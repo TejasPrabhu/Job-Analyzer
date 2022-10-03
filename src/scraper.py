@@ -1,19 +1,42 @@
-from selenium import webdriver
 import time
+
 import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.utils import ChromeType
 
 url = "https://www.linkedin.com/jobs/search?keywords=Data%20Scientist&location=Toronto%2C%20Ontario%2C%20Canada&geoId=100025096&trk=public_jobs_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0 "
 
-columns = ['Job Title', 'Company Name', 'Location', 'Date Posted', 'Total Applicants', 'Seniority level',
-           'Employment type', 'Job function', 'Industries']
+columns = ['Job Title', 'Company Name', 'Location', 'Date Posted', 'Total Applicants', 'Job Description',
+           'Seniority level', 'Employment type', 'Job function', 'Industries']
 df = pd.DataFrame(columns=columns)
 
-options = webdriver.ChromeOptions()
-options.add_argument("--start-maximized")
-wd = webdriver.Chrome(executable_path='./chromedriver.exe', chrome_options=options)
-wd.get(url)
 
+def setup_webdriver():
+    chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.GOOGLE).install())
+
+    chrome_options = Options()
+    options = [
+        "--headless",
+        "--disable-gpu",
+        "--start-maximized",
+        "--ignore-certificate-errors",
+        "--disable-extensions",
+        "--no-sandbox",
+        "--disable-dev-shm-usage"
+    ]
+    for option in options:
+        chrome_options.add_argument(option)
+
+    driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+
+    return driver
+
+
+wd = setup_webdriver()
 max_jobs = 100
 
 i = 0
@@ -47,6 +70,7 @@ while i <= max_jobs:
         location = job_info.find_element(By.CLASS_NAME, 'topcard__flavor-row').text.lstrip(company_name)
         posted = job_info.find_element(By.CLASS_NAME, 'posted-time-ago__text').text
         applicants = job_info.find_element(By.CLASS_NAME, 'num-applicants__caption').text
+        job_desc = job_info.find_element(By.CLASS_NAME, 'show-more-less-html__markup').text
 
         job_dict = {
             'Job Title': job_title,
@@ -54,6 +78,7 @@ while i <= max_jobs:
             'Location': location,
             'Date Posted': posted,
             'Total Applicants': applicants,
+            'Job Description': job_desc
         }
 
         job_criteria = job_info.find_element(By.CLASS_NAME, 'description__job-criteria-list').text.split('\n')
@@ -62,7 +87,7 @@ while i <= max_jobs:
             j = 0
 
             while j < (len(job_criteria)):
-                if job_criteria[j] in columns:
+                if job_criteria[j] in list(df.columns):
                     job_dict[job_criteria[j]] = job_criteria[j + 1]
                     j += 2
 
