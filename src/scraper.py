@@ -101,9 +101,9 @@ def scrape_job_details(driver, df, job):
                     j += 2
 
         # print(job_dict)
+        # df = df.append(job_dict, ignore_index=True)
         row_labels = [1]
         job_df = pd.DataFrame(data=job_dict, index=row_labels)
-        # df = df.append(job_dict, ignore_index=True)
         df = pd.concat([df, job_df], ignore_index=True)
         time.sleep(1)
         return df
