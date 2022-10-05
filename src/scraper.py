@@ -198,4 +198,15 @@ def scrape_data(
     wd.quit()
 
 
-scrape_data()
+def scrape_df(
+        job_title,
+        job_location,
+        distance,
+        company="",
+        number_jobs=40):
+    url = get_linkedin_url(job_title, job_location, distance, company)
+    wd = setup_webdriver()
+    wd.get(url)
+    jobs = linkedin_scraper(driver=wd, max_jobs=number_jobs)
+    wd.quit()
+    return jobs
