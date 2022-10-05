@@ -83,6 +83,8 @@ class JobData:
                 By.CLASS_NAME, 'num-applicants__caption').text
             job_desc = job_info.find_element(
                 By.CLASS_NAME, 'show-more-less-html__markup').text
+            job_link = job_info.find_element(
+                By.CLASS_NAME, 'apply-button').get_attribute('href')
 
             job_dict = {
                 'Job Title': job_title,
@@ -90,7 +92,8 @@ class JobData:
                 'Location': location,
                 'Date Posted': posted,
                 'Total Applicants': applicants,
-                'Job Description': job_desc
+                'Job Description': job_desc,
+                'Job Link': job_link
             }
 
             job_criteria = job_info.find_element(
@@ -104,7 +107,7 @@ class JobData:
                         job_dict[job_criteria[j]] = job_criteria[j + 1]
                         j += 2
 
-            print(job_dict)
+            # print(job_dict)
             df = df.append(job_dict, ignore_index=True)
             time.sleep(1)
             return df
@@ -121,6 +124,7 @@ class JobData:
             'Date Posted',
             'Total Applicants',
             'Job Description',
+            'Job Link',
             'Seniority level',
             'Employment type',
             'Job function',
