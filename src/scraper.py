@@ -14,8 +14,21 @@ from webdriver_manager.core.utils import ChromeType
 
 class JobData:
 
-    def __init__(self) -> None:
+    def __init__(self,
+                job_title="Software Engineer",
+                job_location="Raleigh",
+                distance=20,
+                company="",
+                number_jobs=10) -> None:
         self.job_data = None
+        self.job_title = job_title,
+        self.job_location = job_location,
+        self.distance = distance,
+        self.company= company,
+        self.number_jobs = number_jobs
+        self.skills = ['python', 'c','r', 'c++','java','hadoop','scala','flask','pandas','spark','scikit-learn',
+        'numpy','php','sql','mysql','css','mongdb','nltk','fastai' , 'keras', 'pytorch','tensorflow',
+        'linux','Ruby','JavaScript','django','react','reactjs','ai','ui','tableau']
         
     def setup_webdriver(self):
         chrome_service = Service(ChromeDriverManager(
@@ -146,10 +159,10 @@ class JobData:
                     By.CLASS_NAME, 'jobs-search__results-list').find_elements(
                     By.CLASS_NAME, 'job-search-card')
 
-                if len(job_list) > max_jobs:
-                    job_list = job_list[i:max_jobs]
-                else:
-                    job_list = job_list[i:]
+                # if len(job_list) > max_jobs:
+                #     job_list = job_list[i:max_jobs]
+                # else:
+                #     job_list = job_list[i:]
 
                 if not job_list:
                     break
@@ -180,33 +193,31 @@ class JobData:
         return df
 
 
-    def get_linkedin_url(self,
-            job_title="Mechanical Design Engineer",
-            job_location="Raleigh",
-            distance=20,
-            company=""):
+    def get_linkedin_url(self):
 
         url = "https://www.linkedin.com/jobs/search?keywords={}"\
             " {}&location={}&distance={}".format(
-                job_title, company, job_location, distance)
+                self.job_title, self.company, self.job_location, self.distance)
         return url
 
 
-    def scrape_data(self,
-            job_title="Mechanical Design Engineer",
-            job_location="Raleigh",
-            distance=20,
-            company="",
-            number_jobs=2):
-        url = self.get_linkedin_url(job_title, job_location, distance, company)
+    def scrape_data(self):
+        url = self.get_linkedin_url()
         wd = self.setup_webdriver()
         wd.get(url)
         try:
-            self.job_data = self.linkedin_scraper(driver=wd, max_jobs=number_jobs)
+            self.job_data = self.linkedin_scraper(driver=wd, max_jobs=self.number_jobs)
+            self.extract_skill()
+            self.job_data.to_csv('data\linkedin_scraper.csv')
             # self.job_data.to_csv(r'linkedin_scraper.csv')
         finally:
             wd.close()
 
 
-jd = JobData()
+
+jd = JobData(   job_title="Software Engineer",
+                job_location="Raleigh",
+                distance=20,
+                company="",
+                number_jobs=10)
 jd.scrape_data()
