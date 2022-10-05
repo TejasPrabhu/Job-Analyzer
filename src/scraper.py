@@ -213,11 +213,20 @@ class JobData:
         finally:
             wd.close()
 
+    def extract_skill(self):
+        skill_list = list()
+        for row in self.job_data['Job Description']:
+            desc = row.lower()
+            desc = [word.strip(',') for word in desc.split()]
+            common_list = list(set(desc) & set(self.skills))
+            skill_list.append(common_list)
+
+        self.job_data['skills'] = skill_list
 
 
 jd = JobData(   job_title="Software Engineer",
                 job_location="Raleigh",
-                distance=20,
+                distance=200,
                 company="",
                 number_jobs=10)
 jd.scrape_data()
