@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from .scraper import scrape_df
+import pandas as pd
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
+    df = pd.read_csv("linkedin_scraper.csv")
+    return render_template('index.html',tables=[df.to_html(classes='data')], titles=df.columns.values)
 
 @app.route('/search', methods=('GET', 'POST'))
 def search():
