@@ -2,6 +2,7 @@ import time
 import traceback
 
 import pandas as pd
+from app import add, db
 from selenium import webdriver
 from selenium.common import TimeoutException
 from selenium.webdriver.chrome.options import Options
@@ -223,4 +224,9 @@ class JobData:
             skill_list.append(common_list)
 
         self.job_data['skills'] = skill_list
-        
+
+
+if __name__ == '__main__':
+    jd = JobData()
+    job_data = jd.scrape_data()
+    add(db, job_data)
