@@ -22,3 +22,5 @@ jobs:
         run: sudo apt-get install -y chromium-browser
       - name: Run all test cases
         run: pytest -rA
+      - name: Run flake8
+        run: flake8 --max-line-length=120
