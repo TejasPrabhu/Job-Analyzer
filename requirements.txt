@@ -3,3 +3,7 @@ coverage
 flake8
 selenium
 pandas
+webdriver_manager
+Flask
+pymongo
+Flask-PyMongo
