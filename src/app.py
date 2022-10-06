@@ -1,7 +1,13 @@
-from flask import Flask, render_template, request, flash, redirect, url_for
-from .scraper import scrape_df
+from flask import Flask, render_template, request, flash
+# from .database import read_from_db
+from flask_pymongo import PyMongo
+from pandas import DataFrame
 
 app = Flask(__name__)
+
+app.config["MONGO_URI"] = "mongodb://localhost:27017/job_analyzer"
+mongodb_client = PyMongo(app)
+db = mongodb_client.db
 
 
 @app.route('/')
@@ -13,14 +19,36 @@ def index():
 def search():
     if request.method == 'POST':
         title = request.form['title']
-        location = request.form['location']
-        distance = request.form['distance']
+        # location = request.form['location']
+        # distance = request.form['distance']
         if not title:
             flash('Title is required!')
         else:
-            job_df = scrape_df(title, location, distance).set_index('Job Title')
+            # job_df = add(title, location, distance)
+            job_df = read_from_db(request, db)
+            print(job_df)
+            print(job_df)
             return render_template('job_posting.html',
                                 tables=[job_df.to_html(classes='data')],
                                 # header="true",
                                 titles=job_df.columns.values)
     return render_template('get_job_postings.html')
+
+
+
+
+def add(db, job_data):
+    # job_df = scrape_df(job_title, job_location, distance).set_index('Job Title')
+    db.jobs.insert_many(job_data.to_dict('records'))
+    # db.job.insert_one({ 'item': "card", 'qty': 15 })
+
+
+def read_from_db(request, db):
+        title = request.form['title']
+        location = request.form['location']
+        distance = request.form['distance']
+        data = db.jobs.find({"Job Title": title})
+        print(title)
+        for d in data:
+            print(d)
+        return DataFrame(list(db.jobs.find()))
