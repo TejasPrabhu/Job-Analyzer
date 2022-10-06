@@ -197,9 +197,9 @@ class JobData:
         self.job_data['skills'] = skill_list
 
 
-jd = JobData(job_title="Software Engineer",
-             job_location="Raleigh",
-             distance=200,
-             company="",
-             number_jobs=10)
-jd.scrape_data()
+# jd = JobData(job_title="Software Engineer",
+#              job_location="Raleigh",
+#              distance=200,
+#              company="",
+#              number_jobs=10)
+# jd.scrape_data()
