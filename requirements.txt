@@ -3,4 +3,6 @@ coverage
 flake8
 selenium
 pandas
-webdriver-manager
+webdriver_manager
+Flask
+sphinx
