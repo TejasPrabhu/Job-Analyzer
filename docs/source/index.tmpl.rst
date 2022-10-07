@@ -10,7 +10,6 @@ Welcome to Job-Analyzer's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   src
 
 
 Indices and tables
