@@ -3,7 +3,7 @@ name: Generate Documentation with Sphinx
 on:  
   push:  
     branches:  
-      - auto-docs  
+      - main  
     paths:  
       - '**.py'  
 
