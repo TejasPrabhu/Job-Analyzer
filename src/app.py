@@ -28,6 +28,7 @@ def search():
             job_df = job_df.drop('_id', axis=1)
             job_df = job_df.drop('Industries', axis=1)
             job_df = job_df.drop('Job function', axis=1)
+            job_df = job_df.drop('Total Applicants', axis=1)
             return render_template('job_posting.html',
                                 tables=[job_df.to_html(classes='data')],
                                 # header="true",
