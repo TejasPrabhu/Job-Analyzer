@@ -162,11 +162,6 @@ class JobData:
                     By.CLASS_NAME, 'jobs-search__results-list').find_elements(
                     By.CLASS_NAME, 'job-search-card')
 
-                # if len(job_list) > max_jobs:
-                #     job_list = job_list[i:max_jobs]
-                # else:
-                #     job_list = job_list[i:]
-
                 if not job_list:
                     break
 
@@ -212,7 +207,6 @@ class JobData:
             self.job_data = self.linkedin_scraper(driver=wd, max_jobs=self.number_jobs)
             self.extract_skill()
             self.job_data.to_csv('data\linkedin_scraper.csv')
-            # self.job_data.to_csv(r'linkedin_scraper.csv')
         finally:
             wd.close()
         return self.job_data
