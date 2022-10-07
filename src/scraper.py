@@ -38,7 +38,7 @@ class JobData:
 
         chrome_options = Options()
         options = [
-            # "--headless",
+            "--headless",
             "--disable-gpu",
             "--start-maximized",
             "--ignore-certificate-errors",
