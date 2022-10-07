@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, flash
 # from .database import read_from_db
 from flask_pymongo import PyMongo
 from pandas import DataFrame
+import re
 
 app = Flask(__name__)
 
@@ -47,8 +48,6 @@ def read_from_db(request, db):
         title = request.form['title']
         location = request.form['location']
         distance = request.form['distance']
-        data = db.jobs.find({"Job Title": title})
-        print(title)
-        for d in data:
-            print(d)
-        return DataFrame(list(db.jobs.find()))
+        rgx = re.compile('.*' + title +'.*', re.IGNORECASE)  # compile the regex
+        data = db.jobs.find({'Job Title': rgx})
+        return DataFrame(list(data))

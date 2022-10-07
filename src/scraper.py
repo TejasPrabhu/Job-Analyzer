@@ -2,7 +2,6 @@ import time
 import traceback
 
 import pandas as pd
-from app import add, db
 from selenium import webdriver
 from selenium.common import TimeoutException
 from selenium.webdriver.chrome.options import Options
@@ -12,6 +11,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
+from app import add, mongodb_client
+db = mongodb_client.db
 
 
 class JobData:
@@ -214,6 +215,7 @@ class JobData:
             # self.job_data.to_csv(r'linkedin_scraper.csv')
         finally:
             wd.close()
+        return self.job_data
 
     def extract_skill(self):
         skill_list = list()
@@ -224,7 +226,7 @@ class JobData:
             skill_list.append(common_list)
 
         self.job_data['skills'] = skill_list
-
+        
 
 if __name__ == '__main__':
     jd = JobData()
