@@ -8,7 +8,7 @@ on:
       - '**.py'  
 
 env:
-  MODULE_PATHS: src test
+  MODULE_PATHS: src
   
 jobs:  
   doc-gen:  
