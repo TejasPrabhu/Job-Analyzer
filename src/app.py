@@ -29,13 +29,10 @@ def search():
             job_df = job_df.drop('Industries', axis=1)
             job_df = job_df.drop('Job function', axis=1)
             return render_template('job_posting.html',
-                                tables=[job_df.to_html(classes='customers')],
-                                table_id="customers",
+                                tables=[job_df.to_html(classes='data')],
                                 # header="true",
                                 titles=job_df.columns.values)
     return render_template('get_job_postings.html')
-
-
 
 
 def add(db, job_data):
