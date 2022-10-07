@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Get Job Postings {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Job Title</label>
+        <input type="text" name="title" placeholder="Job Title" class="form-control"
+            value="{{ request.form['title'] }}"></input>
+    </div>
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" name="location" placeholder="Raleigh" class="form-control"
+            value="{{ request.form['location'] }}"></input>
+    </div>
+    <div class="form-group">
+        <label for="distance">Distance in Miles</label>
+        <input type="number" name="distance" placeholder="20" class="form-control"
+            value="{{ request.form['distance'] }}"></input>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}

@@ -16,21 +16,21 @@ from webdriver_manager.core.utils import ChromeType
 class JobData:
 
     def __init__(self,
-                job_title="Software Engineer",
-                job_location="Raleigh",
-                distance=20,
-                company="",
-                number_jobs=10) -> None:
+                 job_title="Software Engineer",
+                 job_location="Raleigh",
+                 distance=20,
+                 company="",
+                 number_jobs=10) -> None:
         self.job_data = None
         self.job_title = job_title,
         self.job_location = job_location,
         self.distance = distance,
-        self.company= company,
+        self.company = company,
         self.number_jobs = number_jobs
-        self.skills = ['python', 'c','r', 'c++','java','hadoop','scala','flask','pandas','spark','scikit-learn',
-        'numpy','php','sql','mysql','css','mongdb','nltk','fastai' , 'keras', 'pytorch','tensorflow',
-        'linux','Ruby','JavaScript','django','react','reactjs','ai','ui','tableau']
-        
+        self.skills = ['python', 'c', 'r', 'c++', 'java', 'hadoop', 'scala', 'flask', 'pandas', 'spark', 'scikit-learn',
+                       'numpy', 'php', 'sql', 'mysql', 'css', 'mongdb', 'nltk', 'fastai', 'keras', 'pytorch', 'tensorflow',
+                       'linux', 'Ruby', 'JavaScript', 'django', 'react', 'reactjs', 'ai', 'ui', 'tableau']
+
     def setup_webdriver(self):
         chrome_service = Service(ChromeDriverManager(
             chrome_type=ChromeType.GOOGLE).install())
@@ -48,10 +48,10 @@ class JobData:
         for option in options:
             chrome_options.add_argument(option)
 
-        driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+        driver = webdriver.Chrome(
+            service=chrome_service, options=chrome_options)
 
         return driver
-
 
     def scroll_to_end(self, driver):
         while True:
@@ -69,7 +69,6 @@ class JobData:
             except BaseException:
                 pass
 
-
     def scrape_job_details(self, driver, df, job):
         try:
 
@@ -86,7 +85,8 @@ class JobData:
                 EC.element_to_be_clickable(
                     (By.CLASS_NAME, 'show-more-less-html__button'))).click()
 
-            job_title = job_info.find_element(By.CLASS_NAME, 'topcard__title').text
+            job_title = job_info.find_element(
+                By.CLASS_NAME, 'topcard__title').text
             company_name = job_info.find_element(
                 By.CLASS_NAME, 'topcard__org-name-link').text
             location = job_info.find_element(
@@ -128,7 +128,6 @@ class JobData:
 
         except TimeoutException:
             return
-
 
     def linkedin_scraper(self, driver, max_jobs=25):
         columns = [
@@ -193,7 +192,6 @@ class JobData:
 
         return df
 
-
     def get_linkedin_url(self):
 
         url = "https://www.linkedin.com/jobs/search?keywords={}"\
@@ -201,18 +199,19 @@ class JobData:
                 self.job_title, self.company, self.job_location, self.distance)
         return url
 
-
     def scrape_data(self):
         url = self.get_linkedin_url()
         wd = self.setup_webdriver()
         wd.get(url)
         try:
-            self.job_data = self.linkedin_scraper(driver=wd, max_jobs=self.number_jobs)
+            self.job_data = self.linkedin_scraper(
+                driver=wd, max_jobs=self.number_jobs)
             self.extract_skill()
-            self.job_data.to_csv('data\linkedin_scraper.csv')
+            # self.job_data.to_csv(r'data\linkedin_scraper.csv')
             # self.job_data.to_csv(r'linkedin_scraper.csv')
         finally:
             wd.close()
+        return self.job_data
 
     def extract_skill(self):
         skill_list = list()
