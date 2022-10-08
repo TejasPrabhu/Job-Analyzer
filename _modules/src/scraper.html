@@ -62,9 +62,10 @@
                  <span class="n">job_location</span><span class="o">=</span><span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span>
                  <span class="n">distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
                  <span class="n">company</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-                 <span class="n">number_jobs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+                 <span class="n">number_jobs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                 <span class="n">df</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">job_data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job_data</span> <span class="o">=</span> <span class="n">df</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">job_title</span> <span class="o">=</span> <span class="n">job_title</span><span class="p">,</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">job_location</span> <span class="o">=</span> <span class="n">job_location</span><span class="p">,</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">distance</span> <span class="o">=</span> <span class="n">distance</span><span class="p">,</span>
@@ -146,7 +147,6 @@
                         <span class="n">job_dict</span><span class="p">[</span><span class="n">job_criteria</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="n">job_criteria</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
                         <span class="n">j</span> <span class="o">+=</span> <span class="mi">2</span>
 
-            <span class="c1"># print(job_dict)</span>
             <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">job_dict</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
             <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">df</span>
@@ -184,11 +184,6 @@
                     <span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s1">&#39;jobs-search__results-list&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span>
                     <span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s1">&#39;job-search-card&#39;</span><span class="p">)</span>
 
-                <span class="c1"># if len(job_list) &gt; max_jobs:</span>
-                <span class="c1">#     job_list = job_list[i:max_jobs]</span>
-                <span class="c1"># else:</span>
-                <span class="c1">#     job_list = job_list[i:]</span>
-
                 <span class="k">if</span> <span class="ow">not</span> <span class="n">job_list</span><span class="p">:</span>
                     <span class="k">break</span>
 
@@ -224,7 +219,6 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">job_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linkedin_scraper</span><span class="p">(</span><span class="n">max_jobs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">number_jobs</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">extract_skill</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">job_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data</span><span class="se">\\</span><span class="s1">linkedin_scraper.csv&#39;</span><span class="p">)</span>
-            <span class="c1"># self.job_data.to_csv(r&#39;linkedin_scraper.csv&#39;)</span>
         <span class="k">finally</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
 
@@ -239,12 +233,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">skill_list</span></div></div>
 
 
-<span class="c1"># jd = JobData(job_title=&quot;Software Engineer&quot;,</span>
-<span class="c1">#              job_location=&quot;Raleigh&quot;,</span>
-<span class="c1">#              distance=200,</span>
-<span class="c1">#              company=&quot;&quot;,</span>
-<span class="c1">#              number_jobs=10)</span>
-<span class="c1"># jd.scrape_data()</span>
+<span class="c1"># if __name__ == &#39;__main__&#39;:</span>
+<span class="c1">#     jd = JobData(job_title=&quot;Software Engineer&quot;,</span>
+<span class="c1">#                  job_location=&quot;Raleigh&quot;,</span>
+<span class="c1">#                  distance=200,</span>
+<span class="c1">#                  company=&quot;&quot;,</span>
+<span class="c1">#                  number_jobs=2)</span>
+<span class="c1">#     jd.scrape_data()</span>
 </pre></div>
 
             <div class="clearer"></div>
