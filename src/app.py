@@ -29,11 +29,22 @@ def search():
             job_df = job_df.drop('Industries', axis=1)
             job_df = job_df.drop('Job function', axis=1)
             job_df = job_df.drop('Total Applicants', axis=1)
+            job_df['Job Link'] = '<a href=' + job_df['Job Link'] + '><div>' + " Apply " + '</div></a>'
             return render_template('job_posting.html',
-                                tables=[job_df.to_html(classes='data')],
+                                tables=['''
+        <style>
+            .table-class {border-collapse: collapse;    margin: 24px 0;    font-size: 1em;    font-family: sans-serif;    min-width: 500px;    box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);}
+            .table-class thead tr {background-color: #009878;    color: #ffffff;    text-align: left;}
+            .table-class th,.table-class td {    text-align:center; padding: 12.4px 15.2px;}
+            .table-class tbody tr {border-bottom: 1.1px solid #dddddd;}
+            .table-class tbody tr:nth-of-type(even) {    background-color: #f3f3f3;}
+            .table-class tbody tr:last-of-type {    border-bottom: 2.1px solid #009878;}
+            .table-class tbody tr.active-row {  font-weight: bold;    color: #009878;} 
+            table tr th { text-align:center; }
+       </style>
+        ''' +job_df.to_html(classes="table-class",render_links=True, escape=False)],
                                 titles=job_df.columns.values)
     return render_template('get_job_postings.html')
-
 
 def add(db, job_data):
     db.jobs.insert_many(job_data.to_dict('records'))
