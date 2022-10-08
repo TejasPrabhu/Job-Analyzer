@@ -105,7 +105,6 @@ class JobData:
                         job_dict[job_criteria[j]] = job_criteria[j + 1]
                         j += 2
 
-            # print(job_dict)
             df = df.append(job_dict, ignore_index=True)
             time.sleep(1)
             return df
@@ -143,11 +142,6 @@ class JobData:
                     By.CLASS_NAME, 'jobs-search__results-list').find_elements(
                     By.CLASS_NAME, 'job-search-card')
 
-                if len(job_list) > max_jobs:
-                    job_list = job_list[i:max_jobs]
-                else:
-                    job_list = job_list[i:]
-
                 if not job_list:
                     break
 
@@ -183,7 +177,6 @@ class JobData:
             self.job_data = self.linkedin_scraper(max_jobs=self.number_jobs)
             self.extract_skill()
             self.job_data.to_csv('data\\linkedin_scraper.csv')
-            # self.job_data.to_csv(r'linkedin_scraper.csv')
         finally:
             self.driver.close()
 
@@ -198,10 +191,10 @@ class JobData:
         self.job_data['skills'] = skill_list
 
 
-if __name__ == '__main__':
-    jd = JobData(job_title="Software Engineer",
-                 job_location="Raleigh",
-                 distance=200,
-                 company="",
-                 number_jobs=10)
-    jd.scrape_data()
+# if __name__ == '__main__':
+#     jd = JobData(job_title="Software Engineer",
+#                  job_location="Raleigh",
+#                  distance=200,
+#                  company="",
+#                  number_jobs=2)
+#     jd.scrape_data()
