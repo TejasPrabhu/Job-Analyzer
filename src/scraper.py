@@ -20,9 +20,10 @@ class JobData:
                  job_location="Raleigh",
                  distance=20,
                  company="",
-                 number_jobs=10) -> None:
+                 number_jobs=10,
+                 df=None) -> None:
         self.driver = None
-        self.job_data = None
+        self.job_data = df
         self.job_title = job_title,
         self.job_location = job_location,
         self.distance = distance,
@@ -142,10 +143,10 @@ class JobData:
                     By.CLASS_NAME, 'jobs-search__results-list').find_elements(
                     By.CLASS_NAME, 'job-search-card')
 
-                # if len(job_list) > max_jobs:
-                #     job_list = job_list[i:max_jobs]
-                # else:
-                #     job_list = job_list[i:]
+                if len(job_list) > max_jobs:
+                    job_list = job_list[i:max_jobs]
+                else:
+                    job_list = job_list[i:]
 
                 if not job_list:
                     break
@@ -196,10 +197,10 @@ class JobData:
 
         self.job_data['skills'] = skill_list
 
-
-# jd = JobData(job_title="Software Engineer",
-#              job_location="Raleigh",
-#              distance=200,
-#              company="",
-#              number_jobs=10)
-# jd.scrape_data()
+if __name__ == '__main__':
+    jd = JobData(job_title="Software Engineer",
+                job_location="Raleigh",
+                distance=200,
+                company="",
+                number_jobs=10)
+    jd.scrape_data()
