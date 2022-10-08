@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, flash
 from flask_pymongo import PyMongo
 from pandas import DataFrame
 import re
+import numpy as np
 
 app = Flask(__name__)
 
@@ -32,7 +33,11 @@ def search():
             job_df['Job Link'] = '<a href=' + job_df['Job Link'] + '><div>' + " Apply " + '</div></a>'
             job_link = job_df.pop("Job Link")
             job_df.insert(7, "Job Link", job_link)
-            job_df[['Job Link']] = job_df[['Job Link']].fillna('-')
+            job_df['Job Link'] = job_df['Job Link'].fillna('----')
+            job_df['skills'] = [','.join(map(str, l)) for l in job_df['skills']]
+            job_df['skills'] = job_df['skills'].replace(r'^\s*$', np.nan, regex=True)
+            job_df['skills'] = job_df['skills'].fillna('----')
+
             return render_template('job_posting.html',
                                 tables=['''
         <style>
