@@ -9,8 +9,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-
     return render_template('index.html')
+
+
+"""
+The index function renders index.html page.
+"""
 
 
 @app.route('/search', methods=('GET', 'POST'))
