@@ -30,6 +30,8 @@ def search():
             job_df = job_df.drop('Job function', axis=1)
             job_df = job_df.drop('Total Applicants', axis=1)
             job_df['Job Link'] = '<a href=' + job_df['Job Link'] + '><div>' + " Apply " + '</div></a>'
+            job_link = job_df.pop("Job Link")
+            job_df.insert(7, "Job Link", job_link)
             return render_template('job_posting.html',
                                 tables=['''
         <style>
