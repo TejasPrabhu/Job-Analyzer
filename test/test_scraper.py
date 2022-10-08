@@ -7,7 +7,7 @@ def test_sample():
     assert True
 
 def test_extract_skill():
-    df = pd.read_csv('data\\linkedin_scraper.csv')
+    df = pd.read_csv('data/linkedin_scraper.csv')
     jd = JobData(df=df)
     jd.extract_skill()
     jd_df = jd.job_data
