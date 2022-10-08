@@ -197,10 +197,11 @@ class JobData:
 
         self.job_data['skills'] = skill_list
 
+
 if __name__ == '__main__':
     jd = JobData(job_title="Software Engineer",
-                job_location="Raleigh",
-                distance=200,
-                company="",
-                number_jobs=10)
+                 job_location="Raleigh",
+                 distance=200,
+                 company="",
+                 number_jobs=10)
     jd.scrape_data()
