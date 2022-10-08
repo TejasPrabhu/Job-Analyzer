@@ -36,12 +36,11 @@ class JobData:
                        'tensorflow', 'linux', 'Ruby', 'JavaScript', 'django', 'react', 'reactjs', 'ai', 'ui', 'tableau']
 
     def setup_webdriver(self):
-        chrome_service = Service(ChromeDriverManager(
-            chrome_type=ChromeType.GOOGLE).install())
+        chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.GOOGLE).install())
 
         chrome_options = Options()
         options = [
-            # "--headless",
+            "--headless",
             "--disable-gpu",
             "--start-maximized",
             "--ignore-certificate-errors",
