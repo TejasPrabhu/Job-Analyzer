@@ -32,6 +32,7 @@ def search():
             job_df['Job Link'] = '<a href=' + job_df['Job Link'] + '><div>' + " Apply " + '</div></a>'
             job_link = job_df.pop("Job Link")
             job_df.insert(7, "Job Link", job_link)
+            job_df[['Job Link']] = job_df[['Job Link']].fillna('-')
             return render_template('job_posting.html',
                                 tables=['''
         <style>
