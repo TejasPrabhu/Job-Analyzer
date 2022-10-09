@@ -173,14 +173,16 @@ class JobData:
             .format(self.job_title, self.company, self.job_location, self.distance)
         return url
 
-    def scrape_data(self):
+    def scrape_data(self, save_csv=True):
         url = self.get_linkedin_url()
         self.setup_webdriver()
         self.driver.get(url)
         try:
             self.job_data = self.linkedin_scraper(max_jobs=self.number_jobs)
             self.extract_skill()
-            self.job_data.to_csv(os.path.join(ROOT_DIR, 'data', 'linkedin_scraper.csv'))
+
+            if save_csv:
+                self.job_data.to_csv(os.path.join(ROOT_DIR, 'data', 'linkedin_scraper.csv'))
 
         finally:
             self.driver.close()
