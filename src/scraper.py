@@ -24,9 +24,10 @@ class JobData:
                  job_location="Raleigh",
                  distance=20,
                  company="",
-                 number_jobs=10) -> None:
+                 number_jobs=10,
+                 df=None) -> None:
         self.driver = None
-        self.job_data = None
+        self.job_data = df
         self.job_title = job_title,
         self.job_location = job_location,
         self.distance = distance,
@@ -107,7 +108,6 @@ class JobData:
                         job_dict[job_criteria[j]] = job_criteria[j + 1]
                         j += 2
 
-            # print(job_dict)
             df = df.append(job_dict, ignore_index=True)
             time.sleep(1)
             return df
@@ -181,7 +181,7 @@ class JobData:
             self.job_data = self.linkedin_scraper(max_jobs=self.number_jobs)
             self.extract_skill()
             self.job_data.to_csv(os.path.join(ROOT_DIR, 'data', 'linkedin_scraper.csv'))
-            # self.job_data.to_csv(r'linkedin_scraper.csv')
+
         finally:
             self.driver.close()
 
@@ -204,9 +204,10 @@ class JobData:
         self.company = company
         self.number_jobs = number_jobs
 
-# jd = JobData(job_title="Software Engineer",
-#              job_location="Raleigh",
-#              distance=200,
-#              company="",
-#              number_jobs=10)
-# jd.scrape_data()
+# if __name__ == '__main__':
+#     jd = JobData(job_title="Software Engineer",
+#                  job_location="Raleigh",
+#                  distance=200,
+#                  company="",
+#                  number_jobs=2)
+#     jd.scrape_data()

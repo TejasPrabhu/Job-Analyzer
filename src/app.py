@@ -1,3 +1,6 @@
+"""
+This module deals with the Web Application part of the software.
+"""
 from flask import Flask, render_template, request, flash
 from .scraper import JobData
 
@@ -6,6 +9,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    """
+    The index function renders the index.html page.
+    """
     return render_template('index.html')
 
 

@@ -1,7 +1,12 @@
 import itertools
 import time
+from pathlib import Path
+
+import pandas as pd
 
 from src.scraper import JobData
+
+csv_path = Path('data/linkedin_scraper.csv')
 
 
 def test_webdriver():
@@ -55,3 +60,12 @@ def test_update_attributes():
     assert job_obj.distance == distance
     assert job_obj.company == company
     assert job_obj.number_jobs == number_jobs
+
+
+def test_extract_skill():
+    df = pd.read_csv(csv_path)
+    jd = JobData(df=df)
+    jd.extract_skill()
+    jd_df = jd.job_data
+    assert (jd_df.iloc[0]['skills'].sort() ==
+            ['c++', 'sql', 'java', 'react', 'python', 'spark'].sort())
