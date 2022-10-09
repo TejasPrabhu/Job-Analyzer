@@ -37,8 +37,7 @@ def search():
             job_df['skills'] = [','.join(map(str, l)) for l in job_df['skills']]
             job_df['skills'] = job_df['skills'].replace(r'^\s*$', np.nan, regex=True)
             job_df['skills'] = job_df['skills'].fillna('----')
-
-            return render_template('job_posting.html',
+            return render_template('job_posting.html', job_count = job_df.shape[0],
                                 tables=['''
         <style>
             .table-class {border-collapse: collapse;    margin: 24px 0;    font-size: 1em;    font-family: sans-serif;    min-width: 500px;    box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);}
