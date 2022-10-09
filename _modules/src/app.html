@@ -40,13 +40,17 @@
           <div class="body" role="main">
             
   <h1>Source code for src.app</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This module deals with the Web Application part of the software.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">flash</span>
-<span class="kn">from</span> <span class="nn">.scraper</span> <span class="kn">import</span> <span class="n">JobData</span>
+<span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask_pymongo</span> <span class="kn">import</span> <span class="n">PyMongo</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MONGO_URI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;mongodb://localhost:27017/job_analyzer&quot;</span>
+<span class="n">mongodb_client</span> <span class="o">=</span> <span class="n">PyMongo</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">mongodb_client</span><span class="o">.</span><span class="n">db</span>
 
 
 <div class="viewcode-block" id="index"><a class="viewcode-back" href="../../src.html#src.app.index">[docs]</a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
@@ -60,19 +64,77 @@
 <div class="viewcode-block" id="search"><a class="viewcode-back" href="../../src.html#src.app.search">[docs]</a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/search&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">))</span>
 <span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
-        <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
-        <span class="n">location</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span>
-        <span class="n">distance</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">title</span><span class="p">:</span>
-            <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;Title is required!&#39;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">jd</span> <span class="o">=</span> <span class="n">JobData</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-            <span class="n">job_df</span> <span class="o">=</span> <span class="n">jd</span><span class="o">.</span><span class="n">scrape_data</span><span class="p">()</span>
-            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;job_posting.html&#39;</span><span class="p">,</span>
-                                   <span class="n">tables</span><span class="o">=</span><span class="p">[</span><span class="n">job_df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">classes</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)],</span>
-                                   <span class="c1"># header=&quot;true&quot;,</span>
-                                   <span class="n">titles</span><span class="o">=</span><span class="n">job_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">job_df</span> <span class="o">=</span> <span class="n">read_from_db</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+        <span class="n">job_count</span> <span class="o">=</span> <span class="n">job_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">job_df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">job_count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;no_jobs.html&#39;</span><span class="p">)</span>
+        <span class="n">job_df</span> <span class="o">=</span> <span class="n">job_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Job Description&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">job_df</span> <span class="o">=</span> <span class="n">job_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;_id&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">job_df</span> <span class="o">=</span> <span class="n">job_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Industries&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">job_df</span> <span class="o">=</span> <span class="n">job_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Job function&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">job_df</span> <span class="o">=</span> <span class="n">job_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Total Applicants&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">job_df</span><span class="p">[</span><span class="s1">&#39;Job Link&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&#39;</span> <span class="o">+</span> <span class="n">job_df</span><span class="p">[</span><span class="s1">&#39;Job Link&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&gt;&lt;div&gt;&#39;</span> <span class="o">+</span> <span class="s2">&quot; Apply &quot;</span> <span class="o">+</span> <span class="s1">&#39;&lt;/div&gt;&lt;/a&gt;&#39;</span>
+        <span class="n">job_link</span> <span class="o">=</span> <span class="n">job_df</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;Job Link&quot;</span><span class="p">)</span>
+        <span class="n">job_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Job Link&quot;</span><span class="p">,</span> <span class="n">job_link</span><span class="p">)</span>
+        <span class="n">job_df</span><span class="p">[</span><span class="s1">&#39;Job Link&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">job_df</span><span class="p">[</span><span class="s1">&#39;Job Link&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;----&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;job_posting.html&#39;</span><span class="p">,</span> <span class="n">job_count</span><span class="o">=</span><span class="n">job_count</span><span class="p">,</span>
+                               <span class="n">tables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    &lt;style&gt;</span>
+<span class="s1">        .table-class {border-collapse: collapse;    margin: 24px 0;    font-size: 1em;</span>
+<span class="s1">        font-family: sans-serif;    min-width: 500px;    box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);}</span>
+<span class="s1">        .table-class thead tr {background-color: #009878;    color: #ffffff;    text-align: left;}</span>
+<span class="s1">        .table-class th,.table-class td {    text-align:center; padding: 12.4px 15.2px;}</span>
+<span class="s1">        .table-class tbody tr {border-bottom: 1.1px solid #dddddd;}</span>
+<span class="s1">        .table-class tbody tr:nth-of-type(even) {    background-color: #f3f3f3;}</span>
+<span class="s1">        .table-class tbody tr:last-of-type {    border-bottom: 2.1px solid #009878;}</span>
+<span class="s1">        .table-class tbody tr.active-row {  font-weight: bold;    color: #009878;}</span>
+<span class="s1">        table tr th { text-align:center; }</span>
+<span class="s1">    &lt;/style&gt;</span>
+<span class="s1">    &#39;&#39;&#39;</span> <span class="o">+</span><span class="n">job_df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">classes</span><span class="o">=</span><span class="s2">&quot;table-class&quot;</span><span class="p">,</span> <span class="n">render_links</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">escape</span><span class="o">=</span><span class="kc">False</span><span class="p">)],</span>
+                            <span class="n">titles</span><span class="o">=</span><span class="n">job_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;get_job_postings.html&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="add"><a class="viewcode-back" href="../../src.html#src.app.add">[docs]</a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">job_data</span><span class="p">):</span>
+    <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">skill</span><span class="p">))</span> <span class="k">for</span> <span class="n">skill</span> <span class="ow">in</span> <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]]</span>
+    <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^\s*$&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;----&#39;</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">jobs</span><span class="o">.</span><span class="n">insert_many</span><span class="p">(</span><span class="n">job_data</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="s1">&#39;records&#39;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="read_from_db"><a class="viewcode-back" href="../../src.html#src.app.read_from_db">[docs]</a><span class="k">def</span> <span class="nf">read_from_db</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">db</span><span class="p">):</span>
+    <span class="n">job_title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+    <span class="n">job_type</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>
+    <span class="n">job_location</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span>
+    <span class="n">company_name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;companyName&#39;</span><span class="p">]</span>
+    <span class="n">skills</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span>
+
+    <span class="n">regex_char</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">,</span> <span class="s1">&#39;[&#39;</span><span class="p">,</span> <span class="s1">&#39;]&#39;</span><span class="p">,</span> <span class="s1">&#39;{&#39;</span><span class="p">,</span> <span class="s1">&#39;}&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">regex_char</span><span class="p">:</span>
+        <span class="n">skills</span> <span class="o">=</span> <span class="n">skills</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="o">+</span><span class="n">char</span><span class="p">)</span>
+
+    <span class="n">rgx_title</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">job_title</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">rgx_type</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">job_type</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">rgx_location</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">job_location</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">rgx_company_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">company_name</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">rgx_skills</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">skills</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+
+    <span class="n">data_filter</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="n">job_title</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">data_filter</span><span class="p">[</span><span class="s1">&#39;Job Title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rgx_title</span>
+    <span class="k">if</span> <span class="n">job_type</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">data_filter</span><span class="p">[</span><span class="s1">&#39;Employment type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rgx_type</span>
+    <span class="k">if</span> <span class="n">job_location</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">data_filter</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rgx_location</span>
+    <span class="k">if</span> <span class="n">company_name</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">data_filter</span><span class="p">[</span><span class="s1">&#39;Company Name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rgx_company_name</span>
+    <span class="k">if</span> <span class="n">skills</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">data_filter</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rgx_skills</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">jobs</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">data_filter</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">))</span></div>
 </pre></div>
 
             <div class="clearer"></div>
