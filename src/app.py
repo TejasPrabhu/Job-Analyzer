@@ -65,6 +65,11 @@ def read_from_db(request, db):
         company_name = request.form['companyName']
         skills = request.form['skills']
 
+        regex_char = ['.', '+', '*', '?', '^', '$', '(', ')', '[', ']', '{', '}', '|']
+
+        for char in regex_char:
+            skills = skills.replace(char, '\\'+char)
+
         rgx_title = re.compile('.*' + job_title +'.*', re.IGNORECASE)
         rgx_type = re.compile('.*' + job_type +'.*', re.IGNORECASE)
         rgx_location = re.compile('.*' + job_location +'.*', re.IGNORECASE)
