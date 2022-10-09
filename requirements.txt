@@ -5,3 +5,4 @@ selenium
 pandas
 webdriver_manager
 Flask
+PyMongo
