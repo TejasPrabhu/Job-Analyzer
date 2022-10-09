@@ -1,3 +1,6 @@
+"""
+The scraper module holds class JobData and functions that scrape the job postings.
+"""
 import os
 import sys
 import time
@@ -13,7 +16,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
-from src.app import add, mongodb_client
+from app import add, mongodb_client
 db = mongodb_client.db
 
 ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
@@ -39,6 +42,9 @@ class JobData:
                        'tensorflow', 'linux', 'Ruby', 'JavaScript', 'django', 'react', 'reactjs', 'ai', 'ui', 'tableau']
 
     def setup_webdriver(self):
+        """
+        The function setup_webdriver sets the options of Chrome Driver and creates webdriver.Chrome object.
+        """
         chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
         chrome_options = Options()
@@ -57,6 +63,9 @@ class JobData:
         self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
     def scroll_to_end(self):
+        """
+        The function scroll_to_end is used to scroll the webpage for scraping.
+        """
         while True:
 
             try:
@@ -70,6 +79,11 @@ class JobData:
                 pass
 
     def scrape_job_details(self, df, job):
+        """
+        The function scrape_job_details
+        :param df: first argument.
+        :param job: second argument.
+        """
         try:
 
             job.click()
@@ -109,7 +123,10 @@ class JobData:
                         job_dict[job_criteria[j]] = job_criteria[j + 1]
                         j += 2
 
-            df = df.append(job_dict, ignore_index=True)
+            row_labels = [1]
+            job_df = pd.DataFrame(data=job_dict, index=row_labels)
+            df = pd.concat([df, job_df], ignore_index=True)
+            # df = df.append(job_dict, ignore_index=True)
             time.sleep(1)
             return df
 
@@ -200,7 +217,9 @@ class JobData:
 
     def update_attributes(self, job_title="Software Engineer", job_location="Raleigh", distance=20,
                           company="", number_jobs=10):
-
+        """
+        The function update_attributes set the values of all the variables of the Class JobData.
+        """
         self.job_title = job_title
         self.job_location = job_location
         self.distance = distance
