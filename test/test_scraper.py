@@ -1,10 +1,12 @@
 import itertools
-import os
 import time
+from pathlib import Path
 
 import pandas as pd
 
-from src.scraper import JobData, ROOT_DIR
+from src.scraper import JobData
+
+csv_path = Path('data/linkedin_scraper.csv')
 
 
 def test_webdriver():
@@ -61,7 +63,6 @@ def test_update_attributes():
 
 
 def test_extract_skill():
-    csv_path = os.path.join(ROOT_DIR, 'data', 'linkedin_scraper.csv')
     df = pd.read_csv(csv_path)
     jd = JobData(df=df)
     jd.extract_skill()
