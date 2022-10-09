@@ -1,12 +1,8 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<h1>{% block title %} Find your jobs here {% endblock %}</h1>
-
+<h1 style="text-align:left;font-weight: 600;padding:5px 0;float:left;">{% block title %} Find your jobs here {% endblock %}</h1>
+<h3 style="color:red;padding:5px 0;text-align:right;float:right;font-family: Chalkduster;" >{{ job_count }} jobs found!!!</h4>
 {% for table in tables %}
-            {{titles[loop.index]}}
             {{ table|safe }}
 {% endfor %}
-
-
 {% endblock %}

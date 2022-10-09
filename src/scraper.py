@@ -11,10 +11,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
+from app import add, mongodb_client
+db = mongodb_client.db
 
 
 class JobData:
-
     def __init__(self,
                  job_title="Software Engineer",
                  job_location="Raleigh",
@@ -191,10 +192,7 @@ class JobData:
         self.job_data['skills'] = skill_list
 
 
-# if __name__ == '__main__':
-#     jd = JobData(job_title="Software Engineer",
-#                  job_location="Raleigh",
-#                  distance=200,
-#                  company="",
-#                  number_jobs=2)
-#     jd.scrape_data()
+if __name__ == '__main__':
+    jd = JobData()
+    job_data = jd.scrape_data()
+    add(db, job_data)
