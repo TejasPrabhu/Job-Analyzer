@@ -16,7 +16,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
-from app import add, mongodb_client
+from src.app import add, mongodb_client
 db = mongodb_client.db
 
 ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
@@ -206,6 +206,9 @@ class JobData:
             self.driver.close()
 
     def extract_skill(self):
+        """
+        The function extract_skill gets the skills present in the job description by matching it with skills list.
+        """
         skill_list = list()
         for row in self.job_data['Job Description']:
             desc = row.lower()
