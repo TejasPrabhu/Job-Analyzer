@@ -15,10 +15,24 @@
             value="{{ request.form['location'] }}"></input>
     </div>
     <div class="form-group">
-        <label for="distance">Distance in Miles</label>
-        <input type="number" name="distance" placeholder="20" class="form-control"
-            value="{{ request.form['distance'] }}"></input>
+        <label for="companyName">Company Name</label>
+        <input type="text" name="companyName" placeholder="" class="form-control"
+            value="{{ request.form['companyName'] }}"></input>
     </div>
+    <div class="form-group">
+        <label for="skills">Technical skills</label>
+        <input type="text" name="skills" placeholder="" class="form-control"
+            value="{{ request.form['skills'] }}"></input>
+    </div>
+    <div class="form-group">
+        <label for="type">Job Type</label>
+        <select name="type" id="type">
+            <option value=''></option>
+            <option value="Internship">Internship</option>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+            <option value="Contract">Contract</option>
+        </select>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
