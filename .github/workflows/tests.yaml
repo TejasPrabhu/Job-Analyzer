@@ -21,7 +21,7 @@ jobs:
       - name: Install Chrome browser
         run: sudo apt-get install -y chromium-browser
       - name: Run flake8
-        run: flake8 --max-line-length=120
+        run: flake8 --max-line-length=120 --extend-ignore=E225
       - name: Run All tests and generate Report
         run: |
           coverage run -m pytest -rA
