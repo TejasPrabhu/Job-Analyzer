@@ -42,3 +42,27 @@ def test_scraper():
     job_obj = JobData(job_title=job_title, job_location=job_location, distance=distance, company=company,
                       number_jobs=number_jobs)
     job_obj.scrape_data()
+
+
+def test_scraper_zero_jobs():
+    number_jobs = 0
+    job_obj = JobData(number_jobs=number_jobs)
+    job_obj.scrape_data()
+
+
+def test_update_attributes():
+    job_title = "Software Engineer"
+    job_location = "Raleigh"
+    distance = 20
+    company = ""
+    number_jobs = 10
+
+    job_obj = JobData()
+    job_obj.update_attributes(job_title=job_title, job_location=job_location, distance=distance, company=company,
+                              number_jobs=number_jobs)
+
+    assert job_obj.job_title == job_title
+    assert job_obj.job_location == job_location
+    assert job_obj.distance == distance
+    assert job_obj.company == company
+    assert job_obj.number_jobs == number_jobs
