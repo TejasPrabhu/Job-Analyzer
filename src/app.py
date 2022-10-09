@@ -36,10 +36,11 @@ def search():
         job_link = job_df.pop("Job Link")
         job_df.insert(7, "Job Link", job_link)
         job_df['Job Link'] = job_df['Job Link'].fillna('----')
-        return render_template('job_posting.html', job_count = job_count,
-                            tables=['''
+        return render_template('job_posting.html', job_count=job_count,
+                               tables=['''
     <style>
-        .table-class {border-collapse: collapse;    margin: 24px 0;    font-size: 1em;    font-family: sans-serif;    min-width: 500px;    box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);}
+        .table-class {border-collapse: collapse;    margin: 24px 0;    font-size: 1em;
+        font-family: sans-serif;    min-width: 500px;    box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);}
         .table-class thead tr {background-color: #009878;    color: #ffffff;    text-align: left;}
         .table-class th,.table-class td {    text-align:center; padding: 12.4px 15.2px;}
         .table-class tbody tr {border-bottom: 1.1px solid #dddddd;}
@@ -48,45 +49,47 @@ def search():
         .table-class tbody tr.active-row {  font-weight: bold;    color: #009878;}
         table tr th { text-align:center; }
     </style>
-    ''' +job_df.to_html(classes="table-class",render_links=True, escape=False)],
+    ''' +job_df.to_html(classes="table-class", render_links=True, escape=False)],
                             titles=job_df.columns.values)
     return render_template('get_job_postings.html')
 
+
 def add(db, job_data):
-    job_data['skills'] = [','.join(map(str, l)) for l in job_data['skills']]
+    job_data['skills'] = [','.join(map(str, skill)) for skill in job_data['skills']]
     job_data['skills'] = job_data['skills'].replace(r'^\s*$', np.nan, regex=True)
     job_data['skills'] = job_data['skills'].fillna('----')
     db.jobs.insert_many(job_data.to_dict('records'))
 
+
 def read_from_db(request, db):
-        job_title = request.form['title']
-        job_type = request.form['type']
-        job_location = request.form['location']
-        company_name = request.form['companyName']
-        skills = request.form['skills']
+    job_title = request.form['title']
+    job_type = request.form['type']
+    job_location = request.form['location']
+    company_name = request.form['companyName']
+    skills = request.form['skills']
 
-        regex_char = ['.', '+', '*', '?', '^', '$', '(', ')', '[', ']', '{', '}', '|']
+    regex_char = ['.', '+', '*', '?', '^', '$', '(', ')', '[', ']', '{', '}', '|']
 
-        for char in regex_char:
-            skills = skills.replace(char, '\\'+char)
+    for char in regex_char:
+        skills = skills.replace(char, '\\'+char)
 
-        rgx_title = re.compile('.*' + job_title +'.*', re.IGNORECASE)
-        rgx_type = re.compile('.*' + job_type +'.*', re.IGNORECASE)
-        rgx_location = re.compile('.*' + job_location +'.*', re.IGNORECASE)
-        rgx_company_name = re.compile('.*' + company_name +'.*', re.IGNORECASE)
-        rgx_skills = re.compile('.*' + skills +'.*', re.IGNORECASE)
+    rgx_title = re.compile('.*' + job_title +'.*', re.IGNORECASE)
+    rgx_type = re.compile('.*' + job_type +'.*', re.IGNORECASE)
+    rgx_location = re.compile('.*' + job_location +'.*', re.IGNORECASE)
+    rgx_company_name = re.compile('.*' + company_name +'.*', re.IGNORECASE)
+    rgx_skills = re.compile('.*' + skills +'.*', re.IGNORECASE)
 
-        data_filter = {}
-        if job_title != '':
-            data_filter['Job Title'] = rgx_title
-        if job_type != '':
-            data_filter['Employment type'] = rgx_type
-        if job_location != '':
-            data_filter['Location'] = rgx_location
-        if company_name != '':
-            data_filter['Company Name'] = rgx_company_name
-        if skills != '':
-            data_filter['skills'] = rgx_skills
+    data_filter = {}
+    if job_title != '':
+        data_filter['Job Title'] = rgx_title
+    if job_type != '':
+        data_filter['Employment type'] = rgx_type
+    if job_location != '':
+        data_filter['Location'] = rgx_location
+    if company_name != '':
+        data_filter['Company Name'] = rgx_company_name
+    if skills != '':
+        data_filter['skills'] = rgx_skills
 
-        data = db.jobs.find(data_filter)
-        return DataFrame(list(data))
+    data = db.jobs.find(data_filter)
+    return DataFrame(list(data))
