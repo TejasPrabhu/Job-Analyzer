@@ -42,7 +42,7 @@ class JobData:
         options = [
             "--headless",
             "--disable-gpu",
-            "--start-maximized",
+            "--window-size=1920,1200",
             "--ignore-certificate-errors",
             "--disable-extensions",
             "--no-sandbox",

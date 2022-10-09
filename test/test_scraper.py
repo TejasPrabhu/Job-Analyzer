@@ -31,3 +31,14 @@ def test_linkedin_url():
         time.sleep(1)
 
     job_obj.driver.quit()
+
+
+def test_scraper():
+    job_title = "Software Engineer"
+    job_location = "Raleigh"
+    distance = 20
+    company = ""
+    number_jobs = 10
+    job_obj = JobData(job_title=job_title, job_location=job_location, distance=distance, company=company,
+                      number_jobs=number_jobs)
+    job_obj.scrape_data()
