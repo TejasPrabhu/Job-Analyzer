@@ -81,6 +81,7 @@ class JobData:
     def scrape_job_details(self, df, job):
         """
         The function scrape_job_details
+
         :param df: first argument.
         :param job: second argument.
         """
