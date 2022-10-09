@@ -7,3 +7,4 @@ webdriver_manager
 Flask
 PyMongo
 sphinx
+flask_pymongo
