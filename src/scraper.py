@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import traceback
 
@@ -162,6 +163,7 @@ class JobData:
 
         except Exception:
             print(traceback.format_exc())
+            sys.exit(1)
 
         return df
 
