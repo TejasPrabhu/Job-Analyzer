@@ -6,3 +6,4 @@ pandas
 webdriver_manager
 Flask
 PyMongo
+sphinx

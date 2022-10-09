@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, flash
-# from .database import read_from_db
 from flask_pymongo import PyMongo
 from pandas import DataFrame
 import re
@@ -14,6 +13,9 @@ db = mongodb_client.db
 
 @app.route('/')
 def index():
+    """
+    The index function renders the index.html page.
+    """
     return render_template('index.html')
 
 

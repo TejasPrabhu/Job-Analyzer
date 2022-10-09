@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "ms-python.flake8",
+        "himanoa.python-autopep8",
+        "ms-python.python"
+    ]
+}
