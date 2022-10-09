@@ -20,7 +20,10 @@ jobs:
           pip install -e .
       - name: Install Chrome browser
         run: sudo apt-get install -y chromium-browser
-      - name: Run all test cases
-        run: pytest -rA
       - name: Run flake8
-        run: flake8 --max-line-length=120 --extend-ignore=E225  
+        run: flake8 --max-line-length=120 --extend-ignore=E225
+      - name: Run All tests and generate Report
+        run: |
+          coverage run -m pytest -rA
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v2

@@ -1,3 +1,5 @@
+import os
+import sys
 import time
 import traceback
 
@@ -13,6 +15,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 from app import add, mongodb_client
 db = mongodb_client.db
+
+ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
 
 
 class JobData:
@@ -35,14 +39,13 @@ class JobData:
                        'tensorflow', 'linux', 'Ruby', 'JavaScript', 'django', 'react', 'reactjs', 'ai', 'ui', 'tableau']
 
     def setup_webdriver(self):
-        chrome_service = Service(ChromeDriverManager(
-            chrome_type=ChromeType.GOOGLE).install())
+        chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
         chrome_options = Options()
         options = [
-            # "--headless",
+            "--headless",
             "--disable-gpu",
-            "--start-maximized",
+            "--window-size=1920,1200",
             "--ignore-certificate-errors",
             "--disable-extensions",
             "--no-sandbox",
@@ -134,14 +137,14 @@ class JobData:
 
             while i < max_jobs:
 
-                if self.driver.find_elements(
-                        By.CLASS_NAME,
-                        'infinite-scroller__show-more-button'):
+                if self.driver.find_elements(By.CLASS_NAME, 'infinite-scroller__show-more-button'):
                     self.scroll_to_end()
 
                 job_list = self.driver.find_element(
                     By.CLASS_NAME, 'jobs-search__results-list').find_elements(
                     By.CLASS_NAME, 'job-search-card')
+
+                job_list = job_list[i:max_jobs] if len(job_list) > max_jobs else job_list[i:]
 
                 if not job_list:
                     break
@@ -161,6 +164,7 @@ class JobData:
 
         except Exception:
             print(traceback.format_exc())
+            sys.exit(1)
 
         return df
 
@@ -170,14 +174,17 @@ class JobData:
             .format(self.job_title, self.company, self.job_location, self.distance)
         return url
 
-    def scrape_data(self):
+    def scrape_data(self, save_csv=True):
         url = self.get_linkedin_url()
         self.setup_webdriver()
         self.driver.get(url)
         try:
             self.job_data = self.linkedin_scraper(max_jobs=self.number_jobs)
             self.extract_skill()
-            self.job_data.to_csv('data\\linkedin_scraper.csv')
+
+            if save_csv:
+                self.job_data.to_csv(os.path.join(ROOT_DIR, 'data', 'linkedin_scraper.csv'))
+
         finally:
             self.driver.close()
 
@@ -191,6 +198,14 @@ class JobData:
 
         self.job_data['skills'] = skill_list
 
+    def update_attributes(self, job_title="Software Engineer", job_location="Raleigh", distance=20,
+                          company="", number_jobs=10):
+
+        self.job_title = job_title
+        self.job_location = job_location
+        self.distance = distance
+        self.company = company
+        self.number_jobs = number_jobs
 
 if __name__ == '__main__':
     jd = JobData()
