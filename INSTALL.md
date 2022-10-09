@@ -116,8 +116,25 @@ Answer few questions.
 
   
 
-* Installing using GUI, open Ubuntu software center
+* Installing using GUI, open Ubuntu software center.
 
-* Click search button and search for vscode
 
-* Install it, you will be able to see it installed in applications after some time
+* Click search button and search for vscode.
+
+
+* Install it, you will be able to see it installed in applications after some time.
+
+
+### 4. MongoDB
+
+  
+
+* [Download the MongoDB MSI Installer Package](https://www.mongodb.com/try/download/community)
+
+  
+
+*  Install MongoDB with the Installation Wizard and make sure you are logged in as a user with Admin privileges.
+
+  
+
+* If not given any location, VS code will be installed in programs folder of C drive.
