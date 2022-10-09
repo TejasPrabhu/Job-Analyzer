@@ -76,8 +76,54 @@
 <dd></dd></dl>
 
 </section>
-<section id="src-scraper-module">
-<h2>src.scraper module<a class="headerlink" href="#src-scraper-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-src.scraper">
+<span id="src-scraper-module"></span><h2>src.scraper module<a class="headerlink" href="#module-src.scraper" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.scraper.JobData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.scraper.</span></span><span class="sig-name descname"><span class="pre">JobData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Software</span> <span class="pre">Engineer'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job_location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Raleigh'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/scraper.html#JobData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.scraper.JobData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.scraper.JobData.extract_skill">
+<span class="sig-name descname"><span class="pre">extract_skill</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/scraper.html#JobData.extract_skill"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.scraper.JobData.extract_skill" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.scraper.JobData.get_linkedin_url">
+<span class="sig-name descname"><span class="pre">get_linkedin_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/scraper.html#JobData.get_linkedin_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.scraper.JobData.get_linkedin_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.scraper.JobData.linkedin_scraper">
+<span class="sig-name descname"><span class="pre">linkedin_scraper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/scraper.html#JobData.linkedin_scraper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.scraper.JobData.linkedin_scraper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.scraper.JobData.scrape_data">
+<span class="sig-name descname"><span class="pre">scrape_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/scraper.html#JobData.scrape_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.scraper.JobData.scrape_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.scraper.JobData.scrape_job_details">
+<span class="sig-name descname"><span class="pre">scrape_job_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/scraper.html#JobData.scrape_job_details"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.scraper.JobData.scrape_job_details" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.scraper.JobData.scroll_to_end">
+<span class="sig-name descname"><span class="pre">scroll_to_end</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/scraper.html#JobData.scroll_to_end"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.scraper.JobData.scroll_to_end" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.scraper.JobData.setup_webdriver">
+<span class="sig-name descname"><span class="pre">setup_webdriver</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/scraper.html#JobData.setup_webdriver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.scraper.JobData.setup_webdriver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.scraper.JobData.update_attributes">
+<span class="sig-name descname"><span class="pre">update_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Software</span> <span class="pre">Engineer'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job_location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Raleigh'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/scraper.html#JobData.update_attributes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.scraper.JobData.update_attributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-src">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Permalink to this heading">¶</a></h2>
@@ -103,7 +149,20 @@
 <li><a class="reference internal" href="#src.app.search"><code class="docutils literal notranslate"><span class="pre">search()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#src-scraper-module">src.scraper module</a></li>
+<li><a class="reference internal" href="#module-src.scraper">src.scraper module</a><ul>
+<li><a class="reference internal" href="#src.scraper.JobData"><code class="docutils literal notranslate"><span class="pre">JobData</span></code></a><ul>
+<li><a class="reference internal" href="#src.scraper.JobData.extract_skill"><code class="docutils literal notranslate"><span class="pre">JobData.extract_skill()</span></code></a></li>
+<li><a class="reference internal" href="#src.scraper.JobData.get_linkedin_url"><code class="docutils literal notranslate"><span class="pre">JobData.get_linkedin_url()</span></code></a></li>
+<li><a class="reference internal" href="#src.scraper.JobData.linkedin_scraper"><code class="docutils literal notranslate"><span class="pre">JobData.linkedin_scraper()</span></code></a></li>
+<li><a class="reference internal" href="#src.scraper.JobData.scrape_data"><code class="docutils literal notranslate"><span class="pre">JobData.scrape_data()</span></code></a></li>
+<li><a class="reference internal" href="#src.scraper.JobData.scrape_job_details"><code class="docutils literal notranslate"><span class="pre">JobData.scrape_job_details()</span></code></a></li>
+<li><a class="reference internal" href="#src.scraper.JobData.scroll_to_end"><code class="docutils literal notranslate"><span class="pre">JobData.scroll_to_end()</span></code></a></li>
+<li><a class="reference internal" href="#src.scraper.JobData.setup_webdriver"><code class="docutils literal notranslate"><span class="pre">JobData.setup_webdriver()</span></code></a></li>
+<li><a class="reference internal" href="#src.scraper.JobData.update_attributes"><code class="docutils literal notranslate"><span class="pre">JobData.update_attributes()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-src">Module contents</a></li>
 </ul>
 </li>
