@@ -80,10 +80,10 @@ class JobData:
 
     def scrape_job_details(self, df, job):
         """
-        The function scrape_job_details
+        The function scrape_job_details gets the detail of a job and appends it to the DataFrame passed.
 
-        :param df: first argument.
-        :param job: second argument.
+        :param df: DataFrame to add job details to.
+        :param job: Fetch details of this job.
         """
         try:
 
@@ -135,6 +135,10 @@ class JobData:
             return
 
     def linkedin_scraper(self, max_jobs=25):
+        """
+        The linkedin_scraper fetches a list of jobs and then fetches the details.
+        Returns a DataFrame with all the job scraped.
+        """
         columns = [
             'Job Title',
             'Company Name',
@@ -187,12 +191,19 @@ class JobData:
         return df
 
     def get_linkedin_url(self):
-
+        """
+        The function get_linkedin_url returns the url based on the parameters set.
+        """
         url = "https://www.linkedin.com/jobs/search?keywords={} {}&location={}&distance={}" \
             .format(self.job_title, self.company, self.job_location, self.distance)
         return url
 
     def scrape_data(self, save_csv=True):
+        """
+        The scrape_data runs the entire scraper and saves the data to a csv if save_csv=True.
+
+        :param save_csv: True or False
+        """
         url = self.get_linkedin_url()
         self.setup_webdriver()
         self.driver.get(url)
