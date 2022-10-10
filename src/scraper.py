@@ -1,19 +1,28 @@
-import os
-import sys
-import time
-import traceback
+"""
+The scraper module holds class JobData and functions that scrape the job postings.
+"""
+"""Copyright 2022 Tejas Prabhu
 
-import pandas as pd
-from selenium import webdriver
-from selenium.common import TimeoutException
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.utils import ChromeType
-from app import add, mongodb_client
+Use of this source code is governed by an MIT-style
+license that can be found in the LICENSE file or at
+https://opensource.org/licenses/MIT.
+"""
+
+import os  # noqa: E402
+import sys  # noqa: E402
+import time  # noqa: E402
+import traceback  # noqa: E402
+import pandas as pd  # noqa: E402
+from selenium import webdriver  # noqa: E402
+from selenium.common import TimeoutException  # noqa: E402
+from selenium.webdriver.chrome.options import Options  # noqa: E402
+from selenium.webdriver.chrome.service import Service  # noqa: E402
+from selenium.webdriver.common.by import By  # noqa: E402
+from selenium.webdriver.support import expected_conditions as EC  # noqa: E402
+from selenium.webdriver.support.wait import WebDriverWait  # noqa: E402
+from webdriver_manager.chrome import ChromeDriverManager  # noqa: E402
+from webdriver_manager.core.utils import ChromeType  # noqa: E402
+from src.app import add, mongodb_client  # noqa: E402
 db = mongodb_client.db
 
 ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
@@ -39,6 +48,9 @@ class JobData:
                        'tensorflow', 'linux', 'Ruby', 'JavaScript', 'django', 'react', 'reactjs', 'ai', 'ui', 'tableau']
 
     def setup_webdriver(self):
+        """
+        The function setup_webdriver sets the options of Chrome Driver and creates webdriver.Chrome object.
+        """
         chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
         chrome_options = Options()
@@ -57,6 +69,9 @@ class JobData:
         self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
     def scroll_to_end(self):
+        """
+        The function scroll_to_end is used to scroll the webpage for scraping.
+        """
         while True:
 
             try:
@@ -70,6 +85,12 @@ class JobData:
                 pass
 
     def scrape_job_details(self, df, job):
+        """
+        The function scrape_job_details gets the detail of a job and appends it to the DataFrame passed.
+
+        :param df: DataFrame to add job details to.
+        :param job: Fetch details of this job.
+        """
         try:
 
             job.click()
@@ -109,7 +130,10 @@ class JobData:
                         job_dict[job_criteria[j]] = job_criteria[j + 1]
                         j += 2
 
-            df = df.append(job_dict, ignore_index=True)
+            row_labels = [1]
+            job_df = pd.DataFrame(data=job_dict, index=row_labels)
+            df = pd.concat([df, job_df], ignore_index=True)
+            # df = df.append(job_dict, ignore_index=True)
             time.sleep(1)
             return df
 
@@ -117,6 +141,10 @@ class JobData:
             return
 
     def linkedin_scraper(self, max_jobs=25):
+        """
+        The linkedin_scraper fetches a list of jobs and then fetches the details.
+        Returns a DataFrame with all the job scraped.
+        """
         columns = [
             'Job Title',
             'Company Name',
@@ -169,12 +197,19 @@ class JobData:
         return df
 
     def get_linkedin_url(self):
-
+        """
+        The function get_linkedin_url returns the url based on the parameters set.
+        """
         url = "https://www.linkedin.com/jobs/search?keywords={} {}&location={}&distance={}" \
             .format(self.job_title, self.company, self.job_location, self.distance)
         return url
 
     def scrape_data(self, save_csv=True):
+        """
+        The scrape_data runs the entire scraper and saves the data to a csv if save_csv=True.
+
+        :param save_csv: True or False
+        """
         url = self.get_linkedin_url()
         self.setup_webdriver()
         self.driver.get(url)
@@ -190,6 +225,9 @@ class JobData:
         return self.job_data
 
     def extract_skill(self):
+        """
+        The function extract_skill gets the skills present in the job description by matching it with skills list.
+        """
         skill_list = list()
         for row in self.job_data['Job Description']:
             desc = row.lower()
@@ -201,7 +239,9 @@ class JobData:
 
     def update_attributes(self, job_title="Software Engineer", job_location="Raleigh", distance=20,
                           company="", number_jobs=10):
-
+        """
+        The function update_attributes set the values of all the variables of the Class JobData.
+        """
         self.job_title = job_title
         self.job_location = job_location
         self.distance = distance
