@@ -40,12 +40,22 @@
           <div class="body" role="main">
             
   <h1>Source code for src.app</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Copyright 2022 Tejas Prabhu</span>
+
+<span class="sd">Use of this source code is governed by an MIT-style</span>
+<span class="sd">license that can be found in the LICENSE file or at</span>
+<span class="sd">https://opensource.org/licenses/MIT.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
 <span class="kn">from</span> <span class="nn">flask_pymongo</span> <span class="kn">import</span> <span class="n">PyMongo</span>
 <span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The module app holds the function related to flask app and database.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MONGO_URI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;mongodb://localhost:27017/job_analyzer&quot;</span>
@@ -56,6 +66,7 @@
 <div class="viewcode-block" id="index"><a class="viewcode-back" href="../../src.html#src.app.index">[docs]</a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Route: &#39;/&#39;</span>
 <span class="sd">    The index function renders the index.html page.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span></div>
@@ -63,6 +74,11 @@
 
 <div class="viewcode-block" id="search"><a class="viewcode-back" href="../../src.html#src.app.search">[docs]</a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/search&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">))</span>
 <span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Route: &#39;/search&#39;</span>
+<span class="sd">    The search function renders the get_job_postings.html.</span>
+<span class="sd">    Upon submission fetches the job postings from the database and renders job_posting.html</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
         <span class="n">job_df</span> <span class="o">=</span> <span class="n">read_from_db</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
         <span class="n">job_count</span> <span class="o">=</span> <span class="n">job_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -91,12 +107,15 @@
 <span class="s1">        .table-class tbody tr.active-row {  font-weight: bold;    color: #009878;}</span>
 <span class="s1">        table tr th { text-align:center; }</span>
 <span class="s1">    &lt;/style&gt;</span>
-<span class="s1">    &#39;&#39;&#39;</span> <span class="o">+</span><span class="n">job_df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">classes</span><span class="o">=</span><span class="s2">&quot;table-class&quot;</span><span class="p">,</span> <span class="n">render_links</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">escape</span><span class="o">=</span><span class="kc">False</span><span class="p">)],</span>
-                            <span class="n">titles</span><span class="o">=</span><span class="n">job_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="s1">    &#39;&#39;&#39;</span> <span class="o">+</span> <span class="n">job_df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">classes</span><span class="o">=</span><span class="s2">&quot;table-class&quot;</span><span class="p">,</span> <span class="n">render_links</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">escape</span><span class="o">=</span><span class="kc">False</span><span class="p">)],</span>
+            <span class="n">titles</span><span class="o">=</span><span class="n">job_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;get_job_postings.html&#39;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="add"><a class="viewcode-back" href="../../src.html#src.app.add">[docs]</a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">job_data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The add function adds the skills column and adds the job data to the database.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">skill</span><span class="p">))</span> <span class="k">for</span> <span class="n">skill</span> <span class="ow">in</span> <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]]</span>
     <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^\s*$&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">job_data</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;----&#39;</span><span class="p">)</span>
@@ -104,6 +123,10 @@
 
 
 <div class="viewcode-block" id="read_from_db"><a class="viewcode-back" href="../../src.html#src.app.read_from_db">[docs]</a><span class="k">def</span> <span class="nf">read_from_db</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">db</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The read_from_db function reads the job details based on the input provided using regex.</span>
+<span class="sd">    Returns a DataFrame with the details</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">job_title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
     <span class="n">job_type</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>
     <span class="n">job_location</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span>
@@ -115,11 +138,11 @@
     <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">regex_char</span><span class="p">:</span>
         <span class="n">skills</span> <span class="o">=</span> <span class="n">skills</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="o">+</span><span class="n">char</span><span class="p">)</span>
 
-    <span class="n">rgx_title</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">job_title</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
-    <span class="n">rgx_type</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">job_type</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
-    <span class="n">rgx_location</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">job_location</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
-    <span class="n">rgx_company_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">company_name</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
-    <span class="n">rgx_skills</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">skills</span> <span class="o">+</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">rgx_title</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">job_title</span> <span class="o">+</span> <span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">rgx_type</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">job_type</span> <span class="o">+</span> <span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">rgx_location</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">job_location</span> <span class="o">+</span> <span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">rgx_company_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">company_name</span> <span class="o">+</span> <span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">rgx_skills</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*&#39;</span> <span class="o">+</span> <span class="n">skills</span> <span class="o">+</span> <span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
 
     <span class="n">data_filter</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">if</span> <span class="n">job_title</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
