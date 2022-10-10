@@ -59,11 +59,18 @@ def test_search_page_submit_zero_results():
 
 
 def test_add_db():
+    """
+    This test verifies that sample data can be added to the database successfully
+    """
 
     add_sample_data()
 
 
 def add_sample_data():
+    """
+    This function adds sample data entry to the database
+    """
+
     df = pd.DataFrame()
 
     job_dict = {
