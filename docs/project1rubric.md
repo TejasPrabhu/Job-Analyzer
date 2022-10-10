@@ -1,6 +1,6 @@
 ## Project 1 Rubric
 
-<b> Column 2 Total: </b> 
+<b> Column 2 Total: </b> 174
 
 |Notes|Score| Evidence|
 |-----|----|---------|
