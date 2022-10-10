@@ -12,6 +12,8 @@
 [![codecov](https://codecov.io/gh/TejasPrabhu/Job-Analyzer/branch/main/graph/badge.svg)](https://codecov.io/gh/TejasPrabhu/Job-Analyzer)
 [![DOI](https://zenodo.org/badge/542878273.svg)](https://zenodo.org/badge/latestdoi/542878273)
 
+![Logo](https://user-images.githubusercontent.com/52947925/194792548-988dc880-642e-4571-8c90-28d0ae2e5cd1.gif)
+
 
 Juggling multiple assignments, quizzes, projects, presentations, and clutching the deadlines every week? Feel like you have no time to watch your favorite series or sports team play let alone search for job posting on a day-to-day basis? Here comes JobCruncher.
 
