@@ -27,6 +27,9 @@ JobCruncher is an online job scraping and analysis tool that provides the user w
 So, leave the tedious and monotonous task of looking up the job postings to our JobCruncher that not only provides the jobs posted every day but helps to filter out the results based on your liking.
 
 # So why use JobCruncher instead?
+
+[![IMAGE ALT TEXT HERE](https://www.youtube.com/watch?v=_ASFR0DymiU&ab_channel=TejasPrabhu/0.jpg)](https://www.youtube.com/watch?v=_ASFR0DymiU&ab_channel=TejasPrabhu)
+
 Unlike many other job portals, JobCruncher is a simple, lightweight, online tool that helps users get clear information about the jobs posted on LinkedIn and further help the user finetune the results.
 
 Further, it helps to provide the user insights about the job postings and as the scraper is executed every day, the user is always provided with the most recent job postings.
