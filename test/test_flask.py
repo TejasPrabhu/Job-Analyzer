@@ -16,3 +16,15 @@ def test_search_page():
     assert b"Company Name" in response.data
     assert b"Technical skills" in response.data
     assert b"Job Type" in response.data
+
+
+def test_search_page_submit():
+
+    response = app.test_client().post("/search", data={
+        "title": "Software Engineer",
+        "type": "Full-Time",
+        "location": "Raleigh",
+        "companyName": "Amazon",
+        "skills": "Python",
+    })
+    assert response.status_code == 200
