@@ -4,36 +4,36 @@
 
 |Notes|Score| Evidence|
 |-----|----|---------|
-|Video1| 0 | |
-|Video2| 0 | Not present in README|
+|Video1| 1 |N/A new project |
+|Video2| 1 |N/A new project |
 |Workload is spread over the whole team (one team member is often Xtimes more productive than the others but nevertheless, here is a track record that everyone is contributing a lot)| 3 | All contributors made significant contributions to the codebase. [Contributors](https://github.com/TejasPrabhu/Job-Analyzer/graphs/contributors) |
-|Number of commits|3| |
-|Number of commits: by different people| 2 |  |
-|Issues reports: there are **many**| 3 | |
-|Issues are being closed| 3 |  |
-|DOI badge: exists|3| |
-|Docs: doco generated, format not ugly | 1 | |
-|Docs: what: point descriptions of each class/function (in isolation) | 0 |  |
-|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z| 0 | |
-|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing| 0 | |
-|Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|  0 | |
-|Use of version control tools| 1 | |
-|Use of style checkers | 3 | |
+|Number of commits|3|[link](https://github.com/TejasPrabhu/Job-Analyzer/pulse) |
+|Number of commits: by different people| 3 |[link](https://github.com/TejasPrabhu/Job-Analyzer/pulse)  |
+|Issues reports: there are **many**| 3 | [link](https://github.com/TejasPrabhu/Job-Analyzer/issues)|
+|Issues are being closed| 3 | [link](https://github.com/TejasPrabhu/Job-Analyzer/issues?q=is%3Aissue+is%3Aclosed) |
+|DOI badge: exists|3|[link](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/README.md) |
+|Docs: doco generated, format not ugly | 3 | [docs](https://tejasprabhu.github.io/Job-Analyzer/index.html)|
+|Docs: what: point descriptions of each class/function (in isolation) |3 | [docs](https://tejasprabhu.github.io/Job-Analyzer/index.html) |
+|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z| 2 | [link](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/README.md)|
+|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing| 3 |[link](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/README.md) |
+|Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.| 3 |[link](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/README.md) |
+|Use of version control tools| 3 |Git is used thoroughly through the project|
+|Use of style checkers | 3 |[link](https://github.com/TejasPrabhu/Job-Analyzer/tree/main/.github/workflows) |
 |Use of code formatters. |3 |  |
 |Use of syntax checkers. |3 | |
-|Use of code coverage |0|  |
-|Other automated analysis tools| 0 |  |
-|Test cases exist|3| |
-|Test cases are routinely executed| 3 | |
-|The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up| 2 | |
-|Issues are discussed before they are closed| 0 | |
-|Chat channel: exists| 0 | |
-|Test cases: a large proportion of the issues related to handling failing cases.|3| |
-|Evidence that the whole team is using the same tools: everyone can get to all tools and files| 3 | |
-|Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)| 3 | |
+|Use of code coverage |3| [link](https://app.codecov.io/gh/TejasPrabhu/Job-Analyzer) |
+|Other automated analysis tools| 2 |  |
+|Test cases exist|3| [tests](https://github.com/TejasPrabhu/Job-Analyzer/tree/main/test)|
+|Test cases are routinely executed| 3 | [link](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/.github/workflows/tests.yaml)|
+|The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up| 3 |[link](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/CONTRIBUTING.md) |
+|Issues are discussed before they are closed| 3 | [link](https://github.com/TejasPrabhu/Job-Analyzer/issues)|
+|Chat channel: exists| 3 | |
+|Test cases: a large proportion of the issues related to handling failing cases.|3| [link](https://github.com/TejasPrabhu/Job-Analyzer/issues)|
+|Evidence that the whole team is using the same tools: everyone can get to all tools and files| 3 |[link](https://github.com/TejasPrabhu/Job-Analyzer/tree/main/.vscode) |
+|Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)| 3 | [link](https://github.com/TejasPrabhu/Job-Analyzer/graphs/contributors)|
 |Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)| N/A | |
-|Evidence that the members of the team are working across multiple places in the code base| 3 | |
-|Short release cycles |  3 | |
+|Evidence that the members of the team are working across multiple places in the code base| 3 |[link](https://github.com/TejasPrabhu/Job-Analyzer/graphs/contributors) |
+|Short release cycles |  3 | (hard to see in short projects) project members are committing often enough so that everyone can get your work|
 |Does your website and documentation provide a clear, high-level overview of your software?| | |
 |Does your website and documentation clearly describe the type of user who should use your software?| | |
 |Do you publish case studies to show how your software has been used by yourself and others?| | |
