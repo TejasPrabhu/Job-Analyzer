@@ -53,29 +53,29 @@
 |Do you publish your release history e.g. release data, version numbers, key features of each release etc. on your web site or in your documentation?| 2| |
 |Does your software describe how a user can get help with using your software?|3 | https://github.com/TejasPrabhu/Job-Analyzer/blame/main/README.md|
 |Does your website and documentation describe what support, if any, you provide to users and developers?|2 | |
-|Does your project have an e-mail address or forum that is solely for supporting users?| | |
-|Are e-mails to your support e-mail address received by more than one person?| | |
-|Does your project have a ticketing system to manage bug reports and feature requests?| | |
-|Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?| | |
-|Is your software’s architecture and design modular?| | |
-|Does your software use an accepted coding standard or convention?| | |
-|Does your software allow data to be imported and exported using open data formats?| | |
-|Does your software allow communications using open communications protocols?| | |
-|Is your software cross-platform compatible?| | |
-|Does your software adhere to appropriate accessibility conventions or standards?| | |
-|Does your documentation adhere to appropriate accessibility conventions or standards?| | |
-|Is your source code stored in a repository under revision control?| | |
-|Is each source code release a snapshot of the repository?| | |
-|Are releases tagged in the repository?| | |
-|Is there a branch of the repository that is always stable?| | |
-|Do you back-up your repository?| | |
-|Do you provide publicly-available instructions for building your software from the source code?| | |
-|Can you build, or package, your software using an automated tool?| | |
-|Do you provide publicly-available instructions for deploying your software?| | |
-|Does your documentation list all third-party dependencies?| | |
-|Does your documentation list the version number for all third-party dependencies?| | |
-|Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional?| | |
-|Can you download dependencies using a dependency management tool or package manager?| | | |
+|Does your project have an e-mail address or forum that is solely for supporting users?|1 | |
+|Are e-mails to your support e-mail address received by more than one person?|1 | |
+|Does your project have a ticketing system to manage bug reports and feature requests?|3 |https://github.com/TejasPrabhu/Job-Analyzer/issues https://github.com/TejasPrabhu/Job-Analyzer/projects?query=is%3Aopen |
+|Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?|3 | |
+|Is your software’s architecture and design modular?| 2| |
+|Does your software use an accepted coding standard or convention?| 3| |
+|Does your software allow data to be imported and exported using open data formats?| 1| |
+|Does your software allow communications using open communications protocols?|3 | |
+|Is your software cross-platform compatible?| 3| python is required|
+|Does your software adhere to appropriate accessibility conventions or standards?|2 | |
+|Does your documentation adhere to appropriate accessibility conventions or standards?|1 | |
+|Is your source code stored in a repository under revision control?|3 | |
+|Is each source code release a snapshot of the repository?|1 | |
+|Are releases tagged in the repository?| 3| |
+|Is there a branch of the repository that is always stable?| 3|main branch is stable |
+|Do you back-up your repository?| 1|no |
+|Do you provide publicly-available instructions for building your software from the source code?|3 | Readme.md|
+|Can you build, or package, your software using an automated tool?|3 |pip can be used |
+|Do you provide publicly-available instructions for deploying your software?| 3| Readme.md|
+|Does your documentation list all third-party dependencies?|3 |requirements.txt |
+|Does your documentation list the version number for all third-party dependencies?|3 | requirements.txt|
+|Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional?|3 |mentioned in requirements.txt |
+|Can you download dependencies using a dependency management tool or package manager?|3 |pip install -r requirements.txt |
 |Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful?| | |
 |Do you have an automated test suite for your software?| | |
 |Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?| | |
