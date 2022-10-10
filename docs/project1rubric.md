@@ -76,31 +76,31 @@
 |Does your documentation list the version number for all third-party dependencies?|3 | requirements.txt|
 |Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional?|3 |mentioned in requirements.txt |
 |Can you download dependencies using a dependency management tool or package manager?|3 |pip install -r requirements.txt |
-|Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful?| | |
-|Do you have an automated test suite for your software?| | |
-|Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?| | |
-|Do you use continuous integration, automatically running tests whenever changes are made to your source code?| | |
-|Are your test results publicly visible?| | |
-|Are all manually-run tests documented?| | |
-|Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software?| | |
-|Does your website state how many projects and users are associated with your project?| | |
-|Do you provide success stories on your website?| | |
-|Do you list your important partners and collaborators on your website?| | |
-|Do you list your project's publications on your website or link to a resource where these are available?| | |
-|Do you list third-party publications that refer to your software on your website or link to a resource where these are available?| | |
-|Can users subscribe to notifications to changes to your source code repository?| | |
-|If your software is developed as an open source project (and, not just a project developing open source software), do you have a governance model?| | |
-|Do you accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project?| | |
-|Do you have a contributions policy?| | |
-|Is your contributions' policy publicly available?| | |
-|Do contributors keep the copyright/IP of their contributions?| | |
-|Does your website and documentation clearly state the copyright owners of your software and documentation?| | |
-|Does each of your source code files include a copyright statement?| | |
-|Does your website and documentation clearly state the licence of your software?| | |
-|Is your software released under an open source licence?| | |
-|Is your software released under an OSI-approved open-source licence?| | |
-|Does each of your source code files include a licence header?| | |
-|Do you have a recommended citation for your software?| | |
-|Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?| | |
-|Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed?| | |
-|Do you make timely announcements of the deprecation of components, APIs, etc.?| | |
+|Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful?|3 | |
+|Do you have an automated test suite for your software?|3 | |
+|Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?| 1| |
+|Do you use continuous integration, automatically running tests whenever changes are made to your source code?| 3| |
+|Are your test results publicly visible?| 3| |
+|Are all manually-run tests documented?|1 | |
+|Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software?|1 | |
+|Does your website state how many projects and users are associated with your project?|3 | |
+|Do you provide success stories on your website?| 1| |
+|Do you list your important partners and collaborators on your website?| 3| |
+|Do you list your project's publications on your website or link to a resource where these are available?|1 | |
+|Do you list third-party publications that refer to your software on your website or link to a resource where these are available?| 1| |
+|Can users subscribe to notifications to changes to your source code repository?|3 | |
+|If your software is developed as an open source project (and, not just a project developing open source software), do you have a governance model?| 2| |
+|Do you accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project?|3 | |
+|Do you have a contributions policy?| 3| |
+|Is your contributions' policy publicly available?|3 | |
+|Do contributors keep the copyright/IP of their contributions?|2| |
+|Does your website and documentation clearly state the copyright owners of your software and documentation?|3 | |
+|Does each of your source code files include a copyright statement?| 3| |
+|Does your website and documentation clearly state the licence of your software?|3 | |
+|Is your software released under an open source licence?| 3| MIT License|
+|Is your software released under an OSI-approved open-source licence?|3 | MTI License|
+|Does each of your source code files include a licence header?| 3| |
+|Do you have a recommended citation for your software?|3 |citation.md |
+|Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?| 3| readme.md|
+|Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed?|n/a | |
+|Do you make timely announcements of the deprecation of components, APIs, etc.?| 1| |
