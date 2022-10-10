@@ -1,22 +1,28 @@
 """
 The scraper module holds class JobData and functions that scrape the job postings.
 """
-import os
-import sys
-import time
-import traceback
+"""Copyright 2022 Tejas Prabhu
 
-import pandas as pd
-from selenium import webdriver
-from selenium.common import TimeoutException
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.utils import ChromeType
-from src.app import add, mongodb_client
+Use of this source code is governed by an MIT-style
+license that can be found in the LICENSE file or at
+https://opensource.org/licenses/MIT.
+"""
+
+import os  # noqa: E402
+import sys  # noqa: E402
+import time  # noqa: E402
+import traceback  # noqa: E402
+import pandas as pd  # noqa: E402
+from selenium import webdriver  # noqa: E402
+from selenium.common import TimeoutException  # noqa: E402
+from selenium.webdriver.chrome.options import Options  # noqa: E402
+from selenium.webdriver.chrome.service import Service  # noqa: E402
+from selenium.webdriver.common.by import By  # noqa: E402
+from selenium.webdriver.support import expected_conditions as EC  # noqa: E402
+from selenium.webdriver.support.wait import WebDriverWait  # noqa: E402
+from webdriver_manager.chrome import ChromeDriverManager  # noqa: E402
+from webdriver_manager.core.utils import ChromeType  # noqa: E402
+from src.app import add, mongodb_client  # noqa: E402
 db = mongodb_client.db
 
 ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
