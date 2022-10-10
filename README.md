@@ -200,6 +200,18 @@ Answer few questions.
   4.	**Notification System** – In phase 2, as every user has a unique profile associated with them, a notification system can be set up in order to notify the user of any new job updates.
 
   5.	**Chatbot Integration** – This is a feel-good feature that provides the user with an easy-to-interact chatbot that provides information and ways to access the features provided by JobCruncher.
+
+## Code Coverage
+
+[![codecov](https://codecov.io/gh/TejasPrabhu/Job-Analyzer/branch/main/graph/badge.svg)](https://codecov.io/gh/TejasPrabhu/Job-Analyzer)
+
+
+| Files | Coverage    |
+| :---:   | :---: |
+|src/scraper.py      |	61.34%  |
+|test/test_flask.py  |	100.00% |	
+|test/test_scraper.py|	100.00% |	
+|src/app.py          |	100.00% |
  
 ## Contributors
 Thanks goes to these wonderful people. 
