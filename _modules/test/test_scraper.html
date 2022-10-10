@@ -40,22 +40,37 @@
           <div class="body" role="main">
             
   <h1>Source code for test.test_scraper</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">itertools</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The test_scraper module holds testing functions.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;Copyright 2022 Tejas Prabhu</span>
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="sd">Use of this source code is governed by an MIT-style</span>
+<span class="sd">license that can be found in the LICENSE file or at</span>
+<span class="sd">https://opensource.org/licenses/MIT.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">src.scraper</span> <span class="kn">import</span> <span class="n">JobData</span><span class="p">,</span> <span class="n">ROOT_DIR</span>
+
+<span class="kn">import</span> <span class="nn">itertools</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span> <span class="nn">os</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span> <span class="nn">time</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">src.scraper</span> <span class="kn">import</span> <span class="n">JobData</span><span class="p">,</span> <span class="n">ROOT_DIR</span>  <span class="c1"># noqa: E402</span>
 
 
 <div class="viewcode-block" id="test_webdriver"><a class="viewcode-back" href="../../test.html#test.test_scraper.test_webdriver">[docs]</a><span class="k">def</span> <span class="nf">test_webdriver</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The function test_webdriver tests the Chrome Web Driver.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">job_obj</span> <span class="o">=</span> <span class="n">JobData</span><span class="p">()</span>
     <span class="n">job_obj</span><span class="o">.</span><span class="n">setup_webdriver</span><span class="p">()</span>
     <span class="n">job_obj</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span></div>
 
 
 <div class="viewcode-block" id="test_linkedin_url"><a class="viewcode-back" href="../../test.html#test.test_scraper.test_linkedin_url">[docs]</a><span class="k">def</span> <span class="nf">test_linkedin_url</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The function test_linkedin_url tests if the url for scraping created correctly.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">job_title_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Scientist&quot;</span><span class="p">]</span>
     <span class="n">job_location_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;California&quot;</span><span class="p">]</span>
     <span class="n">distance_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
@@ -79,12 +94,18 @@
 
 
 <div class="viewcode-block" id="test_scraper_zero_jobs"><a class="viewcode-back" href="../../test.html#test.test_scraper.test_scraper_zero_jobs">[docs]</a><span class="k">def</span> <span class="nf">test_scraper_zero_jobs</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The test_scraper_zero_jobs checks for number_jobs = 0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">number_jobs</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">job_obj</span> <span class="o">=</span> <span class="n">JobData</span><span class="p">(</span><span class="n">number_jobs</span><span class="o">=</span><span class="n">number_jobs</span><span class="p">)</span>
     <span class="n">job_obj</span><span class="o">.</span><span class="n">scrape_data</span><span class="p">(</span><span class="n">save_csv</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="test_update_attributes"><a class="viewcode-back" href="../../test.html#test.test_scraper.test_update_attributes">[docs]</a><span class="k">def</span> <span class="nf">test_update_attributes</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The test_update_attributes checks if the attributes are updated or not.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">job_title</span> <span class="o">=</span> <span class="s2">&quot;Software Engineer&quot;</span>
     <span class="n">job_location</span> <span class="o">=</span> <span class="s2">&quot;Raleigh&quot;</span>
     <span class="n">distance</span> <span class="o">=</span> <span class="mi">20</span>
@@ -103,6 +124,9 @@
 
 
 <div class="viewcode-block" id="test_extract_skill"><a class="viewcode-back" href="../../test.html#test.test_scraper.test_extract_skill">[docs]</a><span class="k">def</span> <span class="nf">test_extract_skill</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The test_extract_skill function checks if the skills are extracted properly from the job description.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">csv_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ROOT_DIR</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;linkedin_scraper.csv&#39;</span><span class="p">)</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
     <span class="n">jd</span> <span class="o">=</span> <span class="n">JobData</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
