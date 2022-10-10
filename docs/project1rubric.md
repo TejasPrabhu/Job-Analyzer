@@ -56,9 +56,9 @@
 |Does your project have an e-mail address or forum that is solely for supporting users?|1 | |
 |Are e-mails to your support e-mail address received by more than one person?|1 | |
 |Does your project have a ticketing system to manage bug reports and feature requests?|3 |https://github.com/TejasPrabhu/Job-Analyzer/issues https://github.com/TejasPrabhu/Job-Analyzer/projects?query=is%3Aopen |
-|Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?|3 | |
+|Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?|3 | https://github.com/TejasPrabhu/Job-Analyzer/issues https://github.com/TejasPrabhu/Job-Analyzer/projects?query=is%3Aopen|
 |Is your software’s architecture and design modular?| 2| |
-|Does your software use an accepted coding standard or convention?| 3| |
+|Does your software use an accepted coding standard or convention?| 3| https://github.com/TejasPrabhu/Job-Analyzer/blob/main/CODE_OF_CONDUCT.md https://github.com/TejasPrabhu/Job-Analyzer/blob/main/CONTRIBUTING.md |
 |Does your software allow data to be imported and exported using open data formats?| 1| |
 |Does your software allow communications using open communications protocols?|3 | |
 |Is your software cross-platform compatible?| 3| python is required|
@@ -66,41 +66,41 @@
 |Does your documentation adhere to appropriate accessibility conventions or standards?|1 | |
 |Is your source code stored in a repository under revision control?|3 | |
 |Is each source code release a snapshot of the repository?|1 | |
-|Are releases tagged in the repository?| 3| |
+|Are releases tagged in the repository?| 3| https://github.com/TejasPrabhu/Job-Analyzer/releases|
 |Is there a branch of the repository that is always stable?| 3|main branch is stable |
-|Do you back-up your repository?| 1|no |
-|Do you provide publicly-available instructions for building your software from the source code?|3 | Readme.md|
+|Do you back-up your repository?| 1| |
+|Do you provide publicly-available instructions for building your software from the source code?|3 | [Readme.md](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/README.md)|
 |Can you build, or package, your software using an automated tool?|3 |pip can be used |
-|Do you provide publicly-available instructions for deploying your software?| 3| Readme.md|
-|Does your documentation list all third-party dependencies?|3 |requirements.txt |
-|Does your documentation list the version number for all third-party dependencies?|3 | requirements.txt|
-|Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional?|3 |mentioned in requirements.txt |
+|Do you provide publicly-available instructions for deploying your software?| 3| [Readme.md](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/README.md)|
+|Does your documentation list all third-party dependencies?|3 |[requirements.txt](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/requirements.txt) |
+|Does your documentation list the version number for all third-party dependencies?|3 | [requirements.txt](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/requirements.txt)|
+|Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional?|3 |mentioned in [requirements.txt](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/requirements.txt) |
 |Can you download dependencies using a dependency management tool or package manager?|3 |pip install -r requirements.txt |
-|Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful?|3 | |
-|Do you have an automated test suite for your software?|3 | |
+|Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful?|3 |https://github.com/TejasPrabhu/Job-Analyzer/blob/main/.github/workflows/tests.yaml |
+|Do you have an automated test suite for your software?|3 | https://github.com/TejasPrabhu/Job-Analyzer/blob/main/.github/workflows/tests.yaml|
 |Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?| 1| |
-|Do you use continuous integration, automatically running tests whenever changes are made to your source code?| 3| |
-|Are your test results publicly visible?| 3| |
+|Do you use continuous integration, automatically running tests whenever changes are made to your source code?| 3| https://github.com/TejasPrabhu/Job-Analyzer/blob/main/.github/workflows/tests.yaml|
+|Are your test results publicly visible?| 3|https://github.com/TejasPrabhu/Job-Analyzer/actions |
 |Are all manually-run tests documented?|1 | |
 |Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software?|1 | |
-|Does your website state how many projects and users are associated with your project?|3 | |
+|Does your website state how many projects and users are associated with your project?|3 | https://github.com/TejasPrabhu/Job-Analyzer/actions|
 |Do you provide success stories on your website?| 1| |
-|Do you list your important partners and collaborators on your website?| 3| |
+|Do you list your important partners and collaborators on your website?| 3| https://github.com/TejasPrabhu/Job-Analyzer/actions|
 |Do you list your project's publications on your website or link to a resource where these are available?|1 | |
 |Do you list third-party publications that refer to your software on your website or link to a resource where these are available?| 1| |
-|Can users subscribe to notifications to changes to your source code repository?|3 | |
-|If your software is developed as an open source project (and, not just a project developing open source software), do you have a governance model?| 2| |
+|Can users subscribe to notifications to changes to your source code repository?|3 | Each contributor gets an email when any issues they are assigned gets an update.|
+|If your software is developed as an open source project (and, not just a project developing open source software), do you have a governance model?| 1| |
 |Do you accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project?|3 | |
-|Do you have a contributions policy?| 3| |
-|Is your contributions' policy publicly available?|3 | |
+|Do you have a contributions policy?| 3|https://github.com/TejasPrabhu/Job-Analyzer/blob/main/CONTRIBUTING.md |
+|Is your contributions' policy publicly available?|3 |https://github.com/TejasPrabhu/Job-Analyzer/blob/main/CONTRIBUTING.md |
 |Do contributors keep the copyright/IP of their contributions?|2| |
 |Does your website and documentation clearly state the copyright owners of your software and documentation?|3 | |
 |Does each of your source code files include a copyright statement?| 3| |
-|Does your website and documentation clearly state the licence of your software?|3 | |
-|Is your software released under an open source licence?| 3| MIT License|
-|Is your software released under an OSI-approved open-source licence?|3 | MTI License|
+|Does your website and documentation clearly state the licence of your software?|3 |https://github.com/TejasPrabhu/Job-Analyzer/blob/main/LICENSE |
+|Is your software released under an open source licence?| 3| [MIT License](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/LICENSE)|
+|Is your software released under an OSI-approved open-source licence?|3 |[ MIT License](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/LICENSE)|
 |Does each of your source code files include a licence header?| 3| |
-|Do you have a recommended citation for your software?|3 |citation.md |
-|Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?| 3| readme.md|
+|Do you have a recommended citation for your software?|3 |[citation.md](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/CITATION.md) |
+|Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?| 3| [readme.md](https://github.com/TejasPrabhu/Job-Analyzer/blob/main/README.md)|
 |Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed?|n/a | |
 |Do you make timely announcements of the deprecation of components, APIs, etc.?| 1| |
