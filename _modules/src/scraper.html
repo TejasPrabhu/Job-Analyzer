@@ -43,22 +43,28 @@
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">The scraper module holds class JobData and functions that scrape the job postings.</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="sd">&quot;&quot;&quot;Copyright 2022 Tejas Prabhu</span>
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
-<span class="kn">from</span> <span class="nn">selenium.common</span> <span class="kn">import</span> <span class="n">TimeoutException</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.service</span> <span class="kn">import</span> <span class="n">Service</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.support.wait</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
-<span class="kn">from</span> <span class="nn">webdriver_manager.chrome</span> <span class="kn">import</span> <span class="n">ChromeDriverManager</span>
-<span class="kn">from</span> <span class="nn">webdriver_manager.core.utils</span> <span class="kn">import</span> <span class="n">ChromeType</span>
-<span class="kn">from</span> <span class="nn">src.app</span> <span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">mongodb_client</span>
+<span class="sd">Use of this source code is governed by an MIT-style</span>
+<span class="sd">license that can be found in the LICENSE file or at</span>
+<span class="sd">https://opensource.org/licenses/MIT.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span> <span class="nn">sys</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span> <span class="nn">time</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span> <span class="nn">traceback</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">selenium.common</span> <span class="kn">import</span> <span class="n">TimeoutException</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.service</span> <span class="kn">import</span> <span class="n">Service</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support.wait</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">webdriver_manager.chrome</span> <span class="kn">import</span> <span class="n">ChromeDriverManager</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">webdriver_manager.core.utils</span> <span class="kn">import</span> <span class="n">ChromeType</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">src.app</span> <span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">mongodb_client</span>  <span class="c1"># noqa: E402</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">mongodb_client</span><span class="o">.</span><span class="n">db</span>
 
 <span class="n">ROOT_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s1">&#39;..&#39;</span><span class="p">))</span>

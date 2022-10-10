@@ -41,21 +41,19 @@
             
   <h1>Source code for src.app</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright 2022 Tejas Prabhu</span>
+<span class="sd">The module app holds the function related to flask app and database.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;Copyright 2022 Tejas Prabhu</span>
 
 <span class="sd">Use of this source code is governed by an MIT-style</span>
 <span class="sd">license that can be found in the LICENSE file or at</span>
 <span class="sd">https://opensource.org/licenses/MIT.</span>
 <span class="sd">&quot;&quot;&quot;</span>
-
-<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
-<span class="kn">from</span> <span class="nn">flask_pymongo</span> <span class="kn">import</span> <span class="n">PyMongo</span>
-<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">The module app holds the function related to flask app and database.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">flask_pymongo</span> <span class="kn">import</span> <span class="n">PyMongo</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span> <span class="nn">re</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># noqa: E402</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MONGO_URI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;mongodb://localhost:27017/job_analyzer&quot;</span>
