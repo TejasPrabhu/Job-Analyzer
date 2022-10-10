@@ -251,5 +251,5 @@ class JobData:
 
 if __name__ == '__main__':
     jd = JobData()
-    job_data = jd.scrape_data()
-    add(db, job_data)
+    jd.scrape_data()
+    add(db, jd.job_data)

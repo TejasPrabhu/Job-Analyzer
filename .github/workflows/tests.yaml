@@ -20,6 +20,10 @@ jobs:
           pip install -e .
       - name: Install Chrome browser
         run: sudo apt-get install -y chromium-browser
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.8.0
+        with:
+          mongodb-version: 6.0
       - name: Run flake8
         run: flake8 --max-line-length=120 --extend-ignore=E225
       - name: Run All tests and generate Report
