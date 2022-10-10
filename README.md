@@ -177,7 +177,11 @@ Answer few questions.
 * Setup and Connect mongoDB database and Run scraper.py to fetch job details
 
 * After running command 'flask run --debug', in src directory you are good to go
+  
+  ```
+    flask run --debug
 
+  ```
 # Tech Stack used for the development of this project
  
  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python" width="20" height="20"/> Python </br>
