@@ -11,7 +11,8 @@ def test_home_page():
 
     response = app.test_client().get('/')
     assert response.status_code == 200
-    assert b"Get Job Postings" in response.data
+    assert b"Welcome to JobCruncher!" in response.data
+    assert b"So why use JobCruncher instead?" in response.data
 
 
 def test_search_page():
@@ -56,6 +57,7 @@ def test_search_page_submit_zero_results():
         "skills": "vvvvvvvvv",
     })
     assert response.status_code == 200
+    assert b"Sorry, there are no current openings with given criteria"
 
 
 def test_add_db():
