@@ -222,6 +222,7 @@ class JobData:
 
         finally:
             self.driver.close()
+        return self.job_data
 
     def extract_skill(self):
         """

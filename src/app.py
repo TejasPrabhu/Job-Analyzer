@@ -40,7 +40,7 @@ def search():
         job_count = job_df.shape[0]
         if job_df.empty:
             job_count = 0
-            return render_template('no_jobs.html')
+            return render_template('no_jobs.html', job_count=job_count)
         job_df = job_df.drop('Job Description', axis=1)
         job_df = job_df.drop('_id', axis=1)
         job_df = job_df.drop('Industries', axis=1)
