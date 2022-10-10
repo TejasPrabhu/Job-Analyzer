@@ -148,20 +148,30 @@ Answer few questions.
 * Install it, you will be able to see it installed in applications after some time.
 
 
-### 4. MongoDB
+# Installing MongoDB
 
   
 
 * [Download the MongoDB MSI Installer Package](https://www.mongodb.com/try/download/community)
-
   
 
 *  Install MongoDB with the Installation Wizard and make sure you are logged in as a user with Admin privileges.
 
+
+# To get started with project
+
+* Install required libraries by 
   
+  ```
+    pip install -r requirements.txt
+  
+  ```
 
-* If not given any location, VS code will be installed in programs folder of C drive.
+* Setup flask with virtual environment and activate it [follow this link to setup flask](https://phoenixnap.com/kb/install-flask)
 
+* Setup and Connect mongoDB database and Run scraper.py to fetch job details
+
+* After running command 'flask run --debug', in src directory you are good to go
 
 # Tech Stack used for the development of this project
  
