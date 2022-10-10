@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+    background-size: cover;
+}
+
+h2{
+    text-align: center;
+    Font-family: "Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif";
+    margin-bottom: 4%;
+    margin-top: 6%;
+}
+
+h1{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4%;
+    Font-family: "Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif";
+    /* background-color: lightseagreen; */
+}
