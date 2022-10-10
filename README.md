@@ -122,7 +122,7 @@ The `docs` folder incorporates all necessary documents and documentation in our 
 
 
 ## Roadmap
-We have a lot planned for the future! Completed tasks and future enhancements can be found [here](https://github.com/users/kartikson1/projects/1/views/1)
+We have a lot planned for the future! Completed tasks and future enhancements can be found [here](https://github.com/users/TejasPrabhu/projects/1)
 ## Contributors
 Thanks goes to these wonderful people. 
 
