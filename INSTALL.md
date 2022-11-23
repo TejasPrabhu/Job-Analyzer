@@ -127,14 +127,18 @@ Answer few questions.
 
 ### 4. MongoDB
 
-  
+#### MAC
+##### Homebrew
 
+This is a package manager for MAC. It assists you in managing and installing other programs. Enter "/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" into the Google search bar to find Homebrew.
+
+#####  MongoDB Install
+
+Run the script below in the terminal to install and configure MongoDB. 
+`mongodb install brew`
+
+Run the script "mongo —version" to verify that MongoDB is installed.
+
+#### Windows
 * [Download the MongoDB MSI Installer Package](https://www.mongodb.com/try/download/community)
-
-  
-
 *  Install MongoDB with the Installation Wizard and make sure you are logged in as a user with Admin privileges.
-
-  
-
-* If not given any location, VS code will be installed in programs folder of C drive.
