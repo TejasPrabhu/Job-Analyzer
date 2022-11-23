@@ -22,7 +22,7 @@ from selenium.webdriver.support import expected_conditions as EC  # noqa: E402
 from selenium.webdriver.support.wait import WebDriverWait  # noqa: E402
 from webdriver_manager.chrome import ChromeDriverManager  # noqa: E402
 from webdriver_manager.core.utils import ChromeType  # noqa: E402
-from app import add, mongodb_client  # noqa: E402
+from src.app import add, mongodb_client  # noqa: E402
 db = mongodb_client.db
 
 ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
@@ -51,7 +51,7 @@ class JobData:
         """
         The function setup_webdriver sets the options of Chrome Driver and creates webdriver.Chrome object.
         """
-        # chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+        chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
         chrome_options = Options()
         options = [
@@ -66,8 +66,8 @@ class JobData:
         for option in options:
             chrome_options.add_argument(option)
 
-        # self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
-        self.driver = webdriver.Chrome(executable_path=r"/Users/subodhgujar/Downloads/chromedriver", 
+        self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+        #self.driver = webdriver.Chrome(executable_path=r"/Users/subodhgujar/Downloads/chromedriver", 
         options=chrome_options)
 
     def scroll_to_end(self):
