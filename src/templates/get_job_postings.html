@@ -1,40 +1,44 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% block title %} Get Job Postings {% endblock %}</h1>
+<!-- <div id="get_job_"> -->
 
-<form method="post">
-    <div class="form-group">
-        <label for="title">Job Title</label>
-        <input type="text" name="title" placeholder="Job Title" class="form-control"
-            value="{{ request.form['title'] }}"></input>
-    </div>
-    <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" name="location" placeholder="Raleigh" class="form-control"
-            value="{{ request.form['location'] }}"></input>
-    </div>
-    <div class="form-group">
-        <label for="companyName">Company Name</label>
-        <input type="text" name="companyName" placeholder="" class="form-control"
-            value="{{ request.form['companyName'] }}"></input>
-    </div>
-    <div class="form-group">
-        <label for="skills">Technical skills</label>
-        <input type="text" name="skills" placeholder="" class="form-control"
-            value="{{ request.form['skills'] }}"></input>
-    </div>
-    <div class="form-group">
-        <label for="type">Job Type</label>
-        <select name="type" id="type">
-            <option value=''></option>
-            <option value="Internship">Internship</option>
-            <option value="Full-Time">Full-Time</option>
-            <option value="Part-Time">Part-Time</option>
-            <option value="Contract">Contract</option>
-        </select>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
-{% endblock %}
+    <h1 id="getJobPostingsTitle">{% block title %} Get Job Postings {% endblock %}</h1>
+    
+    <form method="post">
+        <div class="form-group jobFormDiv">
+            <label for="title" class="jobFormTitle">Job Title</label>
+            <input type="text" name="title" placeholder="eg. Software Developer" class="form-control jobFormInput"
+                value="{{ request.form['title'] }}"></input>
+        </div>
+        <div class="form-group jobFormDiv">
+            <label for="location" class="jobFormTitle">Location</label>
+            <input type="text" name="location" placeholder="eg. Raleigh" class="form-control jobFormInput"
+                value="{{ request.form['location'] }}"></input>
+        </div>
+        <div class="form-group jobFormDiv">
+            <label for="companyName" class="jobFormTitle">Company Name</label>
+            <input type="text" name="companyName" placeholder="eg. Twitter" class="form-control jobFormInput"
+                value="{{ request.form['companyName'] }}"></input>
+        </div>
+        <div class="form-group jobFormDiv">
+            <label for="skills" class="jobFormTitle">Technical skills</label>
+            <input type="text" name="skills" placeholder="eg. HTML" class="form-control jobFormInput"
+                value="{{ request.form['skills'] }}"></input>
+        </div>
+        <div class="form-group jobFormDiv">
+            <label for="jobtype" class="jobFormTitle">Job Type</label>
+            <br>
+            <select name="jobtype" id="jobtype">
+                <option value='--Select Type--'></option>
+                <option value="Internship">Internship</option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+                <option value="Contract">Contract</option>
+            </select>
+        <div class="form-group jobFormSubmitDiv">
+            <button type="submit" id="jobFormSubmitButton">Submit</button>
+        </div>
+    </form>
+</div>
+<!-- {% endblock %} -->
