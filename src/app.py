@@ -9,19 +9,40 @@ license that can be found in the LICENSE file or at
 https://opensource.org/licenses/MIT.
 """
 
-from flask import Flask, render_template, request  # noqa: E402
+from flask import Flask, render_template, request, session, redirect  # noqa: E402
 from flask_pymongo import PyMongo  # noqa: E402
 from pandas import DataFrame  # noqa: E402
+from functools import wraps
 import re  # noqa: E402
 import numpy as np  # noqa: E402
+import pymongo
 
 app = Flask(__name__)
+app.secret_key = b'\xe1\x04B6\x89\xf7\xa0\xab\xd1L\x0e\xfb\x1c\x08"\xf6'
+client = pymongo.MongoClient('localhost', 27017)
+db = client.user_system
+
 url = "mongodb+srv://subodh:se2022@cluster0.fcrvo9n.mongodb.net/job_analyzer?retryWrites=true&w=majority"
 app.config["MONGO_URI"] = url
 mongodb_client = PyMongo(app)
-db = mongodb_client.db
+# db = mongodb_client.db
+
+
+def login_required(f):
+
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if 'logged_in' in session:
+            return f(*args, **kwargs)
+        else:
+            return redirect('/')
+
+    return wrap
+
 
 from src.User import routes
+
+
 @app.route('/')
 def index():
     """

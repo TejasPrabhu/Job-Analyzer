@@ -5,10 +5,9 @@ from flask import Flask, render_template
 from src.User.models import User
 
 
-@app.route('/user/signup', methods=['GET', 'POST'])
+@app.route('/user/signup', methods=['POST'])
 def signup():
-    return render_template('signup.html')
-    # return User().signup()
+    return User().signup()
 
 
 @app.route('/user/logout')
