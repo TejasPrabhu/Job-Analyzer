@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+h1#getJobPostingsTitle{
+    font-family: 'Calistoga', cursive;
+    color: antiquewhite;
+    margin-top: 18px;
+    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 3px lightseagreen;
+}
+
+div.jobFormDiv{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 30px;
+}
+
+input.jobFormInput{
+    padding: 15px;
+}
+
+select#jobtype{
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
+    height: 38px;
+}
+
+select#jobtype:enabled{
+    outline-color: #007bff;
+}
+
+div.jobFormSubmitDiv{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+button#jobFormSubmitButton{
+    font-size: 25px;
+    font-family: 'Calistoga', cursive;
+    border-radius: 30px;
+    width: 135px;
+    height: 45px;
+    border-width: 4px;
+    border-color: antiquewhite;
+    color: antiquewhite;
+    background-color: inherit;
+}
+
+button#jobFormSubmitButton:hover{
+    color: orange;
+    background-color: whitesmoke;
+    border-color: antiquewhite;
+}
+
+label.jobFormTitle{
+    color: antiquewhite;
+    font-size: 18px;
+}
