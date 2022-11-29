@@ -1,3 +1,4 @@
+
 """
 The module app holds the function related to flask app and database.
 """
@@ -7,18 +8,20 @@ Use of this source code is governed by an MIT-style
 license that can be found in the LICENSE file or at
 https://opensource.org/licenses/MIT.
 """
+
 from flask import Flask, render_template, request  # noqa: E402
 from flask_pymongo import PyMongo  # noqa: E402
 from pandas import DataFrame  # noqa: E402
 import re  # noqa: E402
 import numpy as np  # noqa: E402
+
 app = Flask(__name__)
 url = "mongodb+srv://subodh:se2022@cluster0.fcrvo9n.mongodb.net/job_analyzer?retryWrites=true&w=majority"
 app.config["MONGO_URI"] = url
 mongodb_client = PyMongo(app)
 db = mongodb_client.db
 
-
+from src.User import routes
 @app.route('/')
 def index():
     """

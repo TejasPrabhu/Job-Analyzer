@@ -38,7 +38,7 @@ class User:
 
         user = db.users.find_one({'email': request.form.get('email')})
 
-        if user and pbkdf2_sha256.verify(request.form.get('password'),user['password']):
+        if user and pbkdf2_sha256.verify(request.form.get('password'), user['password']):
             return self.startSession(user)
 
         return (jsonify({'error': 'Invalid login credentials'}), 401)

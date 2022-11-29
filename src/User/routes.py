@@ -1,15 +1,19 @@
+import sys
+# sys.path.append('../src')
 from src.app import app
-from src import User
+from flask import Flask, render_template
+from src.User.models import User
 
 
-@app.route('/user/signup', methods=['POST'])
+@app.route('/user/signup', methods=['GET', 'POST'])
 def signup():
-    return User().signup()
+    return render_template('signup.html')
+    # return User().signup()
 
 
-@app.route('/user/signout')
+@app.route('/user/logout')
 def signout():
-    return User().signout()
+    return User().logout()
 
 
 @app.route('/user/login', methods=['POST'])
