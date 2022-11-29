@@ -27,6 +27,14 @@ def index():
     """
     return render_template('index.html')
 
+@app.route('/login')
+def login():
+    """
+    Route: '/login'
+    The index function renders the login.html page.
+    """
+    return render_template('login.html')
+
 
 @app.route('/search', methods=('GET', 'POST'))
 def search():
