@@ -30,14 +30,19 @@ def index():
 
 @app.route('/search', methods=('GET', 'POST'))
 def search():
+    print(f"into search function ${request.method}")
+    print(request)
     """
     Route: '/search'
     The search function renders the get_job_postings.html.
     Upon submission fetches the job postings from the database and renders job_posting.html
     """
     if request.method == 'POST':
+        print("into req post")
         job_df = read_from_db(request, db)
+        print(job_df)
         job_count = job_df.shape[0]
+        print(job_count)
         if job_df.empty:
             job_count = 0
             return render_template('no_jobs.html', job_count=job_count)
