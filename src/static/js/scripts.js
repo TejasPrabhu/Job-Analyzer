@@ -1,4 +1,4 @@
-$("form[name=signup_form").submit(function(e) {
+$("form[name=signup_form").on(function(e) {
 
     var $form = $(this);
     var $error = $form.find(".error");
@@ -10,7 +10,8 @@ $("form[name=signup_form").submit(function(e) {
       data: data,
       dataType: "json",
       success: function(resp) {
-        window.location.href = "/dashboard/";
+        console.log(resp)
+        window.location.href = "/";
       },
       error: function(resp) {
         $error.text(resp.responseJSON.error).removeClass("error--hidden");
@@ -20,7 +21,7 @@ $("form[name=signup_form").submit(function(e) {
     e.preventDefault();
   });
   
-  $("form[name=login_form").submit(function(e) {
+  $("form[name=login_form").on(function(e) {
   
     var $form = $(this);
     var $error = $form.find(".error");
