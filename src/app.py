@@ -43,13 +43,21 @@ def login_required(f):
 from src.User import routes
 
 
-@app.route('/test')
+@app.route('/signup')
 def sgup():
     """
     Route: '/'
     The index function renders the index.html page.
     """
     return render_template('signup.html')
+
+@app.route('/login')
+def lgin():
+    """
+    Route: '/'
+    The login function renders login.html page.
+    """
+    return render_template('login.html')
 
 
 @app.route('/')
