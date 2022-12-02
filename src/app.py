@@ -13,10 +13,9 @@ from pandas import DataFrame  # noqa: E402
 import re  # noqa: E402
 import numpy as np  # noqa: E402
 app = Flask(__name__)
-connection = "mongodb+srv://subodh:se2022@cluster0.fcrvo9n.mongodb.net/job_analyzer"
-params = "tlsAllowInvalidCertificates=true&retryWrites=true&w=majority"
-uri = connection + params
-app.config["MONGO_URI"] = uri
+mongo_conn = "mongodb+srv://subodh:se2022@cluster0.fcrvo9n.mongodb.net/job_analyzer"
+mongo_params = "?tlsAllowInvalidCertificates=true&retryWrites=true&w=majority"
+app.config["MONGO_URI"] = mongo_conn + mongo_params
 mongodb_client = PyMongo(app)
 db = mongodb_client.db
 

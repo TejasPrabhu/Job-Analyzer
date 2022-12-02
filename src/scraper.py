@@ -2,7 +2,6 @@
 The scraper module holds class JobData and functions that scrape the job postings.
 """
 """Copyright 2022 Tejas Prabhu
-
 Use of this source code is governed by an MIT-style
 license that can be found in the LICENSE file or at
 https://opensource.org/licenses/MIT.
@@ -67,8 +66,8 @@ class JobData:
             chrome_options.add_argument(option)
 
         self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
-        #self.driver = webdriver.Chrome(executable_path=r"/Users/subodhgujar/Downloads/chromedriver", 
-        options=chrome_options)
+        # self.driver = webdriver.Chrome(executable_path=r"/Users/subodhgujar/Downloads/chromedriver",
+        # options=chrome_options)
 
     def scroll_to_end(self):
         """
@@ -89,7 +88,6 @@ class JobData:
     def scrape_job_details(self, df, job):
         """
         The function scrape_job_details gets the detail of a job and appends it to the DataFrame passed.
-
         :param df: DataFrame to add job details to.
         :param job: Fetch details of this job.
         """
@@ -209,7 +207,6 @@ class JobData:
     def scrape_data(self, save_csv=True):
         """
         The scrape_data runs the entire scraper and saves the data to a csv if save_csv=True.
-
         :param save_csv: True or False
         """
         url = self.get_linkedin_url()
