@@ -15,12 +15,9 @@ import pandas as pd  # noqa: E402
 from selenium import webdriver  # noqa: E402
 from selenium.common import TimeoutException  # noqa: E402
 from selenium.webdriver.chrome.options import Options  # noqa: E402
-from selenium.webdriver.chrome.service import Service  # noqa: E402
 from selenium.webdriver.common.by import By  # noqa: E402
 from selenium.webdriver.support import expected_conditions as EC  # noqa: E402
 from selenium.webdriver.support.wait import WebDriverWait  # noqa: E402
-from webdriver_manager.chrome import ChromeDriverManager  # noqa: E402
-from webdriver_manager.core.utils import ChromeType  # noqa: E402
 from src.app import add, mongodb_client  # noqa: E402
 db = mongodb_client.db
 
