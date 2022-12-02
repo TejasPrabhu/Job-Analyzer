@@ -68,7 +68,7 @@ class JobData:
 
         self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
         #self.driver = webdriver.Chrome(executable_path=r"/Users/subodhgujar/Downloads/chromedriver", 
-        options=chrome_options)
+        #options=chrome_options)
 
     def scroll_to_end(self):
         """
