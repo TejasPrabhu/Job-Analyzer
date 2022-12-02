@@ -51,7 +51,7 @@ class JobData:
         """
         The function setup_webdriver sets the options of Chrome Driver and creates webdriver.Chrome object.
         """
-        chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+        # chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
         chrome_options = Options()
         options = [
@@ -67,8 +67,10 @@ class JobData:
             chrome_options.add_argument(option)
 
         # self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
-        self.driver = webdriver.Chrome(executable_path=r"E:\Programming\NCSU Programs\SE\Project2\Job-Analyzer\webdriver\chromedriver.exe", 
-        options=chrome_options)
+        driver_path = r"../webdriver/chromedriver"
+        if os.name != "posix":
+            driver_path = driver_path + ".exe"
+        self.driver = webdriver.Chrome(executable_path=driver_path, options=chrome_options)
 
     def scroll_to_end(self):
         """
