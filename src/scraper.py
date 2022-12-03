@@ -22,9 +22,8 @@ from selenium.webdriver.support import expected_conditions as EC  # noqa: E402
 from selenium.webdriver.support.wait import WebDriverWait  # noqa: E402
 from webdriver_manager.chrome import ChromeDriverManager  # noqa: E402
 from webdriver_manager.core.utils import ChromeType  # noqa: E402
-from src.app import add, mongodb_client  # noqa: E402
-from src import app
-db = mongodb_client.db
+from src.app import add, db  # noqa: E402
+# db = mongodb_client.db
 
 ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
 

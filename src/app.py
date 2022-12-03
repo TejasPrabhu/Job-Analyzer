@@ -19,13 +19,13 @@ import pymongo
 
 app = Flask(__name__)
 app.secret_key = b'\xe1\x04B6\x89\xf7\xa0\xab\xd1L\x0e\xfb\x1c\x08"\xf6'
-client = pymongo.MongoClient('localhost', 27017)
-db = client.user_system
+# client = pymongo.MongoClient('localhost', 27017)
+# db = client.user_system
 
 url = "mongodb+srv://subodh:se2022@cluster0.fcrvo9n.mongodb.net/job_analyzer?retryWrites=true&w=majority"
 app.config["MONGO_URI"] = url
 mongodb_client = PyMongo(app)
-# db = mongodb_client.db
+db = mongodb_client.db
 
 
 def login_required(f):
