@@ -1,6 +1,6 @@
 from flask import jsonify, request, session, redirect, render_template
 from passlib.hash import pbkdf2_sha256
-from src.app import db
+from src.app import db, mongodb_client
 import uuid
 
 
@@ -44,3 +44,10 @@ class User:
     def showProfile(self):
         user = session['user']
         return render_template('user_profile.html', user=user)
+
+    def saveResume(self):
+        if 'resume_file' in request.files:
+            resume = request.files['resume_file']
+            mongodb_client.save_file(resume.filename, resume)
+            mongodb_client.db.users.insert({'email': request.form.get('email'), 'resume_filename': resume.filename})
+        return render_template('user_profile.html')

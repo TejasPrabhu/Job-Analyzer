@@ -1,7 +1,7 @@
 import sys
 # sys.path.append('../src')
-from src.app import app
-from flask import Flask, render_template
+from src.app import app, mongodb_client
+from flask import Flask, render_template, request
 from src.User.models import User
 
 
@@ -23,3 +23,7 @@ def login():
 @app.route('/user/profile', methods=['GET'])
 def showUserProfile():
     return User().showProfile()
+
+@app.route('/user/saveResume', methods=['POST'])
+def saveResume():
+    return User().saveResume()
