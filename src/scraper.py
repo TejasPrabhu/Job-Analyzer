@@ -17,11 +17,11 @@ from selenium.common import TimeoutException  # noqa: E402
 from selenium.webdriver.chrome.options import Options  # noqa: E402
 from selenium.webdriver.common.by import By  # noqa: E402
 from selenium.webdriver.chrome.service import Service  # noqa: E402
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.chrome import ChromeDriverManager  # noqa: E402
 from selenium.webdriver.support import expected_conditions as EC  # noqa: E402
 from selenium.webdriver.support.wait import WebDriverWait  # noqa: E402
 from src.app import add, mongodb_client  # noqa: E402
-from webdriver_manager.core.utils import ChromeType
+from webdriver_manager.core.utils import ChromeType  # noqa: E402
 db = mongodb_client.db
 
 ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
