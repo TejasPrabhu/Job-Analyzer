@@ -21,6 +21,12 @@ def loginUser():
 def showUserProfile():
     return User().showProfile()
 
+
 @app.route('/user/saveResume', methods=['POST'])
 def saveResume():
     return User().saveResume()
+
+
+@app.route('/healthcheck', methods=['GET'])
+def healthCheck():
+    return "Flask is up and running"
