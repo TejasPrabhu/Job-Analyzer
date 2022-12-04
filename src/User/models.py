@@ -18,9 +18,7 @@ class User:
             '_id': uuid.uuid4().hex,
             'name': request.form.get('name'),
             'email': request.form.get('email'),
-            'password': request.form.get('password'),
-            }
-        
+            'password': request.form.get('password')}
         user['password'] = pbkdf2_sha256.hash(user['password'])
         if db.users.find_one({'email': user['email']}):
             return (jsonify({'error': 'Email address already in use'}),

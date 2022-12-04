@@ -1,7 +1,4 @@
-import sys
-# sys.path.append('../src')
-from src.app import app, mongodb_client
-from flask import Flask, render_template, request
+from src.app import app
 from src.User.models import User
 
 
