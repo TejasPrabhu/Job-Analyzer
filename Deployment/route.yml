@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: job-analyzer-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+spec:
+  rules:
+    - host: job-analyzer.se22.com/
+      http:
+        paths:
+        backend:
+          serviceName: job-analyzer-service
+          servicePort: http
