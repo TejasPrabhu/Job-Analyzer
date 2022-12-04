@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: job-analyzer-deployment
+spec:
+  selector:
+    matchLabels:
+      app: job-analyzer
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: job-analyzer
+    spec:
+      containers:
+        - name: job-analyzer
+          image: job-analyzer
+          ports:
+            - containerPort: 5000
