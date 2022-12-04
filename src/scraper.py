@@ -74,7 +74,6 @@ class JobData:
         for option in options:
             chrome_options.add_argument(option)
 
-
         # self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
         driver_path = r"./webdriver/chromedriver"
         if os.name != "posix":
@@ -265,4 +264,4 @@ if __name__ == '__main__':
     jd = JobData()
     jd.scrape_data()
     add(db, jd.job_data)
-
+    
