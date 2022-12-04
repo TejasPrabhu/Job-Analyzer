@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="welcomeText">{% block title %} Welcome to JobCruncher! {% endblock %}</h1>
+<div class="intro justify-content-center" id="intro">
+<p>
+    Juggling multiple assignments, quizzes, projects, presentations, and clutching the deadlines every week?
+    Feel like you have no time to watch your favorite series or sports team play let alone search for job posting
+    on a day-to-day basis? Here comes JobCruncher.
+    JobCruncher is an online job scraping and analysis tool that provides the user with the ability to filter jobs
+    posted on Linkedin based on the users interest. LinkedIn is an employment-oriented online service that is a
+    platform primarily used for professional networking and career development. This allows job seekers to post
+    their CVs and employers to post jobs, hence a perfect site to scrap the job details from.
+    So, leave the tedious and monotonous task of looking up the job postings to our JobCruncher that not only
+    provides the jobs posted every day but helps to filter out the results based on your liking.
+</p>
+</div>
+
+<div class="justify-content-center" style="display: flex; justify-content: center;">
+
+    <iframe src="https://giphy.com/embed/k87ZOU3yCuGHVy42Bx" width="680" height="370" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dreamworks-rise-of-the-guardians-dreamworks-animation-sandman-k87ZOU3yCuGHVy42Bx"></a></p>
+</div>
+
+<div class="why justify-content-center">
+    <h2 id="whyQuestion" class="why">So why use JobCruncher instead?</h2>
+    <p id="whyAnswer">
+        Unlike many other job portals, JobCruncher is a simple, lightweight, online tool that helps users
+        get clear information about the jobs posted on LinkedIn and further help the user finetune the results.
+        Further, it helps to provide the user insights about the job postings and as the scraper is executed
+        every day, the user is always provided with the most recent job postings.
+    </p>
+</div>
+
+{% endblock %}

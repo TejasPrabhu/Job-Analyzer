@@ -1,5 +1,74 @@
 ,Job Title,Company Name,Location,Date Posted,Total Applicants,Job Description,Job Link,Seniority level,Employment type,Job function,Industries,skills
-0,"Software Engineer, New Grad",IXL Learning,"Raleigh, NC",1 week ago,Over 200 applicants,"IXL Learning, a leading edtech company with products used by 13 million students worldwide, is seeking new graduates who have a passion for technology and education. You will dive into our code base and immediately contribute to our three extremely impactful educational products and build new, innovative products. You can fine-tune your existing skills and learn new ones as you work on one of our many teams. You’ll be able to work with our Core Technology team in back-end engineering, Front-end group using cutting-edge technologies like React, Mobile team in implementing iOS and Android apps, or our Full-stack teams who seek engineers interested in doing it all.
+0,Jr. Software Engineer (Hybrid),Sunbird Software,"Raleigh, NC",3 days ago,Be among the first 25 applicants,"Do you want to work with a leading global software company in the data center industry experiencing double digit growth in each of the last 5 years?
+
+Do you want to represent a modern data center software product that often beats offers from larger multi-billion dollar companies?
+
+Do you want to represent a product that garners praise, kudos, and high marks from customers and industry analysts?
+
+Do you want to work in an open office space and beat your boss in ping-pong and foosball?
+
+Do you want to build a strong career foundation with a company that continues to grow and expand?
+
+Are you competitive and want to win?
+
+If yes, come join us!
+
+WHY SUNBIRD?
+
+We are all about delighting our clients and live/breathe the end client/user experience
+We stock the office with soda, snacks, coffee, and tea for you to refuel throughout the day
+We have amazing PTO Policy that allows you to take care of yourself and your family
+We offer medical, dental, vision and life insurance to eligible employees
+We believe in collaboration, teamwork, creativity and taking initiative
+
+Interested? Read on for additional details about this opportunity to join our amazing team!
+
+Position Summary
+
+Sunbird (www.sunbirddcim.com), an established leader in Data Center Infrastructure Management, is looking for a Junior Ruby or Perl Software Development Engineer to join our development team. Our award-winning web-based solutions help our customers understand and manage energy consumption, environmental conditions and assets in their facilities.
+
+Environment: Ruby, Perl, Shell, Linux, VMWare, AWS, PostgreSQL, Jenkins, and Github
+
+Duties And Responsibilities
+
+The ideal candidate will be a Perl or Ruby software developer who enjoys automating server configurations, deployments, and other IT processes. The key responsibilities are:
+
+Be an awesome Perl or Ruby developer (If this is you, stop here and apply).
+
+As part of a team, develop Ruby, Perl and\or Shell scripts that allow users to easily deploy and configure our solution, run backups estores, provide high availability, and perform other administrative tasks in a Linux environment
+Troubleshoot operating system issues, configuration problems, authentication errors, and related software defects
+Help maintain servers and network switches in our server room
+Enhance and support our continuous integration environment (Jenkins)
+Ensure our solution is cloud friendly (Azure and Amazon AWS)
+Progressively learn new skills and languages
+Other tasks as needed
+
+Desired Knowledge/Skills
+
+A candidate with any of the following will be at an advantage:
+
+Linux power user
+Knowledge of LDAP and Active Directory
+Experience with system administration and networking (IP, DNS, Routing, Etc..)
+Knowledge / experience with virtualization technology (VMWare preferred)
+Database management skills (PostgreSQL preferred)
+Cryptography technologies and certificates
+Knowledge / experience with containerization (Docker / Kubernetes)
+Must be a graduate of a Computer Science, Computer Engineering, or Electrical Engineering program (or similar field)
+
+Sunbird is an EEO/AA/ADA/Veterans employer.
+
+What is DCIM Software: www.sunbirddcim.com/what-dcim
+What are customers saying about Sunbird: www.sunbirddcim.com/reviews
+Why work at Sunbird: www.sunbirddcim.com/careers
+
+Work Remotely
+
+Hybrid
+What is DCIM Software: www.sunbirddcim.com/what-dcim
+What are customers saying about Sunbird: www.sunbirddcim.com/reviews
+Why work at Sunbird: www.sunbirddcim.com/careers",https://www.linkedin.com/jobs/view/externalApply/3377242227?url=https%3A%2F%2Fwww%2Eziprecruiter%2Ecom%2Fjobs%2Fsunbird-software-inc-5869202e%2Fjr-software-engineer-hybrid-316ba18a%3Fenc_campaign_id%3D7a9b897f%26tsid%3D122001595&urlHash=cBy0&refId=N7uOoBr%2BQ9%2BeVMnRI0zDvQ%3D%3D&trackingId=e1nVcX%2FLIBXjgCUnFhir7g%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,IT Services and IT Consulting,['linux']
+1,"Software Engineer, New Grad",IXL Learning,"Raleigh, NC",1 week ago,Over 200 applicants,"IXL Learning, a leading edtech company with products used by 13 million students worldwide, is seeking new graduates who have a passion for technology and education. You will dive into our code base and immediately contribute to our three extremely impactful educational products and build new, innovative products. You can fine-tune your existing skills and learn new ones as you work on one of our many teams. You’ll be able to work with our Core Technology team in back-end engineering, Front-end group using cutting-edge technologies like React, Mobile team in implementing iOS and Android apps, or our Full-stack teams who seek engineers interested in doing it all.
 
 We find it immensely satisfying to develop products that impact the lives of millions, and we are eager to have you join our team.
 
@@ -22,129 +91,8 @@ Strong analytical-reasoning and problem-solving skills
 Ability to work both independently and with a wide variety of teams
 Knowledge of Unix, Python, Java, SQL, or JavaScript is a plus
 Passion for improving education through technology
-At IXL, we value diversity in age, race, ethnicity, gender, sexual orientation, physical and mental ability, political and religious beliefs, and life experience, and we are proud to promote a work environment where everyone, from any background, can do their best work. IXL Learning is an Equal Opportunity Employer.",https://www.linkedin.com/jobs/view/externalApply/3200864048?url=https%3A%2F%2Fwww%2Eixl%2Ecom%2Fcompany%2Fjobs%3Fgh_jid%3D6304459002%26gh_src%3De358d0722%26gh_src%3D9ab9c2a12&urlHash=LXHU&refId=l3jNbwouqEq7386QjjA0DA%3D%3D&trackingId=7an97XqN9mSd2FFZT4kEAA%3D%3D&trk=public_jobs_apply-link-offsite,Not Applicable,Full-time,Engineering and Information Technology,E-Learning Providers,"['react', 'python', 'linux', 'scala', 'ui', 'sql', 'java']"
-1,Web Software Engineer - New Grad 2023,WillowTree," Durham, NC",2 weeks ago,Over 200 applicants,"Our Company
-
-WillowTree is an award-winning digital product agency driven by innovation and grounded in strategy and user-centered design. We create long-term partnerships with the world’s leading brands to design and build digital flagship products crucial to their core business. We are one of the largest independent digital firms in the US and some of our clients include HBO, National Geographic, Anheuser-Busch, and PepsiCo. Check out what others are saying about us!
-
-Your Team
-
-We believe the best ideas come from shared creativity. What sets us apart from other agencies is that our engineers sit right beside researchers and creatives, so perspectives from multiple disciplines shape our products. Our new grad program is designed for recent college graduates to transition into their careers with confidence. And just to make sure you’re advancing in your craft, you’ll have plenty of opportunities to spend time with team members in your discipline to discuss the latest trends in tech or gain insight on a new skill.
-
-We understand our responsibility to create a diverse, equitable, and inclusive place within the tech industry, while pushing to make our industry more representative. Because of this responsibility, we need candidates who value diversity and inclusion through their work, team collaboration, or involvement in student organizations.
-
-This is a hybrid position.This role is open in three locations: Charlottesville, VA, Columbus, OH, and Durham, NC.
-
-Your Impact
-
-You’ll solve challenges for some of the world’s best-known companies and brands
-Your day-to-day work will influence millions of users
-You’ll collaborate with other developers, designers, and our clients
-You’ll amplify WillowTree’s thought leadership in the industry through speaking, writing, or partnerships
-You’ll build an exciting career in mobile development by working on diverse products
-
-Your Background
-
-You plan to graduate in December 2022 or May 2023.
-Experience with web development (JavaScript, CSS, HTML, etc.)
-A true passion for building a career in software development
-You’ve done a web project in school or in your spare time
-Core understanding of software engineering best practices
-You’re excited about and have the ability to quickly learn new languages, platforms, and tools
-An appreciation for quality code and architecture
-You really love mobile and enjoy digging into what makes each platform unique
-
-P.S. Even if you don’t have expertise in all of the qualifications listed, we value new perspectives and encourage you to apply. We’re committed to building a diverse company that reflects the diversity of our users. If you feel confident about a good amount of the bullet points above, we’ll ramp you up on the rest.
-
-Why WillowTree?
-
-We offer a place to be yourself.
-
-Our differences, both visible and invisible, benefit our teams, our communities, and the products we craft. That’s why WillowTree strives to build a team with diverse backgrounds, skills, and perspectives. You’ll work hard here; however, we’ll balance that with a culture that supports your growth and cares about your well-being. We’re committed to creating an environment of inclusion — a place where every Tree can thrive.
-
-We want you to reach your fullest potential and part of your professional development at WillowTree will include mentorship, dedicated time to innovate, and an annual stipend to fund your professional pursuits.
-
-WillowTree celebrates our differences and provides equal employment opportunities to all team members and applicants without regard to race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state or local laws. Diverse teams build better products. We acknowledge that the tech industry especially lacks opportunity for those who are of non-traditional backgrounds and in underrepresented groups. In order to create the best products for everyone, we know that it's important for our team to reflect the diversity of our users, and we are committed to being the change we want to see.",https://www.linkedin.com/jobs/view/externalApply/3249264370?url=https%3A%2F%2Fboards%2Egreenhouse%2Eio%2Fwillowtree%2Fjobs%2F6330271002%3Fs%3DLinkedIn%26source%3DLinkedIn&urlHash=eUw8&refId=l3jNbwouqEq7386QjjA0DA%3D%3D&trackingId=g0ULrJYF%2Bgp%2F4xP20L1oWg%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,Software Development,['css']
-2,Software Engineer (Remote),SAS," Cary, NC",1 week ago,Be among the first 25 applicants,"You may work from a remote location for this role. Or, you may join us at SAS Worldwide HQ in Cary, NC for this role.
-
-Are you a problem solver, explorer, and knowledge seeker – always asking, “What if?”
-If so, then you may be the new team member we’re looking for. Because at SAS, your curiosity matters – whether you’re developing algorithms, creating customer experiences or answering critical questions. Curiosity is our code, and the opportunities here are endless.
-What We Do
-We’re the leader in analytics. Through our software and services, we inspire customers around the world to transform data into intelligence. Our curiosity fuels innovation, pushing boundaries, challenging the status quo and changing the way we live.
-What You’ll Do
-We’re looking for a Software Developer, you will develop the next generation of SAS Fraud Detection Solution, a cloud-based Fraud Detection Solution. SAS Fraud Detection is a core solution of the SAS Fraud Security Intelligence Division, detecting Fraud in a real-time, request/response workflows.
-You Will
-Participate in the development of a cloud-native, low-latency, solution using Fraud Security Intelligence microservices to assemble business domain specific Fraud Detection solutions. Working alongside a product strategy team in a Continuous Integration / Continuous Delivery environment, you will deliver frequent releases of new functionality and respond quickly to customer feedback and market demands. You will guide the creation of field enablement materials and ensure a high level of customer support.
-Candidates must possess strong design, development, and engineering skills. A strong candidate additionally has comprehensive software development and test automation experience, great organizational and communication skills, and sound management experience. Experience with CI/CD pipeline, cloud technologies, and automated testing is preferred.
-Cloud-based streaming data is the lifeblood of modern analytical systems. Come join us on our journey to produce a data orchestration framework that will power analytical business operations over the next decade.
-What We’re Looking For
-2+ years of experience with Java or GoLang programing
-5+ years of industry experience with full stack software development
-2+ years of experience with development and deployment of containerized software
-Excellent communication, interpersonal, and leadership skills
-You’re curious, passionate, authentic and accountable. These are our values and influence everything we do.
-The nice to haves
-Experience with GoLang
-Experience with streaming data systems
-Experience developing software in a Continuous Delivery environment
-
-SAS looks not only for the right skills, but also a fit to our core values. We seek colleagues who will contribute to the unique values that makes SAS such a great place to work. We look for the total candidate: technical skills, values fit, relationship skills, problem solvers, good communicators and, of course, innovators. Candidates must be ready to make an impact.
-Additional Information
-To qualify, applicants must be legally authorized to work in the United States, and should not require, now or in the future, sponsorship for employment visa status. SAS is an equal opportunity employer. All qualified applicants are considered for employment without regard to race, color, religion, gender, sexual orientation, gender identity, age, national origin, disability status, protected veteran status or any other characteristic protected by law. Read more: Equal Employment Opportunity is the Law . Also view the supplement EEO is the Law , and the Pay Transparency notice.
-Equivalent combination of education, training and experience may be considered in place of the above qualifications. The level of this position will be determined based on the applicant's education, skills and experience. Resumes may be considered in the order they are received. SAS employees performing certain job functions may require access to technology or software subject to export or import regulations. To comply with these regulations, SAS may obtain nationality or citizenship information from applicants for employment. SAS collects this information solely for trade law compliance purposes and does not use it to discriminate unfairly in the hiring process.
-All valid SAS job openings are located on the Careers page at www.sas.com . SAS only sends emails from verified “sas.com” email addresses and never asks for sensitive, personal information or money. Should you have any doubts about the authenticity of any type of communication from, for, or on behalf of SAS, please contact us at Recruitingsupport@sas.com before taking any further action.",,Mid-Senior level,Full-time,Engineering,Software Development,['java']
-3,Software Engineer - IT,TARGAN Inc.,"Morrisville, NC",4 days ago,Be among the first 25 applicants,"Description
-
-Position Summary:
-
-The Software Engineer role is a key technical position in a fast-paced, challenging, and positive work environment. TARGAN is developing its data systems platform to support its ongoing R&D efforts and upcoming commercial systems. These systems will serve as the backbone for TARGAN's continued growth and be built using state-of-the-art technologies. This role will assist in 1) the development, testing and support of our R&D data systems that facilitate experiment planning, data capture, data tracking and data reporting for accelerating product development and 2) the development, testing and deployment of architecture and platforms for our commercial based systems.
-
-This role will collaborate across the organization interfacing with multi-disciplinary teams to assist in the development and implementation of well-thought-out solutions utilizing best practices and current industry standards. The candidate in this role will also help define and shape the data systems as the company grows.
-
-Key Job Responsibilities
-
-Collaborate with the team and internal stakeholders to identify and deliver robust solutions
-Hands-on software development, testing and troubleshooting
-Research and test new technology related to business applications
-Team Collaboration within and outside your specific discipline
-Participate in design sessions and code reviews
-Project communications, documentation & project time reporting
-Use of code repositories for software version control
-
-Requirements
-
-Education & Experience:
-
-Bachelor's degree or higher in Computer Science, Computer Engineering, Information Systems Management (or a related field)
-2+ years of industry experience
-
-Skills & Qualifications
-
-Experience with one or more client-facing Web UI frameworks/tooling such as React, Angular, Blazor, Javacsript, D3, CSS, HTML
-Understanding of JWT/Open Auth technology
-Experience with ASP.NET MVC/Web API (C#, Visual Studio, VS Code)
-XAML and Windows UI Framework experience a plus (willingness to learn .NET MAUI)
-Ability to work independently and in a team environment on fast-track projects
-Self-directed and forward thinking with a strong work ethic
-Robust interpersonal, listening, questioning & communication skills (written and oral)
-Attention to detail and creative problem-solving
-Ability to multi-task and work cross-functionally with team members at all levels while providing guidance to lesser experienced team members
-Exhibits professional, ethical, and socially responsible manner
-
-Additional Skills & Qualifications
-
-Experience with client-side debugging techniques/tooling as well as testing frameworks
-Experience with Entity Framework and SQL Server
-Experience with Azure serverless technologies -- Containers, App Service, App Gateways, Key vaults, Storage accounts, etc.
-Azure DevOps and GIT knowledge
-Experience working with UX-experts, designers, and data scientists
-
-Working Conditions
-
-General office environment: This position will be subject to mostly controlled but potential varying internal environmental conditions, including changes in temperature and noise that are within acceptable safety levels common to a warehouse environment.
-
-PI195302009",https://www.linkedin.com/jobs/view/externalApply/3341284403?url=https%3A%2F%2Fwww%2Ecollegerecruiter%2Ecom%2Fjob%2F699500484%3Fr%3D2%26source%3D101&urlHash=a_yx&refId=l3jNbwouqEq7386QjjA0DA%3D%3D&trackingId=T2IuphLu%2FJnZmpmM4hpmyw%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,Biotechnology Research,"['sql', 'react', 'css', 'ui']"
-4,"Software Engineer, Apple Pay",Apple," Raleigh, NC",3 days ago,108 applicants,"Summary
+At IXL, we value diversity in age, race, ethnicity, gender, sexual orientation, physical and mental ability, political and religious beliefs, and life experience, and we are proud to promote a work environment where everyone, from any background, can do their best work. IXL Learning is an Equal Opportunity Employer.",https://www.linkedin.com/jobs/view/externalApply/3200864048?url=https%3A%2F%2Fwww%2Eixl%2Ecom%2Fcompany%2Fjobs%3Fgh_jid%3D6304459002%26gh_src%3De358d0722%26gh_src%3D9ab9c2a12&urlHash=LXHU&refId=N7uOoBr%2BQ9%2BeVMnRI0zDvQ%3D%3D&trackingId=plQK9C%2B%2F2hnGHf7iO7HRVA%3D%3D&trk=public_jobs_apply-link-offsite,Not Applicable,Full-time,Engineering and Information Technology,E-Learning Providers,"['sql', 'react', 'ui', 'linux', 'python', 'scala', 'java']"
+2,"Software Engineer, Apple Pay",Apple," Raleigh, NC",4 days ago,Over 200 applicants,"Summary
 
 At Apple, great ideas have a way of becoming phenomenal products, services, and customer experiences very quickly. If you are passionate about innovation, have a natural curiosity for new technologies and you show excitement about solving meaningful problems, we would like to invite you to join our team!
 
@@ -194,55 +142,75 @@ Education & Experience
 BS or MS degree in computer science or similar technical field, or equivalent professional experience
 
 
-Role Number: 200436250",https://www.linkedin.com/jobs/view/externalApply/3337049883?url=https%3A%2F%2Fjobs%2Eapple%2Ecom%2Fen-us%2Fdetails%2F200436250%3Fboard_id%3D17682%26cid%3Dscrape_co_us_linkedin_nationwide_software%252Bservices&urlHash=kC27&refId=l3jNbwouqEq7386QjjA0DA%3D%3D&trackingId=rPVPzIf1u%2BOwhR22AhAlsg%3D%3D&trk=public_jobs_apply-link-offsite,Not Applicable,Full-time,Engineering and Information Technology,Computers and Electronics Manufacturing,['java']
-5,Programmer I - Remote,Allucent," Durham, NC",3 weeks ago,Be among the first 25 applicants,"Description
+Role Number: 200436250",https://www.linkedin.com/jobs/view/externalApply/3337049883?url=https%3A%2F%2Fjobs%2Eapple%2Ecom%2Fen-us%2Fdetails%2F200436250%3Fboard_id%3D17682%26cid%3Dscrape_co_us_linkedin_nationwide_software%252Bservices&urlHash=kC27&refId=N7uOoBr%2BQ9%2BeVMnRI0zDvQ%3D%3D&trackingId=quauqvudoO2jDXuiB3BQcQ%3D%3D&trk=public_jobs_apply-link-offsite,Not Applicable,Full-time,Engineering and Information Technology,Computers and Electronics Manufacturing,['java']
+3,Software Engineer,Robert Half,"igh, NC",5 days ago,Be among the first 25 applicants,"Description
 
-CATO SMS and Pharm-Olam, LLC have merged to form Allucent!
+Do you combine strong coding skills and a deep understanding of enterprise systems with creativity? Robert Half Technology is looking for a highly motivated Full Stack Software Engineer with strong software engineering techniques and knowledge of design patterns. As a Full Stack Software Engineer, you will be expected to utilize best practices and innovation that results in superior software solutions. To be successful in the role, you should be self-driven, a creative problem solver and eager to collaborate and solve complex problems both on your own and within project teams.
 
-Allucent is a full-service contract research and development organization with international resources dedicated to helping pharmaceutical and biotechnology companies efficiently and expeditiously navigate the regulatory approval process in order to bring new drugs, biologics, and medical devices to the people who need them. Allucent is a non-laboratory environment. At Allucent, our mission is to help bring new therapies to light. When you work at Allucent, that means rolling up your sleeves and applying your scientific knowledge, clinical expertise, and experience to partnerships with our clients in small and mid-sized biotech companies.
-
-These customers have new therapeutic ideas but want a partner who can assist with the clinical trial process, the complexities of certain disease states, or other critical capacities. You’ll work with them on the newest treatment breakthroughs for some of the most perplexing conditions. And ultimately, you’ll help make a positive difference in patients’ lives.
-
-Location: US (remote)
-
-Responsibilities:
-
-Provide coding support (primarily in R) to Pharmacokineticists conducting PK, PD, Toxicokinetic, Population PK analyses, etc. related to drug development
-Support clinical pharmacology experts in the design and interpretation of Phase 1 clinical studies in healthy volunteers or special populations (e.g., hepatic and renal impaired, etc.)
-Assist with designing programming code to generate summary PK and PD tables, listings, and graphs from clinical and nonclinical data
-Assist with the development of code to clean and summarize data from nonclinical and clinical studies, including implementation of CDISC (SDTM, ADaM, and SEND) standards
-Develop well commented template code that can be reused across multiple studies and scenarios by multiple programmers
-Work independently to provide complex programming support across the company and for Clients
-Participate in the development of and ensure compliance with standard operating procedures and guidelines
-Manage and lead projects with minimal guidance
-
+What you get to do every single day
+Collaborate with an agile team to create solutions that align with the company goals based on business needs and business processes
+Produce high quality production-ready code in an agile environment
+Invite solutions which account for scalability and optimize performance
+Create and bring about back end and front-end components and services
+Promote top programming practices and standards
+Assess new technologies and develop prototypes for steady improvements
 Requirements
+Strong understanding of project methodologies
+2+ years of experience with current development tools/languages
+Comfortable with creating and consuming WebAPIs
+Experienced in common development frameworks
+Relational Database Management Systems experience
+Technology Doesn't Change the World, People Do.®
 
-Bachelor’s degree required, preferably in science, math, statistics, computer science or a related field
-Data manipulation and graphical programming experience with R, SAS, or other programming language is required; experience using GitHub for code management is a plus
-The ability to explore and use creative and novel approaches to difficult data management and manipulation problems is expected
-Some biological background is preferred but not required or expected
-Excellent communication skills and the ability to understand and interpret complex problems are essential
-The ability to work in a matrix environment and work efficiently under deadlines is crucial
-Other combinations of appropriate experience and education will also be considered
+Robert Half is the world’s first and largest specialized talent solutions firm that connects highly qualified job seekers to opportunities at great companies. We offer contract, temporary and permanent placement solutions for finance and accounting, technology, marketing and creative, legal, and administrative and customer support roles.
 
-Benefits
+Robert Half puts you in the best position to succeed by advocating on your behalf and promoting you to employers. We provide access to top jobs, competitive compensation and benefits, and free online training. Stay on top of every opportunity – even on the go.
 
-Comprehensive benefits package
-Competitive salaries per location
-Departmental Study/Training Budget for furthering professional development
-Flexible Working hours (within reason)
-Opportunity for fully remote working or Hybrid Working Model
-Leadership and mentoring opportunities
-Internal growth opportunities and career progression
-More task variety
-Financially rewarding internal employee referral program
-Access to online soft-skills and technical training via GoodHabitz and internal platforms
+Robert Half will consider qualified applicants with criminal histories in a manner consistent with the requirements of the San Francisco Fair Chance Ordinance. All applicants applying for U.S. job openings must be authorized to work in the United States. Benefits are available to temporary professionals. Visit
 
-To all recruitment agencies: Allucent does not accept agency resumes. Please do not forward resumes to our careers alias or other Allucent employees. Allucent is not responsible for any fees related to unsolicited resumes
+© 2022 Robert Half. An Equal Opportunity Employer. M/F/Disability/Veterans. By clicking “Apply Now,” you’re agreeing to",https://www.linkedin.com/jobs/view/externalApply/3369336345?url=https%3A%2F%2Fwww%2Eroberthalf%2Ecom%2Fjob%2Fraleigh-nc%2Fsoftware-engineer%2F03220-0012518815-usen%3Frh_job-feed%3Dtrue&urlHash=yzPe&refId=N7uOoBr%2BQ9%2BeVMnRI0zDvQ%3D%3D&trackingId=U0epz6yMDSXmrmv26%2BUCog%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,Staffing and Recruiting,[]
+4,Software Engineer (Remote),SAS," Cary, NC",1 week ago,84 applicants,"You may work from a remote location for this role. Or, you may join us at SAS Worldwide HQ in Cary, NC for this role. #dice
 
-#CS",,Entry level,Full-time,Engineering and Information Technology,Pharmaceutical Manufacturing,['r']
-6,Software Engineer (JupyterLab/Python/Integrations),Pachyderm Inc.,"Raleigh, NC",3 months ago,Be among the first 25 applicants,"About Pachyderm:
+Are you a problem solver, explorer, and knowledge seeker – always asking, “What if?”
+
+If so, then you may be the new team member we’re looking for. Because at SAS, your curiosity matters – whether you’re developing algorithms, creating customer experiences or answering critical questions. Curiosity is our code, and the opportunities here are endless.
+
+What We Do
+
+We’re the leader in analytics. Through our software and services, we inspire customers around the world to transform data into intelligence. Our curiosity fuels innovation, pushing boundaries, challenging the status quo and changing the way we live.
+
+What You’ll Do
+
+We’re looking for a Software Developer, you will develop the next generation of SAS Fraud Detection Solution, a cloud-based Fraud Detection Solution. SAS Fraud Detection is a core solution of the SAS Fraud Security Intelligence Division, detecting Fraud in a real-time, request/response workflows.
+
+You Will
+
+Participate in the development of a cloud-native, low-latency, solution using Fraud Security Intelligence microservices to assemble business domain specific Fraud Detection solutions. Working alongside a product strategy team in a Continuous Integration / Continuous Delivery environment, you will deliver frequent releases of new functionality and respond quickly to customer feedback and market demands. You will guide the creation of field enablement materials and ensure a high level of customer support.
+
+Candidates must possess strong design, development, and engineering skills. A strong candidate additionally has comprehensive software development and test automation experience, great organizational and communication skills, and sound management experience. Experience with CI/CD pipeline, cloud technologies, and automated testing is preferred.
+
+Cloud-based streaming data is the lifeblood of modern analytical systems. Come join us on our journey to produce a data orchestration framework that will power analytical business operations over the next decade.
+
+What We’re Looking For
+2+ years of experience with Java or GoLang programing
+5+ years of industry experience with full stack software development
+2+ years of experience with development and deployment of containerized software
+Excellent communication, interpersonal, and leadership skills
+You’re curious, passionate, authentic and accountable. These are our values and influence everything we do.
+The nice to haves
+Experience with GoLang
+Experience with streaming data systems
+Experience developing software in a Continuous Delivery environment
+SAS looks not only for the right skills, but also a fit to our core values. We seek colleagues who will contribute to the unique values that makes SAS such a great place to work. We look for the total candidate: technical skills, values fit, relationship skills, problem solvers, good communicators and, of course, innovators. Candidates must be ready to make an impact.
+
+Additional Information
+
+To qualify, applicants must be legally authorized to work in the United States, and should not require, now or in the future, sponsorship for employment visa status. SAS is an Equal Opportunity/Affirmative Action employer. All qualified applicants are considered for employment without regard to race, color, religion, gender, sex, sexual orientation, gender identity, age, national origin, disability status, protected veteran status or any other characteristic protected by law. Read more: Know Your Rights . Also view the Pay Transparency notice.
+
+Equivalent combination of education, training and experience may be considered in place of the above qualifications. The level of this position will be determined based on the applicant's education, skills and experience. Resumes may be considered in the order they are received. SAS employees performing certain job functions may require access to technology or software subject to export or import regulations. To comply with these regulations, SAS may obtain nationality or citizenship information from applicants for employment. SAS collects this information solely for trade law compliance purposes and does not use it to discriminate unfairly in the hiring process.
+
+All valid SAS job openings are located on the Careers page at www.sas.com . SAS only sends emails from verified “sas.com” email addresses and never asks for sensitive, personal information or money. Should you have any doubts about the authenticity of any type of communication from, for, or on behalf of SAS, please contact us at Recruitingsupport@sas.com before taking any further action.",,Mid-Senior level,Full-time,Engineering,Software Development,['java']
+5,Software Engineer (JupyterLab/Python/Integrations),Pachyderm Inc.,"Raleigh, NC",1 month ago,Be among the first 25 applicants,"About Pachyderm:
 
 Pachyderm is the leader in data versioning and pipelines for MLOps. We're building the data foundation that allows data science teams to automate and scale their machine learning lifecycle while guaranteeing reproducibility. With over $40 million in three rounds of funding from leading investors like Benchmark, Microsoft M12, and Y Combinator, Pachyderm is committed to building industrial strength capabilities for Data Centric AI. Pachyderm offers a commercial Enterprise Edition and an open source Community Edition. Pachyderm helps customers get their ML and AI projects to market faster, lower data processing and storage costs, and supports strict data governance requirements.
 
@@ -281,117 +249,121 @@ Education and donation stipends - we want to support your career growth and the 
 Supportive parental leave (see also: work/life balance).
 Encouraged fun - game days, fun activities, zoom hangouts and more (and - when responsible - visits to our home base for team on-sites)
 
-We can't wait to meet you and hope you'll join our PACH!",,Entry level,Full-time,Engineering and Information Technology,Software Development,"['ai', 'python']"
-7,Software Development Engineer,"Metabolon, Inc.","rrisville, NC",4 days ago,Be among the first 25 applicants,"Metabolon’s Software Engineering organization is looking to add a Software Development Engineer to a growing team. The Software Engineering team partners across our organization to solve difficult business challenges for both our external customers and internal clients. Many of our developers work on both front-end and back-end development. This Software Development Engineer will have an initial focus on front-end UI development. As an organization, we place a strong emphasis on career development, as well as flexibility.
+We can't wait to meet you and hope you'll join our PACH!",,Entry level,Full-time,Engineering and Information Technology,"Technology, Information and Internet","['python', 'ai']"
+6,"Software Engineer, Fullstack",Ndustrial," Raleigh, NC",1 month ago,Be among the first 25 applicants,"Ndustrial was founded in 2011 to accelerate efficiency across industrial facilities. Our founders merged their experiences across Silicon Valley innovation, industrial engineering and computer science to build a real-time industrial intelligence platform that enables companies to gain new levels of insight into their business processes and energy intensity and then optimize and transform them for sustained competitive advantage.
 
-Your technical knowledge is broad and deep, typically ranging from front-end UIs through to back-end systems and all points in between. You have deep hands-on expertise with many disparate technologies.
-You developed an understanding of Metabolon’s business and infrastructure, and you are sought out by others in your division.
-You have played a leading role in the implementation and deployment of a successful enterprise-level system.
-You have good knowledge of the work done by other teams within your department and proactively help other teams.
-You think in terms not just of code but of architecture, and you communicate your ideas effectively to others within your division.
-You influence and drive software engineering best practices within your division.
-You influence your team’s technical and business strategy by making insightful contributions to the team’s priorities and approach. You make a significant contribution to team planning.
-You get a lot done. You work very efficiently and routinely deliver the right things.
-You harmonize discordant views, find the best way forward and convince your team.
-You demonstrate resilience and navigate difficult situations with composure and tact.
-You actively mentor more junior members of the team, improving their skills, their knowledge of our systems, and their ability to get things done.
-Bachelor's degree or foreign equivalent in Computer Science, Engineering, Mathematics, or a related field; OR equivalent knowledge, skills, and industry experience.
-Proficiency in, at least, one modern programming language such as Java, C, C++, C#, Python, Scala, Ruby, etc.
-Proficient with modern Web app development frameworks like React, Angular or Javascript.
-2+ years’ experience in the job offered or a related occupation.",https://www.linkedin.com/jobs/view/externalApply/3344555453?url=https%3A%2F%2Fcareers-metabolon%2Eicims%2Ecom%2Fjobs%2F1155%2Fsoftware-development-engineer%2Fjob%3Fmode%3Djob%26iis%3DJob%2BPosting%26iisn%3DLinkedIn&urlHash=9PQ4&refId=l3jNbwouqEq7386QjjA0DA%3D%3D&trackingId=JSuVlryKumm9wxp%2B0eJwBQ%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,Biotechnology Research,"['react', 'python', 'c', 'scala', 'ui', 'c++', 'java']"
-8,Backend Software Engineer - New Grad 2023,WillowTree," Durham, NC",2 weeks ago,Over 200 applicants,"Our Company
+Headquartered in Raleigh, NC, Ndustrial’s customers span the globe. Come join one of the most impactful companies in its industry with investments from one of the largest utilities on the planet, ENGIE New Ventures, Clean Energy Ventures and the largest cold storage logistics companies in the world, Lineage Logistics. Our culture values a relentless customer first commitment to quality anchored in integrity and a startup mindset rooted in curiosity. Building a company and solving global challenges is hard work but our teamwork is sustained through humility and humor.
 
-WillowTree is an award-winning digital product agency driven by innovation and grounded in strategy and user-centered design. We create long-term partnerships with the world’s leading brands to design and build digital flagship products crucial to their core business. We are one of the largest independent digital firms in the US and some of our clients include HBO, National Geographic, Anheuser-Busch, and PepsiCo. Check out what others are saying about us!
+We are looking for someone passionate about their work and who can be a big part of a small team. Someone who can be counted on to continue driving us forward. This particular opening is core to what we do here at Ndustrial, which is taking data from numerous different sources and organizing it in a way that is useful for our customers. The scale at which we are doing this is growing every day and we need talented individuals who are ready to take on the challenge of not only helping us keep up with the pace, but also to continuously improve the system. We are not the kind of startup that expects you to work insane hours or sleep at your desk, but we do need someone who understands how a startup works and is willing to be a part of a (sometimes) crazy ride.
 
-Your Team
+Requirements
+Enhance features and functionality of our existing stack while developing new software to meet our customer’s needs.
+Actively participate in scoping, estimating, code reviews throughout the development process.
+Communicate with your fellow coworkers about your progress and offer suggestions/improvements to continually improve all aspects of the software.
+Be able to provide thorough reasons/explanations for software decision in order to prevent technical debt.
+Able to engage in customer focused work and support items when needed.
+Occasional IT support when the need arises.
+Have a constructive voice. It will be expected and respected.
+Strong curiosity about new technologies
+Self-motivated individual who can work independently/remotely
+3+ years experience with the following technologies:
+API Development with REST and GraphQL
+Scripting language Node.js(Typescript)
+PostgreSQL Databases
+Developing Microservices architecture
+Application development with Kubernetes
+OAuth 2.0
+Nice to haves:
+CI/CD experience with Github Actions and Helm charts
+Experience with Python
+Experience with industrial IoT or time series data
+AWS Experience, SAA or DVA
 
-We believe the best ideas come from shared creativity. What sets us apart from other agencies is that our engineers sit right beside researchers and creatives, so perspectives from multiple disciplines shape our products. Our new grad program is designed for recent college graduates to transition into their careers with confidence. And just to make sure you’re advancing in your craft, you’ll have plenty of opportunities to spend time with team members in your discipline to discuss the latest trends in tech or gain insight on a new skill.
+Benefits
+Open PTO Policy
+Outstanding Benefits: Medical, Dental and Vision, STD, LTD, Life, AD&D insurance employee premiums fully covered!
+Annual professional Development stipend ($500/year)
+Commuter benefit
+401K
+Team outings, catered lunches, celebrations!
+Flexible work environment with telecommuting options
+New, modern, gorgeous office conveniently located on Fayetteville St. in Downtown Raleigh
+We live our values everyday: Teamwork, Customer Service, Quality and Curiosity
+Inclusive, communicative, innovative and fun environment, we enjoy working together!
+Dog friendly office",,Not Applicable,Full-time,Engineering and Information Technology,"Technology, Information and Internet",['python']
+7,Salesforce Developer,Red Zone Resources,"aleigh, NC",1 day ago,Be among the first 25 applicants,"The Senior Salesforce Application Developer is responsible for the overall development and product management of the Salesforce Provider Portal. Responsibilities include compiling requirements for the Salesforce application to enable varied business functions, managing risks and issues associated with design choices, supporting definition of user roles and profiles, security settings, access settings (User Profiles, Role Hierarchy, Sharing Rules and Security), and identifying opportunities for application optimization, integration, redesign, or development. This role must exhibit the ability to design applications to support business processes and reporting requirements and be familiar with the Salesforce development environments and the options available to deploy applications and manage changes on the Lightning Platform. This role is also responsible for identifying production risks and areas for improvement, update and develop custom validations and/or code as needed based on business requirements, and support configuration updates to the Salesforce environment. The division is planning additional pandemic efforts for Emergency Child Care portal such as continuation of staff bonuses to teaching and non-teaching staff who are serving in child care facilities during these pandemic times. Also the division is planning a new initiative to pay staff salaries if they are sick or absent due to COVID and support substitute staff salaries. Division may also continue with school age family support process. In addition to the continuation of operations with Emergency Child Care portal, this position will explore options to increase usability of existing Subsidized Child care provider portal and support similar needs within the Child Welfare area in NC FAST to develop applications for new or extended functionality.
 
-We understand our responsibility to create a diverse, equitable, and inclusive place within the tech industry, while pushing to make our industry more representative. Because of this responsibility, we need candidates who value diversity and inclusion through their work, team collaboration, or involvement in student organizations.
+Required / Desired Skills
 
-This is a hybrid position. This role is open in three locations: Charlottesville, VA, Columbus, OH, and Durham, NC.
+Skill Required / Desired Amount of Experience
 
-Your Impact
+Salesforce Certified Platform App Builder Certification / Required
 
-You’ll solve challenges for some of the world’s best-known companies and brands
-Your day-to-day work will influence millions of users
-You’ll collaborate with other developers, designers, and our clients
-You’ll amplify WillowTree’s thought leadership in the industry through speaking, writing, or partnerships
-You’ll build an exciting career in mobile development by working on diverse products
+Salesforce Platform Developer 1 Certification / Required
 
-Your Background
+Experience using Salesforce Platform Community, Service Cloud, and Gov Cloud / Required4Years
 
-You plan to graduate in December 2022 or May 2023.
-Experience with web or mobile development (Python, Java, etc.)
-A true passion for building a career in software development
-You’ve done a mobile or web project in school or in your spare time
-Core understanding of software engineering best practices
-You’re excited about and have the ability to quickly learn new languages, platforms, and tools
-An appreciation for quality code and architecture
-You really love mobile and enjoy digging into what makes each platform unique
+Experience with Salesforce Object Query Language (SOQL) and and Salesforce Object Search Language (SOSL) / Required4Years
 
-P.S. Even if you don’t have expertise in all of the qualifications listed, we value new perspectives and encourage you to apply. We’re committed to building a diverse company that reflects the diversity of our users. If you feel confident about a good amount of the bullet points above, we’ll ramp you up on the rest.
+Experience Using Shield And Lightning / Required7Years
 
-Why WillowTree?
+Experience with object-oriented languages such as Apex, Java, JavaScript, C#, and Ruby. / Required7Years
 
-We offer a place to be yourself.
+Experience with Model View Controller (MVC) architecture and component-based architecture / Required7Years
 
-Our differences, both visible and invisible, benefit our teams, our communities, and the products we craft. That’s why WillowTree strives to build a team with diverse backgrounds, skills, and perspectives. You’ll work hard here; however, we’ll balance that with a culture that supports your growth and cares about your well-being. We’re committed to creating an environment of inclusion — a place where every Tree can thrive.
+Experience with requirements analysis and business process design. / Required7Years
 
-We want you to reach your fullest potential and part of your professional development at WillowTree will include mentorship, dedicated time to innovate, and an annual stipend to fund your professional pursuits.
+Experience with developing Lightning components (Both Aura and LWC) / Required3Years
 
-WillowTree celebrates our differences and provides equal employment opportunities to all team members and applicants without regard to race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state or local laws. Diverse teams build better products. We acknowledge that the tech industry especially lacks opportunity for those who are of non-traditional backgrounds and in underrepresented groups. In order to create the best products for everyone, we know that it's important for our team to reflect the diversity of our users, and we are committed to being the change we want to see.",https://www.linkedin.com/jobs/view/externalApply/3249266262?url=https%3A%2F%2Fboards%2Egreenhouse%2Eio%2Fwillowtree%2Fjobs%2F6330270002%3Fs%3DLinkedIn%26source%3DLinkedIn&urlHash=ckzO&refId=l3jNbwouqEq7386QjjA0DA%3D%3D&trackingId=1AftzldTJvRVFocgyheRBQ%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,Software Development,['java']
-9,Software Engineer,"Double Line, Inc.","Raleigh, NC",3 months ago,54 applicants,"(This is a remote position open to candidates residing in North Carolina and Texas. We have an office location in Austin, TX for use at our employees' convenience. We have no plans to return to the office on a mandatory basis.)
+Experience with integration platform like MuleSoft or Boomi / Highly desired2Years
 
- 
+Salesforce Certified Administrator certification. / Required
 
-Feeling underappreciated? Underutilized? Are you ready to develop, document, debug, support, analyze, maintain source code, and adhere to existing Double Line standards and best practices?  We're a growing company focused on expanding our Development team with a proactive and driven Software Engineer.  Sound interesting?
+Salesforce Certified Service Cloud Consultant Certification. / Required",,Entry level,Full-time,Information Technology,Staffing and Recruiting,['java']
+8,Software Engineering Intern (Summer 2023),Dropbox," Raleigh, NC",2 weeks ago,Over 200 applicants,"Company Description
+Dropbox is a leading global collaboration platform that's transforming the way people work together, from the smallest business to the largest enterprise. With more than 700 million registered users across more than 180 countries, our mission is to design a more enlightened way of working. From our headquarters in San Francisco to eight dedicated Studios and a worldwide team of employees who choose where they work best, our Virtual First approach is leading the way into the future of work.
 
- 
+Team Description
+Our mission is to engage and hire the emerging talent that will shape the future of Dropbox. Learn about our internships here!
 
-If so, we're looking for a motivated and driven person like you who:
 
-Is strong in ASP.Net C# MVC and WebAPI
-Wants to dive in headfirst in complex and custom codebases
-Thrives in an agile environment with Lean software development principles
-Possesses a deadline-driven mentality
-Enjoys collaborating with internal and external stakeholders
-Has familiarity with AngularJS+ or other front-end development
-Experienced in SQL and SSRS Reporting
- 
+Role Description
 
-Bonus points if you're bringing knowledge of or really want to learn any of the following:
+As a Dropbox intern, you are part of a top-notch learning experience with engineers from all backgrounds. You’ll work side-by-side with a dedicated, experienced engineer as your mentor and have ownership of a high-impact project.
+Our goal is to create a robust and impactful learning experience. You can expect to learn how to collaborate with full-timers across the engineering, product, and design teams and receive regular and effective feedback on your work to help you continuously improve. We’ll also help you connect with fellow interns, establish mentors, and build the foundation of a strong professional network.
+We will work with you to accommodate your school end and start dates culminating in a minimum of a 12-week long internship.
 
-AWS, Azure, and Google Cloud
-ETL mapping and processes
-Consultancy experience
- 
+Responsibilities
 
-We do not want you to make the leap without knowing what we need, so here is how we define success for this position:
+As an intern, you work side-by-side with Dropbox engineers. Here are some examples numerous types of roles and teams that you can have an impact on:
+Product Engineering- Build delightful full-stack user experiences that tackle real customer needs and help drive tons of revenue for Dropbox. As a product engineering intern you can expect to work across backend, API, desktop, mobile and web.
+Infrastructure Engineering- Craft the building blocks that let us scale Dropbox to handle millions of concurrent connections, hundreds of billions of files, and hundreds of petabytes of data.
+Analytics Engineering- Measure, optimize, and build one of the industry’s most advanced analytics platforms to derive insights from vast amounts of data. Our massive scale means you’ll work with more data than many other analytics firms combined.
+Mobile Engineering- Craft the Dropbox client experience on mobile devices by learning and applying the ins and outs of iOS and Android SDK using Objective-C, Swift, Java and C++. You are also responsible for building the backend systems that power the mobile experiences and optimize the protocol between client and server for reliability, efficiency and speed.
+Front End Engineering- Help keep our websites up and running by applying everything our application engineers do with the curiosity and interest in building fast, scalable, and responsive Dropbox experiences for the modern web, using technologies like Typescript, React, and Redux.
+Site Reliability Engineering (SRE)- Build the software and automation that controls the hardware to run our products. Work with a team who lives on the boundary of software and hardware and develop a deep understanding of the inner workings of our products, our commitment to ensuring our products work well on real-world hardware in our data centers, and serve as the first line of defense when something goes with our production infrastructure or services.
+Security Engineering- People trust Dropbox to keep their data secure, and at Dropbox we rely on our security engineers to make our products safe. You are a software engineer with a deep interest in building software that is secure yet easy to use. Security engineers collaborate with product teams to secure our software, production infrastructure, website, desktop and mobile apps and our corporate infrastructure and devices.
 
-Shadow and train with existing Software Engineers within the first 30 days
-Begin taking and completing assignments in sprints within the first 60 days
-Demonstrate 80%+ on-time delivery of assigned tasks within the first 90 days
- 
 
-In return, we offer:
+Requirements
 
-A mission-driven company with a long-term focus on helping the world by untangling the technical knots that plague state and local governments, particularly in education, healthcare, and similar fields
-A home where your voice matters and you can affect real change
-Direct connection to the Executive team where you can help drive the future of the company
-An employer who cares about you, makes sure you're engaged with exciting work, and offers robust benefits, 401k with employer match, and a great culture.
- 
+Currently pursuing a BS or MS in Computer Science or related technical field involving coding (e.g., physics or mathematics), or equivalent technical experience
+Experience writing or shipping software as part of coursework, personal projects, internships, coding competitions or research
+Passion for learning, solving problems, and challenging the status quo
+Available for Summer 2023 full time internship (40 hours per week / 12 weeks)
 
-We need to know - can you make this happen? If so, we definitely need to talk to you.
 
- 
+Total Rewards
 
-We value diversity at Double Line. We hire, recruit, and promote without regard to race, color, religion, sex, sexual orientation, gender, national origin, pregnancy or maternity, veteran status or any other status protected by applicable law. We understand the importance of creating a safe and comfortable work environment and encourage individualism and authenticity in every member of our team. 
+For candidates hired in Colorado, the expected salary/On-Target Earnings (OTE) rate for the role is $8,000/mo, subject to change.
+Salary/OTE is just one component of Dropbox’s total rewards package. Dropbox is committed to investing in the holistic health and wellbeing of all Dropboxers and their families. Our benefits and perks programs include:
+Competitive medical, dental and vision coverage
+Flexible Time Off/Paid Time Off, paid holidays, Company-wide PTO days, Volunteer time off
+Perks Allowance to be used on what matters most to you, whether that’s productivity, learning & development, wellness, co-working space
 
- 
+Additional benefits details are available upon request.
 
-Double Line does not sponsor applicants for work visas at this time.  
+Dropbox is in the process of updating our technology to provide pay ranges in New York City based on the recent amendments to the New York City Human Rights Law (NYCHRL). If you are based in NYC and have any questions about the pay range for this role, please contact paytransparency@ and provide your name and the job title to which you are interested in applying.
 
- 
 
-Double Line does not currently offer relocation assistance.",,Entry level,Full-time,Engineering and Information Technology,Business Consulting and Services,['sql']
+Dropbox is an equal opportunity employer. We are a welcoming place for everyone, and we do our best to make sure all people feel supported and connected at work. A big part of that effort is our support for members and allies of internal groups like Asians at Dropbox, BlackDropboxers, Latinx, Pridebox (LGBTQ), Vets at Dropbox, Women at Dropbox, ATX Diversity (based in Austin, Texas) and the Dropbox Empowerment Network (based in Dublin, Ireland).",https://www.linkedin.com/jobs/view/externalApply/3254372848?url=https%3A%2F%2Fwww%2Edropbox%2Ecom%2Fjobs%2Flisting%2F4380645%3Fgh_src%3Daonhf1&urlHash=t8Yv&refId=N7uOoBr%2BQ9%2BeVMnRI0zDvQ%3D%3D&trackingId=sT%2B2DYMKmdN4UruGzxH5%2BA%3D%3D&trk=public_jobs_apply-link-offsite,Not Applicable,Full-time,Engineering and Information Technology,"IT Services and IT Consulting, Software Development, and Technology, Information and Internet","['react', 'java']"
