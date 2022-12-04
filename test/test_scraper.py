@@ -13,7 +13,7 @@ import itertools  # noqa: E402
 import os  # noqa: E402
 import time  # noqa: E402
 import pandas as pd  # noqa: E402
-from scraper import JobData, ROOT_DIR  # noqa: E402
+from src.scraper import JobData, ROOT_DIR  # noqa: E402
 
 
 def test_webdriver():
