@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+<body>
+    <section class="vh-100" style="background-color: #eee;">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+              <div class="card text-black" style="border-radius: 25px;">
+                <div class="card-body p-md-5">
+                  <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+      
+                      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login</p>
+      
+                      <form name ="signup_form" class="mx-1 mx-md-4">
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input name="email" type="email" id="form3Example3c" class="form-control" />
+                            <label class="form-label" for="form3Example3c">Email</label>
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input name="password" type="password" id="form3Example4c" class="form-control" />
+                            <label class="form-label" for="form3Example4c">Password</label>
+                          </div>
+                        </div>
+      
+                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                          <button type="button" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+      
+                      </form>
+      
+                    </div>
+                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+      
+                      <img src="../static/jc.gif"
+                        class="img-fluid" alt="Sample image">
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+</body>
+</html>
+=======
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="welcomeText">{% block title %} Welcome to JobCruncher! {% endblock %}</h1>
+<div class="intro justify-content-center" id="intro">
+<p>
+    Juggling multiple assignments, quizzes, projects, presentations, and clutching the deadlines every week?
+    Feel like you have no time to watch your favorite series or sports team play let alone search for job posting
+    on a day-to-day basis? Here comes JobCruncher.
+    JobCruncher is an online job scraping and analysis tool that provides the user with the ability to filter jobs
+    posted on Linkedin based on the users interest. LinkedIn is an employment-oriented online service that is a
+    platform primarily used for professional networking and career development. This allows job seekers to post
+    their CVs and employers to post jobs, hence a perfect site to scrap the job details from.
+    So, leave the tedious and monotonous task of looking up the job postings to our JobCruncher that not only
+    provides the jobs posted every day but helps to filter out the results based on your liking.
+</p>
+</div>
+
+<div class="justify-content-center" style="display: flex; justify-content: center;">
+
+    <iframe src="https://giphy.com/embed/k87ZOU3yCuGHVy42Bx" width="680" height="370" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dreamworks-rise-of-the-guardians-dreamworks-animation-sandman-k87ZOU3yCuGHVy42Bx"></a></p>
+</div>
+
+<div class="why justify-content-center">
+    <h2 id="whyQuestion" class="why">So why use JobCruncher instead?</h2>
+    <p id="whyAnswer">
+        Unlike many other job portals, JobCruncher is a simple, lightweight, online tool that helps users
+        get clear information about the jobs posted on LinkedIn and further help the user finetune the results.
+        Further, it helps to provide the user insights about the job postings and as the scraper is executed
+        every day, the user is always provided with the most recent job postings.
+    </p>
+</div>
+
+{% endblock %}
