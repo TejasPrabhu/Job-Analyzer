@@ -63,7 +63,7 @@ class JobData:
             chrome_options.add_argument(option)
 
         # self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
-        driver_path = "webdriver/chromedriver"
+        driver_path = r"./webdriver/chromedriver"
         if os.name != "posix":
             driver_path = driver_path + ".exe"
         self.driver = webdriver.Chrome(executable_path=driver_path, options=chrome_options)
