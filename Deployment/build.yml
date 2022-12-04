@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: job-analyzer
+  name: job-analyzer
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: job-analyzer:latest
+  resources: {}
+  source:
+    git:
+      ref: main
+      uri: https://github.com/subodh30/job-analyzer.git
+    contextDir: job-analyzer/
+    type: Git
+  strategy:
+    dockerStrategy:
+      dockerfilePath: "./Deployment/Dockerfile"
+    type: Docker
