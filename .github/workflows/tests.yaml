@@ -18,8 +18,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -e .
-      - name: Install Chrome browser
-        run: sudo apt-get install -y chromium-browser
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@1.8.0
         with:
