@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
@@ -18,10 +18,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -e .
-      - name: Install Chrome browser
-        run: sudo apt-get install -y chromium-browser
       - name: Start MongoDB
-        uses: supercharge/mongodb-github-action@1.8.0
+        uses: ankane/setup-mongodb@v1
         with:
           mongodb-version: 6.0
       - name: Run flake8
