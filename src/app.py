@@ -40,7 +40,7 @@ def login_required(f):
     return wrap
 
 
-from src.User import routes
+
 
 
 @app.route('/test')

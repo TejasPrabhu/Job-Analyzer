@@ -30,7 +30,7 @@ ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
 
 class JobData:
     def __init__(self,
-                 job_title="Software Engineer",
+                 job_title="Machine Learning",
                  job_location="Raleigh",
                  distance=20,
                  company="",
@@ -253,6 +253,9 @@ class JobData:
 
 if __name__ == '__main__':
     jd = JobData()
+    jdML = JobData(job_title="Machine Learning")
     jd.scrape_data()
+    jdML.scrape_data()
+    add(db, jdML.job_data)
     add(db, jd.job_data)
     print(dir(app), "Hello")
