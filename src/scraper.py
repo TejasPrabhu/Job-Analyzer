@@ -22,6 +22,7 @@ from selenium.webdriver.support import expected_conditions as EC  # noqa: E402
 from selenium.webdriver.support.wait import WebDriverWait  # noqa: E402
 from webdriver_manager.chrome import ChromeDriverManager  # noqa: E402
 from webdriver_manager.core.utils import ChromeType  # noqa: E402
+
 from app import add, mongodb_client  # noqa: E402
 
 from selenium.webdriver.common.by import By  # noqa: E402
@@ -36,7 +37,7 @@ ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
 
 class JobData:
     def __init__(self,
-                 job_title="Software Engineer",
+                 job_title="Machine Learning",
                  job_location="Raleigh",
                  distance=20,
                  company="",
@@ -262,6 +263,9 @@ class JobData:
 
 if __name__ == '__main__':
     jd = JobData()
+    jdML = JobData(job_title="Machine Learning")
     jd.scrape_data()
+    jdML.scrape_data()
+    add(db, jdML.job_data)
     add(db, jd.job_data)
     

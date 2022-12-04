@@ -1,4 +1,167 @@
 ,Job Title,Company Name,Location,Date Posted,Total Applicants,Job Description,Job Link,Seniority level,Employment type,Job function,Industries,skills
+0,Intern - Data Scientist,Genworth," Raleigh, NC",3 weeks ago,137 applicants,"POSITION TITLE
+
+Intern - Data Scientist
+
+LOCATION
+
+Hybrid- Raleigh, NC
+
+THE PROGRAM
+
+Enact’s Internship Program provides an excellent opportunity for students to gain hands-on experience in achieving business results while developing technical and professional skills. The internship program is a critical component of Enact’s talent pipeline as we look to interns to provide cutting edge ideas and skills that will drive business success.
+
+Enact invests time, energy, and resources to create a worthwhile experience for interns. Interns work on meaningful business projects, but beyond that, they will network directly with leaders throughout the company (all the way up to the CEO), attend teambuilding events with their internship cohort, connect with the community through volunteer opportunities (both on-site and off-site), and attend professional development workshops. It’s a unique internship experience that helps interns develop a network of peers and mentors who act as a source of constant engagement and guidance during the internship.
+
+YOUR ROLE
+
+In addition to the multiple weekly events attended by all interns, you’ll work alongside industry experts for a 12-week internship beginning May 15, 2023. As part of the Data Science team, you will be developing comprehensive analytics to different functions which are highly dependent on data insights to create efficiencies. This is a dynamic and challenging opportunity to apply the latest machine learning models and methods in Data Science to solve a variety of business matters.
+
+In this role, you will collaborate with partners in Operations (Underwriting, Claims, Billing), Marketing, Pricing, Risk, Customer Solutions, and other functions to define business questions, prepare data, build predictive and prescriptive models, and communicate its insights and recommended actions.
+
+Your Responsibilities
+Design, create and implement advanced analytics and forecasting models to optimize business processes; provide insights for decision making using Machine Learning and traditional statistical modeling
+Using large datasets, develop and perform exploratory data analysis and build advanced machine learning models using structured and unstructured data.
+Communicate the ML models and methods in a logical and understandable manner for non-analytical business users and model governance teams
+
+Your Qualifications
+Master’s or PhD student in a quantitative research field such as: Statistics, Econometrics, Computer Science, Demography / Actuarial Science, Mathematics, Data Science, Quantitative Social Sciences, Epidemiology, Engineering, etc.
+Hands-on experience developing solutions using Python (Pandas, Scikit-learn), Spark, database query and management tools (SQL), in a cloud platform
+Hands-on experience with multiple Machine Learning models, time series forecasting, optimization, and other predictive modeling techniques. ML experience and knowledge of ML platforms, libraries, and programming
+Strong communication (oral, written, interpersonal, and presentation) skills
+
+Company
+
+Enact, operating principally through its wholly-owned subsidiary Genworth Mortgage Insurance Corp. since 1981, is a leading U.S. private mortgage insurance provider committed to helping more people achieve the dream of homeownership. Building on a deep understanding of lenders’ businesses and a legacy of financial strength, we partner with lenders to bring best-in class service, leading underwriting expertise, and extensive risk and capital management to the mortgage process, helping to put more people in homes and keep them there. By empowering customers and their borrowers, Enact seeks to positively impact the lives of those in the communities in which it serves in a sustainable way. Enact is headquartered in Raleigh, North Carolina.
+
+Through our values of Excellence, Improvement and Connection, the Enact team delivers on our mission to help more people realize the dream of homeownership. The positive impact we can have on our world inspires us to go the extra mile. We look at the bigger picture, always considering our customers’ processes and their borrowers’ experience. We work hard to anticipate all the effects our actions might have. That can make our work challenging, and also satisfying. Are you the kind of person who’s always anticipating your customers’ needs? Always one step ahead, ready to catch that unexpected curveball? If so, you could thrive with us.
+
+We are proud to be an equal opportunity employer and all hiring decisions are based on merit, qualifications, and business need. We do not discriminate based upon race, religion, color, national origin, gender (including pregnancy), sexual orientation, gender identity, gender expression, age, status as a protected veteran, status as an individual with a disability, or other applicable legally protected characteristics.",https://www.linkedin.com/jobs/view/externalApply/3355329789?url=https%3A%2F%2Fgnw%2Ewd1%2Emyworkdayjobs%2Ecom%2FGNW%2Fjob%2FRaleigh-North-Carolina%2FIntern---Data-Scientist_REQ-220545-1&urlHash=s3Bt&refId=gUtCtSuAN%2BgCUNfuQhS2IA%3D%3D&trackingId=zU5MVkT8kr8U19MxPIHQUA%3D%3D&trk=public_jobs_apply-link-offsite,Internship,Full-time,Engineering and Information Technology,Insurance,"['spark', 'python']"
+1,Machine Learning R&D Engineer,PerkinElmer Informatics,"Durham, NC",4 weeks ago,Be among the first 25 applicants,"Responsibilities Location(s) Durham, North Carolina Status Regular Job ID JR-033645
+
+Imagine a world where you could detect health issues sooner to treat them more effectively. Where scientific and medical research are enhanced to solve the greatest challenges of our times. At PerkinElmer, we imagine this world every day. Then, we innovate and collaborate to make it happen everywhere.
+
+Our dedicated team of about 16,000 employees worldwide, pioneers scientific technologies for better detection, imaging, and informatics to help our customers work to create healthier families, improve the quality of life, and sustain the well-being and longevity of people globally. If you are seeking a meaningful, impactful, and stimulating career, look no further! PerkinElmer is seeking a Machine Learning R&D Engineer, to help our team develop and deploy AI solutions. The team works on solving novel problems in the Life Science space.
+
+This job is based in Research Triangle Park, North Carolina.
+
+Who We Are Looking For
+Someone who builds, deploys, implements and/or modifies machine learning/AI applications, including pattern recognition applications, (e.g., image, text, speech recognition) and automation scripts and utilities.
+Someone who uses a combination of dataflow programming or pre-trained algorithms from an existing AI framework (e.g., TensorFlow, MXNet, Torch) but may also develop own scripts and algorithms in Python, C++, Java, or equivalent languages.
+Someone to work with engineers and software developers to define requirements for instrument capabilities to improve and build new types of image acquisition, analysis, and processing solutions.
+Someone who is willing to infrequently but occasionally travel to support customers with training and troubleshooting.
+Someone who can assist in the writing of application notes, peer reviewed papers, and white papers related to help drive adoption of novel imaging approaches and methodologies.
+Basic Qualifications
+Five years minimum of related experience with imaging science, data science, and/or MLOps
+Familiarity with deep learning frameworks (PyTorch, TensorFlow, ONNX)
+Experience porting code from data scientists to production-ready models
+Must be able to communicate effectively with other team members
+Preferred Qualifications
+Masters or Ph.D. degree in computer science, biomedical engineering, or similar
+Experience with ultrasound acquisition and processing algorithms
+Experience with automated medical image segmentation and classification
+Familiarity with model registry and tracking using MLFlow or similar
+Collaborative teamwork experience using git and git projects through weekly sprints
+Ability to design, and implement solutions in the cloud or in hybrid architecture
+Ideal candidate will have an entrepreneurial mindset with flexibility with exploring and adopting new technologies",https://www.linkedin.com/jobs/view/externalApply/3372329525?url=https%3A%2F%2Fjobs%2Eperkinelmer%2Ecom%2Fjob%2Fdurham%2Fmachine-learning-r-and-d-engineer%2F20539%2F39465610464&urlHash=hg5V&refId=gUtCtSuAN%2BgCUNfuQhS2IA%3D%3D&trackingId=N%2B7xV3kY63BdqwvdWRfnpQ%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,Software Development,"['c++', 'java', 'tensorflow', 'ai', 'python']"
+2,Data Science Internship,Red Hat,"leigh, NC",1 week ago,Over 200 applicants,"About The Job
+
+The Red Hat Global Finance Analytics team is looking for a highly motivated individual who wants to gain hands-on experience with open source and Red Hat products during a summer internship to join us as a Data Science Intern. In this role, you will work in an environment where diverse perspectives are invited, the best ideas are valued, and people feel empowered to contribute. Freedom and courage are two of our core values, which is why you’ll need to be comfortable taking risks and exploring the unknown. But being a Red Hatter isn't just about being brave, it's also about demonstrating commitment and sticking to it.
+
+The key focus for Red Hat's Intern Program is a dual partnership between the early talent team and our intern managers. We can offer you professional development, social engagement and networking, performance and development, and meaningful work throughout your summer at Red Hat.
+
+In This Role You Will
+
+What you will do
+Be responsible for generating insights from data across the company to support our business leadership and inform our company strategy.
+Engage in a variety of projects that require an array of analytical skills: data manipulation, descriptive analytics, data visualization, dashboard development, predictive modeling, and stakeholder management.
+Work closely with various finance teams and leadership to develop and deliver data models, dashboards, and key insights.
+Have the opportunity to use your strengths and evolve your skills in direct application to Red Hat’s business.
+What You Will Bring
+Ability to work full-time May-August
+Currently pursuing a degree in analytics, statistics or a quantitative field and in your last year of study; if you have graduated, be no more than 6 months past your graduation date
+Excellent programming skills: SQL, Python (mostly the scientific computing stack)
+Proficiency in Tableau or other data visualization platforms
+Familiarity with relational database systems like SQL Server, Redshift, Oracle, Big Query, etc
+Familiarity with building, automating, and deploying machine learning models / forecasts
+Affinity for frequent collaboration and constant desire to improve the team by sharing knowledge and feedback
+Self starter with a sense of personal accountability
+A coachable, energetic, creative problem solver
+The Following Are Considered a Plus
+Domain experience in software / technology, finance, or subscription-based companies
+Familiarity with Git or version control systems",https://www.linkedin.com/jobs/view/externalApply/3369933530?url=https%3A%2F%2Fus-redhat%2Eicims%2Ecom%2Fjobs%2F97599%2Fdata-science-internship%2Fjob%3Fhub%3D7%26in_iframe%3D1%26%2526%253Fmode%3Djob%26%2526iis%3DJob%252BBoard%26%2526iisn%3DLinkedIn%252BPosting%26mode%3Djob%26iis%3DJob%2BBoard%26iisn%3DLinkedIn&urlHash=IwG0&refId=gUtCtSuAN%2BgCUNfuQhS2IA%3D%3D&trackingId=qYUzRVkWgG1KWDU9Jooxow%3D%3D&trk=public_jobs_apply-link-offsite,Not Applicable,Full-time,Engineering and Information Technology,IT Services and IT Consulting and Software Development,"['python', 'sql', 'tableau']"
+3,Data Scientist,Cloudflare," Raleigh, NC",2 weeks ago,45 applicants,"About Us
+
+At Cloudflare, we have our eyes set on an ambitious goal: to help build a better Internet. Today the company runs one of the world’s largest networks that powers approximately 25 million Internet properties, for customers ranging from individual bloggers to SMBs to Fortune 500 companies. Cloudflare protects and accelerates any Internet application online without adding hardware, installing software, or changing a line of code. Internet properties powered by Cloudflare all have web traffic routed through its intelligent global network, which gets smarter with every request. As a result, they see significant improvement in performance and a decrease in spam and other attacks. Cloudflare was named to Entrepreneur Magazine’s Top Company Cultures list and ranked among the World’s Most Innovative Companies by Fast Company.
+
+We realize people do not fit into neat boxes. We are looking for curious and empathetic individuals who are committed to developing themselves and learning new skills, and we are ready to help you do that. We cannot complete our mission without building a diverse and inclusive team. We hire the best people based on an evaluation of their potential and support them throughout their time at Cloudflare. Come join us!
+
+What you'll do
+
+Partner and align with business leaders, stakeholders, product managers and internal teams to understand the business and product challenges and goals and address them using predictive analytics in a globally distributed environment.
+Understand data landscape i.e tooling, tech stack, source systems etc. and work closely with the data engineering team to improve the data collection and quality.
+Understand business/product strategy and high-level roadmap and align analysis efforts to enable them with data insights and help achieve their strategic goals.
+Strong audience focused presentation and storytelling skills focused on key takeaways in a crisp and concise manner.
+Define, implement, and train statistical, machine learning, and deep learning models.
+Use software engineering best practices to publish model scores/insights/learnings at scale within the company.
+Ability to define and spot macro and micro levels trends with statistical significance on a regular basis and understand key drivers driving those trends.
+Active role in hiring, growing, and mentoring the data scientist team in Austin.
+
+Examples Of Desirable Skills, Knowledge And Experience
+
+M.S or Ph.D in Computer Science, Statistics, Mathematics, or other quantitative fields.
+2-5 years of data scientist experience with proven industry experience in a large scale environment (PBs scale & globally distributed teams)
+Strong experience working with business functions such as Finance, Sales, and Marketing to build models and drive impactful business outcomes (eg: customer and revenue growth)
+2+ years experience with a fast-growing SaaS business based company is preferred.
+Strong experience in scientific computing using Python, R, or Scala.
+Experience with Spark, SQL, Tableau, Google Analytics, Hive and BigQuery (or any other Big data/Cloud equivalent) etc.
+Experience working with and processing structured, unstructured, and semi-structured data.
+Strong cross-functional collaboration experience with data engineering and data analysts teams within the function.
+Proven track record of applying data insights and machine learning in order to address business needs and drive revenue.
+Strong communication and presentation skills catered to different audiences within the company.
+Capable of working closely with business, engineering, and product teams to ensure data initiatives are aligned with business needs.
+Experience in hiring data scientists and establishing team best practices is preferred.
+
+Compensation
+
+Compensation may be adjusted depending on work location.
+
+For Colorado-based hires: Estimated annual salary of $ 112,000 - $ 136,000 .
+For New York City-based hires: Estimated annual salary of $ 158,000 - $ 193,000 .
+
+Equity
+
+This role is eligible to participate in Cloudflare’s equity plan.
+
+Benefits
+
+Cloudflare offers a complete package of benefits and programs to support you and your family. Our benefits programs can help you pay health care expenses, support caregiving, build capital for the future and make life a little easier and fun! The below is a description of our benefits for employees in the United States, and benefits may vary for employees based outside the U.S.
+
+Health & Welfare Benefits
+
+Medical/Rx Insurance
+Dental Insurance
+Vision Insurance
+Flexible Spending Accounts
+Commuter Spending Accounts
+Fertility & Family Forming Benefits
+On-demand mental health support and Employee Assistance Program
+Global Travel Medical Insurance
+
+Financial Benefits
+
+Short and Long Term Disability Insurance
+Life & Accident Insurance
+401(k) Retirement Savings Plan
+Employee Stock Participation Plan
+
+Time Off
+
+Flexible paid time off covering vacation and sick leave
+Leave programs, including parental, pregnancy health, medical, and bereavement leave
+
+What Makes Cloudflare Special?
+
 0,Jr. Software Engineer (Hybrid),Sunbird Software,"Raleigh, NC",3 days ago,Be among the first 25 applicants,"Do you want to work with a leading global software company in the data center industry experiencing double digit growth in each of the last 5 years?
 
 Do you want to represent a modern data center software product that often beats offers from larger multi-billion dollar companies?
@@ -94,53 +257,127 @@ Passion for improving education through technology
 At IXL, we value diversity in age, race, ethnicity, gender, sexual orientation, physical and mental ability, political and religious beliefs, and life experience, and we are proud to promote a work environment where everyone, from any background, can do their best work. IXL Learning is an Equal Opportunity Employer.",https://www.linkedin.com/jobs/view/externalApply/3200864048?url=https%3A%2F%2Fwww%2Eixl%2Ecom%2Fcompany%2Fjobs%3Fgh_jid%3D6304459002%26gh_src%3De358d0722%26gh_src%3D9ab9c2a12&urlHash=LXHU&refId=N7uOoBr%2BQ9%2BeVMnRI0zDvQ%3D%3D&trackingId=plQK9C%2B%2F2hnGHf7iO7HRVA%3D%3D&trk=public_jobs_apply-link-offsite,Not Applicable,Full-time,Engineering and Information Technology,E-Learning Providers,"['sql', 'react', 'ui', 'linux', 'python', 'scala', 'java']"
 2,"Software Engineer, Apple Pay",Apple," Raleigh, NC",4 days ago,Over 200 applicants,"Summary
 
-At Apple, great ideas have a way of becoming phenomenal products, services, and customer experiences very quickly. If you are passionate about innovation, have a natural curiosity for new technologies and you show excitement about solving meaningful problems, we would like to invite you to join our team!
+We’re not just a highly ambitious, large-scale technology company. We’re a highly ambitious, large-scale technology company with a soul. Fundamental to our mission to help build a better Internet is protecting the free and open Internet.
 
+Project Galileo : We equip politically and artistically important organizations and journalists with powerful tools to defend themselves against attacks that would otherwise censor their work, technology already used by Cloudflare’s enterprise customers--at no cost.
 
-Apple Pay Server team is looking for talented software engineers that love building systems that run at scale, are interested in continuous learning and thrive in a fast paced environment.
+Athenian Project : We created Athenian Project to ensure that state and local governments have the highest level of protection and reliability for free, so that their constituents have access to election information and voter registration.
 
+Path Forward Partnership : Since 2016, we have partnered with Path Forward, a nonprofit organization, to create 16-week positions for mid-career professionals who want to get back to the workplace after taking time off to care for a child, parent, or loved one.
 
-Key Qualifications
+1.1.1.1 : We released 1.1.1.1 to help fix the foundation of the Internet by building a faster, more secure and privacy-centric public DNS resolver. This is available publicly for everyone to use - it is the first consumer-focused service Cloudflare has ever released. Here’s the deal - we don’t store client IP addresses never, ever. We will continue to abide by our privacy commitment and ensure that no user data is sold to advertisers or used to target consumers.
 
-Experience with object-oriented analysis and design with languages like Java
+Sound like something you’d like to be a part of? We’d love to hear from you!
 
-Experience with design and development of scalable and distributed systems
+This position may require access to information protected under U.S. export control laws, including the U.S. Export Administration Regulations. Please note that any offer of employment may be conditioned on your authorization to receive software or technology controlled under these U.S. export laws without sponsorship for an export license.
 
-Experience with authoring and supporting web services
+Cloudflare is proud to be an equal opportunity employer. We are committed to providing equal employment opportunity for all people and place great value in both diversity and inclusiveness. All qualified applicants will be considered for employment without regard to their, or any other person's, perceived or actual race, color, religion, sex, gender, gender identity, gender expression, sexual orientation, national origin, ancestry, citizenship, age, physical or mental disability, medical condition, family care status, or any other basis protected by law. We are an AA/Veterans/Disabled Employer.
 
-Experience with Relational and NoSQL Databases
+Cloudflare provides reasonable accommodations to qualified individuals with disabilities. Please tell us if you require a reasonable accommodation to apply for a job. Examples of reasonable accommodations include, but are not limited to, changing the application process, providing documents in an alternate format, using a sign language interpreter, or using specialized equipment. If you require a reasonable accommodation to apply for a job, please contact us via e-mail at hr@cloudflare.com or via mail at 101 Townsend St. San Francisco, CA 94107.",,Entry level,Full-time,Engineering and Information Technology,"IT Services and IT Consulting, Computer and Network Security, and Technology, Information and Internet","['r', 'spark', 'sql', 'tableau', 'python']"
+4,Data Scientist,MANN+HUMMEL," Raleigh, NC",1 week ago,126 applicants,"MANN+HUMMEL is a leading provider of filtration solutions for automotive, industrial, commercial and consumer segments. An exciting opportunity exists to join the brand new global IoT business team based in Raleigh, NC focusing on marketing IoT Products, with potential applications across many different business segments.
 
-Nice to have - knowledge on security and cryptography, experience with Java and Apache Kafka
+JOB RESPONSIBILITIES
 
+− Use creative problem-solving skills to address business problems from different perspectives
+− Distill and communicate data analytics results to all organizational levels
+− Data mining of data sets of various types and formats
+− Process, cleanse, and verify the integrity of data used for analysis
+− Documentation and presentation of research results to products owner and stakeholders
+− Create automated anomaly detection systems and constant tracking of its performance
+− Develop machine learning classifiers, algorithms and processes
+− Responsible for transforming the business challenge into corresponding data science approach, and for transferring applicable results back to the business
+− Create documentation of all aspects of software design, development, debug and release
 
-Description
+REQUIREMENTS
 
-Apple Pay brought mobile payment to millions of customers, and it’s just the beginning. We are looking for engineers who are equally comfortable working at the bits and bytes level and designing state-of-the-art objected-oriented web services. The people here at Apple don’t just build products — we craft the kind of wonder that’s revolutionized entire industries. It’s the diversity of those people and their ideas that supports the innovation that runs through everything we do, from amazing technology to industry-leading environmental efforts.
+Education:
+− Bachelor’s Degree in computer science, applied math, engineering or related field
 
-JOB DUTIES INCLUDE THE FOLLOWING:
+Experience:
+- 3+ years’ experience in quantitative data analysis
 
-- Participate in scoping, designing and implementation of scalable distributed systems that work at high transition rates
+Required Skills:
+− Experienced with cloud technologies
+− Experienced with common data science toolkits, such as R, python, scipy, sagemaker, AWS, Dynamodb, and Tableau, Power BI
+− Great communication skills with both, data experts and business managers
+− Use of data visualization tools, such as D3.js, GGplot, etc.
+− Proficiency in using query languages such as SQL, Hive, Pig
+− Experienced with NoSQL databases, such as MongoDB, Cassandra, HBase
+− Solid applied statistics skills, such as distributions, statistical testing, regression, etc.
+− Agile mindset, customer driven and results oriented
+− Experienced in Agile methods e.g.: Scrum is a plus
+- Ability to work in an autonomous team",,Mid-Senior level,Full-time,Engineering and Information Technology,Environmental Services,"['r', 'python', 'sql', 'tableau']"
+5,Machine Learning Engineer,Actalent," Raleigh, NC",2 hours ago,Be among the first 25 applicants,"Industry:* This would be an opportunity to establish a career with a company that develops technology and solutions for our National Defense in the areas of RF Electronics, Machine Learning, and software architecture.
 
+You would be introduced to machine learning in the field of Electronic Warfare, Robotics, and Modeling and Simulation.
+What is in it for you:*
+Research and Development of cutting-edge technology
+Work in an environment that encourages creativity, innovation, and teamwork
+Work in the Research Triangle area of North Carolina
+Competitive health benefits
+Obtain a Secret level Security Clearance, if qualified, or continue to keep a current Clearance active.
+The Successful applicant will have:*
+Experience developing machine learning and complex signal processing algorithms
+Knowledge of programming languages (such as C/C++, MATLAB, Python, Simulink).
+Experience with digital signal processing, probability theory, stochastic signal processing and machine learning.
+Knowledge in any of these areas: Electronic Warfare systems, Radar, waveforms, radar signal processing, Communication Simulators, Communications Jamming, Wireless communication systems
+Knowledge of Kalman filtering, CNN, Random Forest, Support Vector Machine, Adaptive Neural Networks, Belief Propagation, other machine learning algorithms.
+The ability to obtain a secret level security clearance
+Your job duties will be:*
+Participate in the development of innovative detection, estimation and classification algorithms and techniques for advanced applications.
+Develop signal processing algorithms, waveforms and techniques that exploit and optimize radar, radio and Electronic Warfare architectures that take advantage of advanced radio frequency and processing technology.
+Perform concept and performance trade studies and demonstrate developed capabilities for streaming data applications.
+Develop prototype, and test sensor models and signal processing algorithms in detailed high-fidelity simulations written in C/C++, and MATLAB.
+Who to contact:* For immediate consideration please contact LaMark McGreen at 407-754-2540
 
-- Write bullet-proof Java code (thread-safe, performant, object-oriented, and inherently testable)
+About Actalent:
 
+Actalent connects passion with purpose. Our scalable talent solutions and services capabilities drive value and results and provide the expertise to help our customers achieve more. Every day, our experts around the globe are making an impact. We’re supporting critical initiatives in engineering and sciences that advance how companies serve the world. Actalent promotes consultant care and engagement through experiences that enable continuous development. Our people are the difference. Actalent is an operating company of Allegis Group, the global leader in talent solutions. The company is an equal opportunity employer and will consider all applications without regards to race, sex, age, color, religion, national origin, veteran status, disability, sexual orientation, gender identity, genetic information or any characteristic protected by law.",https://www.linkedin.com/jobs/view/externalApply/3386413312?url=https%3A%2F%2Fjsv3%2Erecruitics%2Ecom%2Fredirect%3Frx_cid%3D3374%26rx_jobId%3DJP-003373037%26rx_url%3Dhttps%253A%252F%252Fars2%2Eequest%2Ecom%252F%253Ficid%253Dlinkedin_limited_listings_recruitics%2526id%253D2153%2526response_id%253D692ec944d04338748426cb20f32c9ae4%2526rx_job%253DJP-003373037%2526rx_medium%253Dpost%2526rx_paid%253D0%2526rx_r%253Dnone%2526rx_source%253DLinkedIn%2526rx_ts%253D20221203T204613Z&urlHash=1Pv5&refId=gUtCtSuAN%2BgCUNfuQhS2IA%3D%3D&trackingId=LuGhEYSSiUkSpfhFIJcYUw%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,Business Consulting and Services,['python']
+6,Machine Learning Developer,SynergisticIT," Raleigh, NC",1 week ago,Be among the first 25 applicants,"About Us
 
-- Collaborate with the business team on current and future initiatives
+Synergistic IT is a full-service staffing and placement firm servicing clients in America for the past 12+ years. We are dedicated to fulfilling the IT needs of our clients. From staffing to full implementation of projects we provide the highest quality IT Services. We don't just help you secure a Tech Job, but we build your solid career in technology.
 
+Job Description
 
-- Collaborate with the iOS client team on feature definition and development
+Technical Skills:
 
+Python, Model Training/Testing
 
-- Participate in designing specifications and protocols to tackle novel problems
+Primary Responsibilities
 
+Working on an awesome AI product for document information extraction.
 
-Apple is an Equal Opportunity Employer that is committed to inclusion and diversity. We also take affirmative action to offer employment and advancement opportunities to all applicants, including minorities, women, protected veterans, and individuals with disabilities. Apple will not discriminate or retaliate against applicants who inquire about, disclose, or discuss their compensation or that of other applicants.
+Build the next-generation information extraction product powered by state-of-the-art AI and Deep Learning techniques.
 
+Work with an international top-notch engineering team with full commitment on
 
-Education & Experience
+Machine Learning development.
 
-BS or MS degree in computer science or similar technical field, or equivalent professional experience
+Required Candidate profile
 
+Skills Required
+
+Passionate about search amp; AI technologies. Open to collaborating with colleagues amp; external contributors.
+
+Good understanding of the mainstream deep learning models from multiple domains: computer vision, NLP, reinforcement learning, model optimization, etc.
+
+Skilled in the following programming languages: Python 3.
+
+Good English skills especially for writing and reading documentation
+
+Education Requirement
+
+Bachelors, Masters in Computer Science/ Computer Engineering/ Information Systems/Information Technology/ Electrical Engineering/ Mechanical Engineering.
+
+Benefit's Of Working With Our Clients
+
+E-Verified.
+
+Help to get H1b Employer
+
+Long Term Positions
+
+On Job Technical Support.
 
 Role Number: 200436250",https://www.linkedin.com/jobs/view/externalApply/3337049883?url=https%3A%2F%2Fjobs%2Eapple%2Ecom%2Fen-us%2Fdetails%2F200436250%3Fboard_id%3D17682%26cid%3Dscrape_co_us_linkedin_nationwide_software%252Bservices&urlHash=kC27&refId=N7uOoBr%2BQ9%2BeVMnRI0zDvQ%3D%3D&trackingId=quauqvudoO2jDXuiB3BQcQ%3D%3D&trk=public_jobs_apply-link-offsite,Not Applicable,Full-time,Engineering and Information Technology,Computers and Electronics Manufacturing,['java']
 3,Software Engineer,Robert Half,"igh, NC",5 days ago,Be among the first 25 applicants,"Description
@@ -212,34 +449,119 @@ Equivalent combination of education, training and experience may be considered i
 All valid SAS job openings are located on the Careers page at www.sas.com . SAS only sends emails from verified “sas.com” email addresses and never asks for sensitive, personal information or money. Should you have any doubts about the authenticity of any type of communication from, for, or on behalf of SAS, please contact us at Recruitingsupport@sas.com before taking any further action.",,Mid-Senior level,Full-time,Engineering,Software Development,['java']
 5,Software Engineer (JupyterLab/Python/Integrations),Pachyderm Inc.,"Raleigh, NC",1 month ago,Be among the first 25 applicants,"About Pachyderm:
 
-Pachyderm is the leader in data versioning and pipelines for MLOps. We're building the data foundation that allows data science teams to automate and scale their machine learning lifecycle while guaranteeing reproducibility. With over $40 million in three rounds of funding from leading investors like Benchmark, Microsoft M12, and Y Combinator, Pachyderm is committed to building industrial strength capabilities for Data Centric AI. Pachyderm offers a commercial Enterprise Edition and an open source Community Edition. Pachyderm helps customers get their ML and AI projects to market faster, lower data processing and storage costs, and supports strict data governance requirements.
+Candidates who are missing the required skills might be provided an option to enhance their skills so that they can also apply for the role and can make a career in the IT industry.
 
-Pachyderm is growing fast and still small, so joining means you are getting in right at the ground floor and that you will have an enormous impact on the success and direction of the company and product. Pachyderm has always and will always embrace a ""Remote-first"" approach to growing our team. This allows us to hire a diverse group of individuals across the country (and world!) while giving our team members the flexibility to work from anywhere. Being a member of The Pach means joining a supportive team that cares about you, values kindness and works hard to create an open and transparent workplace.
+If you do respond via e-mail, please include a daytime phone number so that we can reach you. In considering candidates, time is of the essence, so please respond ASAP. Thank you",https://www.linkedin.com/jobs/view/externalApply/3377324858?url=https%3A%2F%2Fwww%2Eresume-library%2Ecom%2Ffeed%2Fclick%2F551%2F92951604%3Fdpj%3Dyes&urlHash=Sycn&refId=gUtCtSuAN%2BgCUNfuQhS2IA%3D%3D&trackingId=A2KD6SWQ7MzNiVXNTjc5NQ%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,IT Services and IT Consulting,"['ai', 'python']"
+7,Machine Learning Engineer - Platform,Pryon," Raleigh, NC",2 weeks ago,64 applicants,"Welcome to Pryon, an Artificial Intelligence (AI) company focused on Augmented Intelligence for the enterprise. It is a place for people who want to define the state of the art: real AI, developed by real pioneers, solving real problems of consequence. Our company was built by some of the most well-known experts in the field, whose DNA lives on in Alexa, Siri, Watson, and virtually every other AI product on the market. But the best part of the story is still to come: We’re creating a world-class culture fueled by intellectual curiosity and radical technology — to reduce the distance between knowledge and people. Our proprietary, cutting-edge natural language processing capabilities transform unstructured data into meaningful experiences that increase productivity with unmatched accuracy and speed.
 
-The Role
+Responsibilities:
 
-Pachyderm is looking for a Python & JupyterHub developer to join our team that is building a data science platform.
+We seek to hire a Machine Learning Engineer with a focus on our Platform and Tools for our AI Research team. In this role you will be responsible for:
 
-You'll be working closely with our design & product team to implement new features. Your main task will be integrating Pachyderm with JupyterHub. You will also be part of the team working on several exciting integrations with other tools and platforms. As an early member of the team, you will have a ton of ownership and impact on the product direction. You'll be required to collaborate closely with other engineers and product leaders.
+Working with our research and engineering teams to build an agile Machine Learning Research platform.
+Extend the capabilities of our machine intelligence, natural language processing, and inference engines.
+Help with integrating these components into our production environment.
 
-While your primary focus will be building the product, you'll also have direct exposure to users and enterprise customers. At Pachyderm, open-source user and customer feedback is a major driver of our product roadmap and we believe that everyone within the company should experience that first-hand.
+Requirements:
 
-The long and short of it is, if you're looking to make a big impact on a small team that works on open source software and delivers an enterprise-grade product, then this role is for you. You can check out our product on GitHub.
-
-We offer significant equity, full benefits, and all the usual startup perks.
-
-Qualifications:
-3+ years of experience as a Python Developer
-2+ years of experience as a JavaScript/TypeScript Developer
-Experience designing interactive web applications using Python or JavaScript/TypeScript
-Experience with data analysis and data visualization in Python
-Experience with widgets and interactive visualizations in Jupyter
-Experience writing Jupyter Notebook and/or Jupyter Lab extensions
-Familiarity with Docker, Kubernetes and AWS
-Bonus: Experience deploying and customizing JupyterHub a plus
-Bonus: Knowledge of TypeScript and AngularJS a plus
+MS or PhD in Computer Science, Data Science, or a related technical field. BS with relevant experience is also acceptable.
+Strong foundation in Computer Science with competencies in data structures, algorithms, and software design.
+Experience with MLOps frameworks like Airflow, MLFlow, Argo, etc.
+Expertise in one or more Python, Java, Golang, C++.
+Experience with one or more of: Deep Learning, Deep Reinforcement Learning, Natural Language Processing, Computer Vision, and Speech Recognition.
+Experience with one or more of TensorFlow, PyTorch, Jax, or another deep learning toolkit.
+Experience with cloud-based development environments such as AWS, Azure, or Google. Experience with micro-service creation is a plus.
+Experience working in an agile software engineering environment with tools such as Jira and Git and demonstrated ability to produce product-level code is a plus.
+Industry or research experience in data analytics, machine learning, and software development.
+Problem-solving skills. Hands-on, get-stuff-done attitude.
+Team player with the ability to work in a close-knit, fast-paced startup environment.
 
 Benefits:
+
+100% Company paid Health/Dental/Vision benefits for you and your dependents.
+Life Insurance, Short-term, and Long-term Disability.
+401k.
+Unlimited Managed PTO.
+
+Powered by JazzHR
+
+Bz0Ax8eqPr",https://www.linkedin.com/jobs/view/externalApply/3367362266?url=https%3A%2F%2Fpryon%2Eapplytojob%2Ecom%2Fapply%2FBz0Ax8eqPr%2FMachine-Learning-Engineer-Platform%3Fsource%3DLILI&urlHash=STyC&refId=gUtCtSuAN%2BgCUNfuQhS2IA%3D%3D&trackingId=XXXwk24PX0zVciGII%2FEd8Q%3D%3D&trk=public_jobs_apply-link-offsite,Mid-Senior level,Full-time,Engineering and Information Technology,Internet Publishing,"['java', 'tensorflow', 'ai', 'pytorch', 'python']"
+8,Machine Learning Engineer,SPECTRAFORCE," Durham, NC",3 weeks ago,Be among the first 25 applicants,"Durham, NC / Jersey City, NJ/ Boston, MA/ Westlake, TX - Hybrid (1 week onsite per month)
+
+12 Months (Conversion to FTE)
+
+Min pay rate: $70/hr on W2 Only
+
+Top Skills
+
+ML Exposure
+Python programming experience
+Comfortable with SQL
+AWS Sagemaker
+The Expertise You Have:
+
+Has Bachelor’s or Master’s Degree in a technology related field (e.g. Engineering, Computer Science, etc.).
+5+ years of experience in implementing Big data solutions in data analytics space.
+1-2 years of experience in developing ML infrastructure and MLOps in the Cloud (AWS preferred).
+Experience in Object Oriented Programming (Java, Scala, Python), Unix scripting or related programming languages and exposure to some of Python’s ML ecosystem (numpy, panda, sklearn, tensorflow, etc.).
+Experience with building data pipelines in getting the data required to build and evaluate ML models, using tools like Apache Spark or other distributed data processing frameworks.
+Data movement technologies (ETL/ELT), Messaging/Streaming Technologies (AWS SQS, Kinesis/Kafka), Relational and NoSQL databases (Cassandra, Elastic search, Graph database), API and in-memory technologies.
+Strong knowledge of developing highly scalable distributed systems using Open-source technologies.
+Experience with CI/CD tools (e.g., Jenkins or equivalent), version control (Git), orchestration/DAGs tools (Airflow, Luigi, Kubeflow, or equivalent).
+Solid experience in Agile methodologies (Kanban and SCRUM).
+Cloud experience (AWS preferred).
+The Skills You Bring:
+
+You have good technical design and analysis skills.
+You the ability to deal with ambiguity and work in fast paced environment.
+Your experience supporting mission critical applications.
+You are familiar with applied data science methods, feature engineering and machine learning algorithms.
+Your Data wrangling experience with structured and unstructured data.
+Your experience building ML infrastructure, with an eye towards software engineering.
+You have superb communication skills, both through written and verbal channels.
+You have excellent collaboration skills to work with multiple teams in the organization.
+Your ability to understand and adapt to changing business priorities and technology advancements in Big data and Data Science ecosystem.
+The Value You Deliver:
+
+Examples of specific problems you’ll help solve – build tools to help detect shifts in data/features used by ML models to help identify issues in advance of deteriorating prediction quality, monitoring the uncertainty of model outputs, automating prediction explanation for model diagnostics. Designing & developing a feature generation & store framework that promotes sharing of data among different ML models, etc.
+Designing, Building and supporting mission critical applications to provide the best customer experience
+Exploring new technology trends and leveraging them to simplify our data and ML ecosystem
+Driving Innovation and implementing solutions with future thinking
+Effectively partner with applied Data Scientists and lay software foundations upon which models can be built
+Guiding teams to improve development agility and productivity
+Resolving technical roadblocks to the team and mitigating potential risks
+Delivering system automation by setting up continuous integration/continuous delivery pipelines
+
+Below is the brief introduction of SPECTRAFORCE, the benefits we offer and the disclaimers:
+
+Established in 2004, SPECTRAFORCE is one of the largest and fastest-growing diversity-owned staffing firms in the US. The growth of our company is a direct result of our global client service delivery model that is powered by our state-of-the-art A.I. proprietary talent acquisition platform, robust ISO 9001:2015/ISO 27001 certified processes, and strong and passionate client engaged teams.
+
+We have built our business by providing talent and project-based solutions, including Contingent, Permanent, and Statement of Work (SOW) services to over 130 clients in the US, Canada, Puerto Rico, Costa Rica, and India. Key industries that we service include Technology, Financial Services, Life Sciences, Healthcare, Telecom, Retail, Utilities and Transportation.
+
+SPECTRAFORCE is built on a concept of “human connection,” defined by our branding attitude of NEWJOBPHORIA®, which is the excitement of bringing joy and freedom to the work lifestyle so our people (and clients) can reach their highest potential. Our entire workflow and teams are trained to cultivate the joy of NEWJOBPHORIA® with candidates and employees throughout their engagement with SPECTRAFORCE. http://www.spectraforce.com
+
+Benefits: SPECTRAFORCE offers ACA compliant health benefits as well as dental, vision, accident, and hospital indemnity insurances. Additional benefits SPECTRAFORCE offers to the eligible employees include commuter benefits, 401K plan with matching and a referral bonus program. SPECTRAFORCE offers unpaid leave as well as paid sick leave when required by law.
+
+Equal Opportunity Employer: SPECTRAFORCE is an equal opportunity employer and does not discriminate against any employee or applicant for employment because of race, religion, color, sex, national origin, age, sexual orientation, gender identity, genetic information, disability or veteran status, or any other category protected by applicable federal, state, or local laws. Please contact Human Resources at nahr@spectraforce.com if you require reasonable accommodation",https://www.linkedin.com/jobs/view/externalApply/3385474670?url=https%3A%2F%2Fspectraforce%2Ecom%2FCareers%2FJobDetails%2Ehtml%3Fjobid%3D2d3f46f5-6c50-4a52-ba00-073f8de53a71%26OrgId%3D1%26UserId%3D1&urlHash=rxjh&refId=gUtCtSuAN%2BgCUNfuQhS2IA%3D%3D&trackingId=7y63QyueJZ5rN7l%2FdZhDdQ%3D%3D&trk=public_jobs_apply-link-offsite,Entry level,Full-time,Engineering and Information Technology,Staffing and Recruiting,"['tensorflow', 'spark', 'scala', 'sql', 'python']"
+9,Data Science Intern (Summer 2023),Lenovo," Morrisville, NC",2 weeks ago,Over 200 applicants,"Description And Requirements
+
+Lenovo Infrastructure Solutions Group (ISG) is a smart infrastructure solutions provider to organizations of all sizes. We are looking for an eager and passionate Summer 2023 Intern to join our team as a Data Scientist. In this role you will work with the Software & Solutions Organization to analyze presales testing data. You will work with Senior level Executives and be tasked with supporting theories and outcomes. This role will allow you to gain hands on experience within leading edge go to market development. The successful candidate will be a self-starter who is passionate about learning and enjoys math & analytics. This role is based out of Morrisville, NC.
+
+Requirements:
+
+Pursing a Bachelor’s degree in Data Science or related field
+Experience with open source programing such as R/Java/Go
+Experience with zero code
+Familiar with front end development such as JavaScript/HTML/CSS
+Ability to work through the SDLC (Agile & Waterfall)
+Ability to hypothesize and defend work
+
+We are an Equal Opportunity Employer and do not discriminate against any employee or applicant for employment because of race, color, sex, age, religion, sexual orientation, gender identity, status as a veteran, and basis of disability or any federal, state, or local protected class.
+
+Lenovo adopted a COVID-19 Vaccination Policy for US-based employees. As a condition of employment, employees must adhere to Lenovo’s US Vaccination Policy and be fully vaccinated against COVID-19, subject to any applicable accommodations. To be fully vaccinated means individuals must receive the full series of a vaccine either approved by the FDA or WHO and listed by the CDC (e.g. two dose of the Moderna, AstraZeneca or Pfizer-BioNTech vaccines; or one dose of the Johnson & Johnson vaccine). This applies to all US-based employees, contractors and interns, regardless of work location. As a condition of employment, you must provide proof that you are fully vaccinated or follow Lenovo’s accommodation process.
+
+Morrisville - North Carolina - United States of America",https://www.linkedin.com/jobs/view/externalApply/3355826889?url=https%3A%2F%2Fjobs%2Elenovo%2Ecom%2Fen_US%2Fcareers%2FJobDetail%2FData-Science-Intern-Summer-2023-PURDUE%2F43462&urlHash=r7-p&refId=gUtCtSuAN%2BgCUNfuQhS2IA%3D%3D&trackingId=LcOiIvfD%2BMupBKZNPtAheA%3D%3D&trk=public_jobs_apply-link-offsite,Not Applicable,Part-time,Engineering and Information Technology,IT Services and IT Consulting,[]
+
 Significant equity, 401k and full benefits (100% medical, dental and vision for employees, 50% for all dependents).
 Flexible PTO - work/life balance is important and we want you to take time off to rejuvenate!
 Remote friendly- we were remote before remote was cool and we intend to continue to invest in a remote first culture.
