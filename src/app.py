@@ -1,3 +1,4 @@
+from functools import wraps
 
 """
 The module app holds the function related to flask app and database.
@@ -12,10 +13,8 @@ https://opensource.org/licenses/MIT.
 from flask import Flask, render_template, request, session, redirect  # noqa: E402
 from flask_pymongo import PyMongo  # noqa: E402
 from pandas import DataFrame  # noqa: E402
-from functools import wraps
 import re  # noqa: E402
 import numpy as np  # noqa: E402
-import pymongo
 
 app = Flask(__name__)
 
@@ -44,9 +43,6 @@ def login_required(f):
     return wrap
 
 
-
-
-
 @app.route('/signup')
 def sgup():
     """
@@ -54,6 +50,7 @@ def sgup():
     The index function renders the index.html page.
     """
     return render_template('signup.html')
+
 
 @app.route('/login')
 def lgin():
@@ -71,6 +68,7 @@ def index():
     The index function renders the index.html page.
     """
     return render_template('index.html')
+
 
 @app.route('/login')
 def login():
