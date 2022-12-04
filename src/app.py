@@ -18,12 +18,13 @@ import numpy as np  # noqa: E402
 import pymongo
 
 app = Flask(__name__)
-app.secret_key = b'\xe1\x04B6\x89\xf7\xa0\xab\xd1L\x0e\xfb\x1c\x08"\xf6'
-client = pymongo.MongoClient('localhost', 27017)
-db = client.user_system
 
-url = "mongodb+srv://subodh:se2022@cluster0.fcrvo9n.mongodb.net/job_analyzer?retryWrites=true&w=majority"
-app.config["MONGO_URI"] = url
+app.secret_key = b'\xe1\x04B6\x89\xf7\xa0\xab\xd1L\x0e\xfb\x1c\x08"\xf6'
+
+mongo_conn = "mongodb+srv://subodh:se2022@cluster0.fcrvo9n.mongodb.net/job_analyzer"
+mongo_params = "?tlsAllowInvalidCertificates=true&retryWrites=true&w=majority"
+app.config["MONGO_URI"] = mongo_conn + mongo_params
+
 mongodb_client = PyMongo(app)
 # db = mongodb_client.db
 
@@ -68,17 +69,30 @@ def index():
     """
     return render_template('index.html')
 
+@app.route('/login')
+def login():
+    """
+    Route: '/login'
+    The index function renders the login.html page.
+    """
+    return render_template('login.html')
+
 
 @app.route('/search', methods=('GET', 'POST'))
 def search():
+    print(f"into search function ${request.method}")
+    print(request)
     """
     Route: '/search'
     The search function renders the get_job_postings.html.
     Upon submission fetches the job postings from the database and renders job_posting.html
     """
     if request.method == 'POST':
+        print("into req post")
         job_df = read_from_db(request, db)
+        print(job_df)
         job_count = job_df.shape[0]
+        print(job_count)
         if job_df.empty:
             job_count = 0
             return render_template('no_jobs.html', job_count=job_count)

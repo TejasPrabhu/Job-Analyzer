@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% block title %} Welcome to JobCruncher! {% endblock %}</h1>
-<div class="intro justify-content-center">
+<h1 id="welcomeText">{% block title %} Welcome to JobCruncher! {% endblock %}</h1>
+<div class="intro justify-content-center" id="intro">
 <p>
     Juggling multiple assignments, quizzes, projects, presentations, and clutching the deadlines every week?
     Feel like you have no time to watch your favorite series or sports team play let alone search for job posting
@@ -15,9 +15,15 @@
     provides the jobs posted every day but helps to filter out the results based on your liking.
 </p>
 </div>
+
+<div class="justify-content-center" style="display: flex; justify-content: center;">
+
+    <iframe src="https://giphy.com/embed/k87ZOU3yCuGHVy42Bx" width="680" height="370" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dreamworks-rise-of-the-guardians-dreamworks-animation-sandman-k87ZOU3yCuGHVy42Bx"></a></p>
+</div>
+
 <div class="why justify-content-center">
-    <h2 class="why">So why use JobCruncher instead?</h2>
-    <p>
+    <h2 id="whyQuestion" class="why">So why use JobCruncher instead?</h2>
+    <p id="whyAnswer">
         Unlike many other job portals, JobCruncher is a simple, lightweight, online tool that helps users
         get clear information about the jobs posted on LinkedIn and further help the user finetune the results.
         Further, it helps to provide the user insights about the job postings and as the scraper is executed
